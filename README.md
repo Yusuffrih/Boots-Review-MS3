@@ -105,3 +105,6 @@ The colours I have chosen are:
 * Capri - Hex (21C2FD)
 * Red RYB - Hex (FF1F0A)
 
+### Icons 
+I have gone to [Font Awesome](https://fontawesome.com/) for the icons that I have used in the site. The icons, I feel just add a little bit extra to the site in terms of style and make it a bit more visually appealing which ultimately provides a better User Experience.
+
