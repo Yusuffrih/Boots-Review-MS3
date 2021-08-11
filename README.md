@@ -54,4 +54,13 @@ A secondary aim of the site is that when these people have bought their pair of 
 * I would like to be given feedback from the site confirming when I have completed an action such as creating or deleting a review of a pair of football boots
 * I would like to be able to contact the site owner and provide some feedback on the site
 
-
+## User Stories
+* As a user of the site, I would like to be able to register my details and create a secure account with a username and password
+* As a user, I would like to be able to write a review of a pair of boots I wore
+* As a user, I would like to be able to read a review that someone else wrote on a pair of boots
+* As a user, I would like to be able to update/edit a review that I wrote
+* As a user, I would like to be able to delete a review that I wrote on a pair of boots
+* As a user, I would like to be able to see pictures of boots that have been reviewed
+* As a user, I would like to be able to follow a link to a purchase boots that have been reviewed
+* As a user, I would like to be able to search the database for boot reviews based on certain criteria
+* As a user, I would like to be able to save boots that have been reviewed so that I may see them at a later stage
