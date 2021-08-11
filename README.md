@@ -201,3 +201,13 @@ None
 * [JS Fiddle](https://jsfiddle.net/) - An online playground IDE used to test and trial Javascript code with HTML and CSS
 * [Youtube](https://www.youtube.com/) - Youtube videos are a great way to learn how to do different things if stuck on a particular piece of code
 * [Favicon](https://favicon.io/) - An online tool that generates the icon that is found in the tab bar at the top of the page beside the title of the page.
+
+## Testing
+
+### User Story Testing
+### Validator Testing 
+### Feature Testing 
+### Lighthouse Testing
+### Compatability Testing
+### CRUD Testing
+### Bugs
