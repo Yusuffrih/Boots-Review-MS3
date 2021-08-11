@@ -117,3 +117,29 @@ I created mock ups for my page to fit into the main device types - Desktop, Tabl
 * [Desktop] ()
 
 ### Data Schema
+To carry out the functionality of the site, I needed to create three different collections of data. They are: 
+1. Users 
+2. Boots
+3. Categories
+
+The Users collection is made up of the following fields: 
+* _id: ObjectId("string")
+* username: "string"
+* password: "string"
+
+The Boots collection is made up of the following fields:
+* _id: ObjectId("string")
+* boots_name: "string"
+* make_name: "string"
+* materials_used: "string"
+* price_range: number
+* purchase_url: url
+* image_url: url
+* star_rating: number (1-5)
+* review: "string"
+* created_by: "string"
+
+The Categories collection is made up of the following fields:
+* _id: ObjectId("string")
+* category_name: "string"
+
