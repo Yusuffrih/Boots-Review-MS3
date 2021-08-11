@@ -162,3 +162,7 @@ The site features are as follows:
 * Bootstrap css design features such as navabr, buttons cards etc.
 * Bootstraps responsive web design which allows users to use the site on all device sizes
 
+## Features Yet To Implement
+None 
+
+
