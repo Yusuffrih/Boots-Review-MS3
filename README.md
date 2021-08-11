@@ -146,3 +146,19 @@ The Categories collection is made up of the following fields:
 * _id: ObjectId("string")
 * category_name: "string"
 
+## Features
+The site features are as follows: 
+* Navigation bar at the top of the site for easy and intuitive navigation around the different pages of the site
+* Registration page where the user can input their details, username and password
+* Search bar for users to be able to search through the database:
+    * to find reviews of particular boots that they want to read review of
+    * to find reviews of boots that are in a particular price range
+    * to find reviews of boots that are made with specific materials
+    * to find reviews of boots that are of a certain make
+    * to find reviews of boots that are of a certain star rating
+* To be able to follow the link attached to the boots review which will take the user to an external site where they can purchase the boots
+* User feedback whenever they carry out any of the CRUD operations
+* User feedback on forms
+* Bootstrap css design features such as navabr, buttons cards etc.
+* Bootstraps responsive web design which allows users to use the site on all device sizes
+
