@@ -124,6 +124,9 @@ To carry out the functionality of the site, I needed to create three different c
 
 The Users collection is made up of the following fields: 
 * _id: ObjectId("string")
+* first_name: "string"
+* second_name: "string"
+* email_address: "string"
 * username: "string"
 * password: "string"
 
