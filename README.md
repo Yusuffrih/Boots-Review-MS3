@@ -77,3 +77,10 @@ A secondary aim of the site is that when these people have bought their pair of 
 * All features need to be operating efficiently
 * All features and functionality need to be well laid out and very intuitive
 * The site needs to be responsive across all devices and browsers
+
+## User Expectations
+* Any external links need to open in a separate tab so that I don't lose where I am on the site and have to navigate there again
+* All of the content needs to be easily readable and contrasting with the background colours and imagery
+* Navigation of the site needs to be really easy and intuitive
+* The site owner should be easily contactable - contact page and contact info in the footer of the site
+* Any forms should always provide me with feedback so that I know what input it expects
