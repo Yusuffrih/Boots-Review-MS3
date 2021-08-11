@@ -108,3 +108,12 @@ The colours I have chosen are:
 ### Icons 
 I have gone to [Font Awesome](https://fontawesome.com/) for the icons that I have used in the site. The icons, I feel just add a little bit extra to the site in terms of style and make it a bit more visually appealing which ultimately provides a better User Experience.
 
+### Wireframes
+When creating my wireframes, I first drew some rough sketches on paper but then decided that [Balsamiq](https://balsamiq.com/) would be the most suitable technology to use to assist with the design of the site. 
+
+I created mock ups for my page to fit into the main device types - Desktop, Tablet and Mobile. The mock-ups for the devices can be found here: 
+* [Mobile]()
+* [Tablet] ()
+* [Desktop] ()
+
+### Data Schema
