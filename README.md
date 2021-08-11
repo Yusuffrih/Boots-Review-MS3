@@ -48,13 +48,13 @@ A secondary aim of the site is that when these people have bought their pair of 
 * As a site owner, I would like to collect a database of star ratings of the football boots that are reviewed so that I can eventually create a ranking of the top rated boots
 * As a site owner, I would like to collect a database of price ranges of football boots so that site owners would be able to search for the best rated boots within their price range
 
-## User Goals
+### User Goals
 * I would like the site to be responsive to different screen sizes so that I can use different devices to view the site
 * I would like to feel like I am part of a community of people who have the same interests
 * I would like to be given feedback from the site confirming when I have completed an action such as creating or deleting a review of a pair of football boots
 * I would like to be able to contact the site owner and provide some feedback on the site
 
-## User Stories
+### User Stories
 * As a user of the site, I would like to be able to register my details and create a secure account with a username and password
 * As a user, I would like to be able to write a review of a pair of boots I wore
 * As a user, I would like to be able to read a review that someone else wrote on a pair of boots
@@ -65,7 +65,7 @@ A secondary aim of the site is that when these people have bought their pair of 
 * As a user, I would like to be able to search the database for boot reviews based on certain criteria
 * As a user, I would like to be able to save boots that have been reviewed so that I may see them at a later stage
 
-## User Requirements
+### User Requirements
 * The site needs to be easy to navigate between the different features via good UX and a concise navbar
 * To be able easily see whether or not an CRUD action has been successful or not
 * To have a landing page that tells the user what the page is at a glance
@@ -78,9 +78,10 @@ A secondary aim of the site is that when these people have bought their pair of 
 * All features and functionality need to be well laid out and very intuitive
 * The site needs to be responsive across all devices and browsers
 
-## User Expectations
+### User Expectations
 * Any external links need to open in a separate tab so that I don't lose where I am on the site and have to navigate there again
 * All of the content needs to be easily readable and contrasting with the background colours and imagery
 * Navigation of the site needs to be really easy and intuitive
 * The site owner should be easily contactable - contact page and contact info in the footer of the site
 * Any forms should always provide me with feedback so that I know what input it expects
+
