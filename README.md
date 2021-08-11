@@ -85,3 +85,9 @@ A secondary aim of the site is that when these people have bought their pair of 
 * The site owner should be easily contactable - contact page and contact info in the footer of the site
 * Any forms should always provide me with feedback so that I know what input it expects
 
+## Design Choices
+Generally, football boots tend to be quite sleek and stylish so I decided to try and keep this site the same way. The overall look and feel of the site is very soft touch with nice lines and angles. The colours are quite simple with lots of black and white but with a bit of colour to give it that little bit of extra style.
+
+### Fonts
+There is very little text on the landing page so as not to distract the user and not to take the user's attention away from understanding what the overall aim of the site actually is. For the fonts, I used [Google Fonts](https://fonts.google.com/?standard-styles=). This is a really fantastic feature of [Google](https://google.com) which is great for getting any kind of font you want. The fonts I chose for my page are *Play* & *Roboto* with *sans-serif* as a backup font in the event that [Google Fonts](https://fonts.google.com/?standard-styles=) does not work. The reason I decided to use *Play* & *Roboto* is that I found them to be quite sleek fonts which would almost represent a pair of football boots. 
+
