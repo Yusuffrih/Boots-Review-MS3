@@ -91,3 +91,17 @@ Generally, football boots tend to be quite sleek and stylish so I decided to try
 ### Fonts
 There is very little text on the landing page so as not to distract the user and not to take the user's attention away from understanding what the overall aim of the site actually is. For the fonts, I used [Google Fonts](https://fonts.google.com/?standard-styles=). This is a really fantastic feature of [Google](https://google.com) which is great for getting any kind of font you want. The fonts I chose for my page are *Play* & *Roboto* with *sans-serif* as a backup font in the event that [Google Fonts](https://fonts.google.com/?standard-styles=) does not work. The reason I decided to use *Play* & *Roboto* is that I found them to be quite sleek fonts which would almost represent a pair of football boots. 
 
+### Colours
+In deciding the colour scheme for the site, I decided to keep it nice and simple while at the same time trying to make it sleek and almost stealthy as this is the feel that is often hinted upon in tv ads for football boots. There is often a lot of black with splashes of colour. The black tends to make the colour stand out and is a really good contrasting background for reading content. The same idea goes for white. 
+
+I used the site [Coolors](https://coolors.co/) to assist in generating a colour scheme for the site. This is a great site as it gives you the codes of the colours you want in any form you want ie. Hex code. 
+
+![Colour Pallette]()
+
+The colours I have chosen are: 
+* Rich Black Fogra 39 - Hex (0B0909)
+* White - Hex (FFFFFF)
+* Platinum - Hex (ECEAEC)
+* Capri - Hex (21C2FD)
+* Red RYB - Hex (FF1F0A)
+
