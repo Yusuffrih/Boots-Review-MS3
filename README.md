@@ -213,6 +213,31 @@ None
 ### Bugs
 
 ## Deployment
+All of the code was written in Gitpod, a cloud-based IDE. Github is used in conjunction with Gitpod you can deploy your project to Github Pages through the following steps: 
+
+### Github Pages
+To deplow the site, the following steps were taken: 
+1. Opened Github repository
+2. Opened settings 
+3. Click into **Pages** section on the side menu
+4. Clicked into Branches
+5. Selected **Master Branch**
+6. Clicked save
+7. Refreshed page
+8. Await confirmation of deployment to Github Pages
+
+### Run Locally
+To run the project locally, follow these simple steps:
+1. Open the Repository
+2. Click on the **Code** button beside the green Gitpod button
+3. Click into the HTTPS tab
+4. Copy the URL available
+5. Open your local IDE
+6. Type git clone into the terminal which should prompt you to enter your copied URL
+7. Paste the URL here
+8. Project should be running in local IDE now
+
+### Deploying in Heroku
 
 ## Credits
 
