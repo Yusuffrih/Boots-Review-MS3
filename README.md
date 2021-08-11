@@ -21,7 +21,7 @@ A secondary aim of the site is that when these people have bought their pair of 
         * Data Schema 
 * Features
     * Implemented Features
-    * Features Not Yet Implemented
+    * Features Yet To Implemented
 * Technologies Used
     * Languages
     * Frameworks & Libraries
@@ -163,6 +163,41 @@ The site features are as follows:
 * Bootstraps responsive web design which allows users to use the site on all device sizes
 
 ## Features Yet To Implement
-None 
+None
 
+## Technologies Used
 
+### Languages
+* [HTML](https://en.wikipedia.org/wiki/HTML) - HTML is a markup language I used for structuring and presenting content of my site
+* [CSS](https://en.wikipedia.org/wiki/CSS) - A language used to style the presentation of the content written in HTML5
+* [Javascript](https://en.wikipedia.org/wiki/JavaScript) - Javascript is the language used to provide the interactivity to the user on the site
+* [Python](https://www.python.org/) - Python is a backend programming language that is highly powerful and is designed around readability. It's language constructs and object oriented approach assist programmers in writing clear and easily read code
+
+### Frameworks & Libraries
+* [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - A front-end framework which assist me in creating responsive website design
+* [Google Fonts](https://fonts.google.com/) - An open-source online library of thousands of fonts and icons that were free and easy to use.
+* [Font Awesome](https://fontawesome.com/) - An open source online library of icons which I used for extra styling.
+* [Pip3](https://pypi.org/project/pip/) - Pip3 is the package installer for Python and is used to download Python dependencies from the command line
+* [BSON](https://en.wikipedia.org/wiki/BSON) - BSON is the binary encoding of JSON-like documents that MongoDB uses when storing documents in collections. It adds support for data types like Date and binary that aren't supported in JSON.
+* [Pep8](https://pypi.org/project/pep8/) - Used pip3 to install pep8 validator which is a tool which ensures you stick to the pep8 compliance
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/) - used to import the following functions: flash, render_template, redirect, request, session, url_for
+* [MongoDB](https://www.mongodb.com/1) - MongoDB is an object-oriented, simple, dynamic, and scalable NoSQL database. It where I stored the database for this project
+* [Heroku](https://id.heroku.com/login) - Heroku is a container-based cloud Platform as a Service (PaaS). Developers use Heroku to deploy, manage, and scale modern apps to get it to the market
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - Workzeug is used in this project to for password security.
+
+### Tools
+* [Coolors](https://coolors.co/) - Used this to generate a colour scheme that matched what I wanted for the site.
+* [Pexels](https://www.pexels.com/) - Online library of stock photos for use for free.
+* [Balsamic](https://balsamiq.com/) - Software used to complete the wireframes. This was much easier than trying to draw.
+* [CSS Formatter](https://www.cleancss.com/css-beautify/) - This is used to beautify the CSS code
+* [Javascript Formatter](https://beautifier.io/) - This is used to beatify the Javascript code to ensure the correct formatting is applied
+* [Git](https://en.wikipedia.org/wiki/Git) - System used version control
+* [GitHub](https://github.com/) - This is where my project repository was stored.
+* [GitPod](https://www.gitpod.io/) - Open source, online workspace used to work on my project
+* [W3 HTML Validator](https://validator.w3.org/) - Used to validate my code to ensure that there were no errors.
+* [W3 CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to validate my code to ensure that there were no errors.
+* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/Chrome) - A set of development tools to assist the user create web content. They are built directly into the browser
+* [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) - One of the Chrome Dev Tools which was used to assess the level of accessibility, performance and correctness that was provided by the site.
+* [JS Fiddle](https://jsfiddle.net/) - An online playground IDE used to test and trial Javascript code with HTML and CSS
+* [Youtube](https://www.youtube.com/) - Youtube videos are a great way to learn how to do different things if stuck on a particular piece of code
+* [Favicon](https://favicon.io/) - An online tool that generates the icon that is found in the tab bar at the top of the page beside the title of the page.
