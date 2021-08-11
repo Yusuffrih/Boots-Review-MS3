@@ -48,3 +48,10 @@ A secondary aim of the site is that when these people have bought their pair of 
 * As a site owner, I would like to collect a database of star ratings of the football boots that are reviewed so that I can eventually create a ranking of the top rated boots
 * As a site owner, I would like to collect a database of price ranges of football boots so that site owners would be able to search for the best rated boots within their price range
 
+## User Goals
+* I would like the site to be responsive to different screen sizes so that I can use different devices to view the site
+* I would like to feel like I am part of a community of people who have the same interests
+* I would like to be given feedback from the site confirming when I have completed an action such as creating or deleting a review of a pair of football boots
+* I would like to be able to contact the site owner and provide some feedback on the site
+
+
