@@ -64,3 +64,16 @@ A secondary aim of the site is that when these people have bought their pair of 
 * As a user, I would like to be able to follow a link to a purchase boots that have been reviewed
 * As a user, I would like to be able to search the database for boot reviews based on certain criteria
 * As a user, I would like to be able to save boots that have been reviewed so that I may see them at a later stage
+
+## User Requirements
+* The site needs to be easy to navigate between the different features via good UX and a concise navbar
+* To be able easily see whether or not an CRUD action has been successful or not
+* To have a landing page that tells the user what the page is at a glance
+* To have a well laid out site that is easy to use and understandable
+* To be able to read clearly any messaging that is displayed on screen via constrasting backgrounds
+* To be given clear and easy to understand instructions via really good UX
+* To be able to contact the site owner to provide feedback or make a complaint if necessary
+* To have my registration and personal data secure in the database
+* All features need to be operating efficiently
+* All features and functionality need to be well laid out and very intuitive
+* The site needs to be responsive across all devices and browsers
