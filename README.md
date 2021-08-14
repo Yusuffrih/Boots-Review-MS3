@@ -137,7 +137,7 @@ The Boots collection is made up of the following fields:
 | id            | ObjectId  | N/A     |
 | name          | string    | N/A     |
 | make_id       | string    | N/A     |
-| materials_id  | string    | N/A     |
+| color_id  | string    | N/A     |
 | price-range_id| string    | N/A     |
 | purchase_url  | string    | N/A     |
 | image_url     | string    | N/A     |
@@ -159,11 +159,11 @@ The Reviews collection is made up of the following fields:
 | user_id     | string    | N/A     |
 | review_date | string    | N/A     |
 
-The Materials collections is made up of the following fields:
+The Colours collections is made up of the following fields:
 | Field         | Data Type | Default |
 |---------------|-----------|---------|
 | id            | ObjectId  | N/A     |
-| material_type | string    | N/A     |
+| color | string    | N/A     |
 
 The Price Ranges collection is made up of the following fields:
 | Field       | Data Type | Default |
