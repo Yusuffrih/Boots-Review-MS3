@@ -123,28 +123,66 @@ To carry out the functionality of the site, I needed to create three different c
 3. Categories
 
 The Users collection is made up of the following fields: 
-* _id: ObjectId("string")
-* first_name: "string"
-* second_name: "string"
-* email_address: "string"
-* username: "string"
-* password: "string"
+| Field    | Data Type | Default |
+|----------|-----------|---------|
+| id       | ObjectId  | N/A     |
+| is_admin | boolean   | True    |
+| username | string    | N/A     |
+| password | string    | N/A     |
+| bio      | string    | N/A     | 
 
 The Boots collection is made up of the following fields:
-* _id: ObjectId("string")
-* boots_name: "string"
-* make_name: "string"
-* materials_used: "string"
-* price_range: number
-* purchase_url: url
-* image_url: url
-* star_rating: number (1-5)
-* review: "string"
-* created_by: "string"
+| Field         | Data Type | Default |
+|---------------|-----------|---------|
+| id            | ObjectId  | N/A     |
+| name          | string    | N/A     |
+| make_id       | string    | N/A     |
+| materials_id  | string    | N/A     |
+| price-range_id| string    | N/A     |
+| purchase_url  | string    | N/A     |
+| image_url     | string    | N/A     |
+| star_rating_id| number    | N/A     |
+| review_id     | array     | N/A     |
+| category_id     | string     | N/A  |
 
 The Categories collection is made up of the following fields:
-* _id: ObjectId("string")
-* category_name: "string"
+| Field | Data Type | Default |
+|-------|-----------|---------|
+| id    | ObjectId  | N/A     |
+| name  | string    | N/A     |
+
+The Reviews collection is made up of the following fields:
+| Field       | Data Type | Default |
+|-------------|-----------|---------|
+| id          | ObjectId  | N/A     |
+| boot_id     | string    | N/A     |
+| user_id     | string    | N/A     |
+| review_date | string    | N/A     |
+
+The Materials collections is made up of the following fields:
+| Field         | Data Type | Default |
+|---------------|-----------|---------|
+| id            | ObjectId  | N/A     |
+| material_type | string    | N/A     |
+
+The Price Ranges collection is made up of the following fields:
+| Field       | Data Type | Default |
+|-------------|-----------|---------|
+| id          | ObjectId  | N/A     |
+| price_range | string    | N/A     |
+
+The Makes collection is made up of the following fields:
+| Field | Data Type | Default |
+|-------|-----------|---------|
+| id    | ObjectId  | N/A     |
+| name  | string    | N/A     |
+
+The Star Ratings collection is made up of the following fields:
+| Field | Data Type | Default |
+|-------|-----------|---------|
+| id    | ObjectId  | N/A     |
+| stars | number    | N/A     |
+
 
 ## Features
 The site features are as follows: 
