@@ -244,6 +244,7 @@ None
 * [JS Fiddle](https://jsfiddle.net/) - An online playground IDE used to test and trial Javascript code with HTML and CSS
 * [Youtube](https://www.youtube.com/) - Youtube videos are a great way to learn how to do different things if stuck on a particular piece of code
 * [Favicon](https://favicon.io/) - An online tool that generates the icon that is found in the tab bar at the top of the page beside the title of the page.
+* [RandomKeyGen](https://randomkeygen.com/) - A tool that creates a random password to be used
 
 ## Testing
 
