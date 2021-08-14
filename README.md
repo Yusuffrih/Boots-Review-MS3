@@ -121,6 +121,11 @@ To carry out the functionality of the site, I needed to create three different c
 1. Users 
 2. Boots
 3. Categories
+4. Reviews
+5. Colours
+6. Price Ranges
+7. Makes
+8. Star Ratings
 
 The Users collection is made up of the following fields: 
 | Field    | Data Type | Default |
