@@ -1,6 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'layout/base.html' %}
 {% block content%}
 {% include 'components/navigation/nav.html' %}
-
+    {% for review in reviews %}
+        {{ review.review }}
+        <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
+        {{ review.star_rating_id }}
+        {{ review.date_of_review }}
+    {% endfor %}
 {% include 'components/footer/footer.html' %}
 {% endblock %}
