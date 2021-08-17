@@ -24,6 +24,11 @@ def home_page():
     return render_template('pages/home.html')
 
 
+@app.route("/sign-up", methods=["GET", "POST"])
+def sign_up():
+    return render_template("pages/authentication.html")
+
+
 @app.route("/reviews")
 def reviews():
     reviews = mongo.db.reviews.find()
