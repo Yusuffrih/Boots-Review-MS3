@@ -23,6 +23,12 @@ def home_page():
     return render_template('pages/home.html')
 
 
+@app.route("/reviews")
+def reviews():
+    reviews = mongo.db.reviews.find()
+    return render_template("pages/reviews.html", reviews=reviews)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
