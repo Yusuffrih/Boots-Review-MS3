@@ -1,6 +1,25 @@
-{% extends 'base.html' %}
+{% extends 'layout/base.html' %}
 {% block content%}
 {% include 'components/navigation/nav.html' %}
-
+<div class="card">
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+              <label for="username-input">Username</label>
+              <input type="text" class="form-control" id="username-input" aria-describedby="emailHelp">
+              <small id="usernmae-help" class="form-text text-muted">Your Username is not case sensitive</small>
+            </div>
+            <div class="form-group">
+              <label for="password-input">Password</label>
+              <input type="password" class="form-control" id="password-input">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+  </div>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
