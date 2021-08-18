@@ -6,13 +6,13 @@
   <form class="container col-sm-12 col-md-8 offset-left-2" method="POST" action="{{ url_for ('sign_up') }}">
     <!-- Username -->
     <div class="form-group">
-      <label for="username-input">Username</label>
-      <input type="text" class="form-control" id="username-input" name = "username-input" aria-describedby="emailHelp">
+      <label for="username-input">Username <i class="fas fa-user"></i></label>
+      <input type="text" class="form-control" id="username-input" name = "username-input" aria-describedby="username-help">
       <small id="username-help" class="form-text text-muted">Your Username is not case sensitive</small>
     </div>
     <!-- Password -->
     <div class="form-group">
-      <label for="password-input">Password</label>
+      <label for="password-input">Password <i class="fas fa-key"></i></label>
       <input type="password" class="form-control" id="password-input" name = "password-input">
       <small id="password-help" class="form-text text-muted">The password should be six or more characters and not include special characters</small>
     </div>
