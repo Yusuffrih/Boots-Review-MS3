@@ -18,6 +18,7 @@ body {
 
 h3 {
     font-size: 3rem;
+    margin-top: 20px;
 }
 
 /* Home Page */
@@ -103,4 +104,5 @@ footer {
 .btn-lg {
     font-size: 2rem;
 }
+
 
