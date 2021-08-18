@@ -3,21 +3,29 @@
 {% include 'components/navigation/nav.html' %}
 
   <h3>Sign Up</h3>
-  <form class="container col-sm-12 col-md-8" method="POST" action="{{ url_for ('sign_up') }}">
+  <form class="container col-sm-12 col-md-8 authentication-form needs-validation" novalidate method="POST" action="{{ url_for ('sign_up') }}">
     <!-- Username -->
     <div class="form-group">
       <label for="username-input">Username <i class="fas fa-user"></i></label>
-      <input type="text" class="form-control" id="username-input" name = "username-input" aria-describedby="username-help">
-      <small id="username-help" class="form-text text-muted">Your Username is not case sensitive</small>
+      <input type="text" class="form-control" id="username-input" name="username-input" 
+      minlength="3" maxlength="15" placeholder="Usernames are not case sensitive" aria-label="username" autofocus required>
     </div>
     <!-- Password -->
     <div class="form-group">
       <label for="password-input">Password <i class="fas fa-key"></i></label>
-      <input type="password" class="form-control" id="password-input" name = "password-input">
-      <small id="password-help" class="form-text text-muted">The password should be six or more characters and not include special characters</small>
+      <input type="password" class="form-control" id="password-input" name="password-input" 
+      minlength="6" maxlength="20" pattern="[A-Za-z]{6,}" placeholder="Must be at least 6 characters long with no special characters e.g. @!%" 
+      aria-label="password" required>
+    </div>
+    <!-- Profile Bio -->
+    <div class="form-group">
+      <label for="bio-input">Profile Bio <i class="fas fa-user"></i></label>
+      <textarea class="form-control" id="username-input" name="username-input" 
+      minlength="50" maxlength="300" placeholder="Please write a little about yourself that will be displayed on your user profile page(min. 50 characters)" 
+      aria-label="profile bio" rows="3" required></textarea>
     </div>
     <!-- Submit -->
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-lg btn-primary authentication-submit">Submit</button>
   </form>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
