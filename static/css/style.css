@@ -99,8 +99,12 @@ footer {
     background-color: #0B0909;
 }
 
-.navbar-brand {
+a.navbar-brand {
     font-size: 3rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
 }
 
 /* Buttons */
