@@ -42,10 +42,12 @@ def sign_up():
             "profile_pic": request.form.get("profile-pic")
         }
         mongo.db.users.insert_one(sign_up)
+        return redirect(url_for('pages/profile.html'))
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("You have successfully signed up!")
+
     return render_template("pages/authentication.html")
 
 
