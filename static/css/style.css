@@ -133,3 +133,10 @@ a.navbar-brand {
     padding: 20px;
     margin-top: 20px;
 }
+
+/* Flash messages */
+
+#flash-message {
+    background-color: #0B0909;
+    color: #FF1F0A;
+}
