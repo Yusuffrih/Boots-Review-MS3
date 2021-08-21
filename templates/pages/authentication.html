@@ -23,11 +23,13 @@
     <div class="form-group">
       <label for="profile-pic" class="form-label">Profile Picture</label>
       <input type="url" class="form-control" id="profile-pic" name="profile-pic" placeholder="https://i.postimg.cc/AAAA/example.png" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.png)" required>
-      <small><em>Needs to be a URL</em></small>
-      <a href="https://postimages.org/">Make yours here</a>
+      <small class="form-help"><em>Needs to be a URL - Make yours <a href="https://postimages.org/" target="_blank">here</a></em></small>
     </div>
     <!-- Submit -->
     <button type="submit" class="btn btn-lg btn-primary authentication-submit">Submit</button>
+    <div class="form-help">
+      <small>Already have an account? <a href="#">Log In</a></small>
+    </div>
   </form>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
