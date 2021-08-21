@@ -132,6 +132,8 @@ a.navbar-brand {
     background-color: #ECEAEC;
     padding: 20px;
     margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px #0b090918;
 }
 
 .form-help {
@@ -142,5 +144,7 @@ a.navbar-brand {
 
 #flash-message {
     background-color: #0B0909;
-    color: #FF1F0A;
+    color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 5px 5px #0b090918;
 }
