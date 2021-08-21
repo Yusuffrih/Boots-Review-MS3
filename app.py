@@ -42,13 +42,46 @@ def sign_up():
             "profile_pic": request.form.get("profile-pic")
         }
         mongo.db.users.insert_one(sign_up)
-        return redirect(url_for('pages/profile.html'))
+        return redirect(url_for("profile"))
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("You have successfully signed up!")
 
     return render_template("pages/authentication.html", sign_up=True)
+
+
+@app.route("/log-in", methods=["GET", "POST"])
+def log_in():
+    if request.method == "POST":
+        # check if username already exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            print("ADDED BY JO -- USER EXISTS")
+            # check to see if the password matches that of the db
+            if check_password_hash(existing_user["password"],
+               request.form.get("password")):
+                print("ADDED BY JO -- USER GAVE CORRECT PASSWORD")
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for("profile"))
+
+            else:
+                print("ADDED BY JO -- USER GAVE WRONG PASSWORD")
+                flash("Invalid username/password, try again!")
+                return redirect(url_for('log_in'))
+
+        else:
+            flash("Invalid username/password, try again!")
+            return redirect(url_for("log_in"))
+
+    return render_template("pages/authentication.html")
+
+
+@app.route("/profile")
+def profile():
+    return render_template("/pages/profile.html")
 
 
 @app.route("/reviews")
