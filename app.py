@@ -48,7 +48,7 @@ def sign_up():
         session["user"] = request.form.get("username").lower()
         flash("You have successfully signed up!")
 
-    return render_template("pages/authentication.html")
+    return render_template("pages/authentication.html", sign_up=True)
 
 
 @app.route("/reviews")
