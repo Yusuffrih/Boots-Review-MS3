@@ -1,30 +1,45 @@
 {% include 'components/flash_messages/flash_messages.html' %}
-  <h3>Sign Up</h3>
-  <form class="container col-sm-12 col-md-8 authentication-form was-validated" method="POST" action="{{ url_for ('sign_up') }}" novalidate>
-    <!-- Username -->
-    <div class="form-group">
-      <label for="username">Username <i class="fas fa-user"></i></label>
-      <input type="text" class="form-control" id="username" name="username" minlength="3" maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" placeholder="Username is not case sensitive" aria-label="username" autofocus required>
-    </div>
-    <!-- Password -->
-    <div class="form-group">
-      <label for="password">Password <i class="fas fa-key"></i></label>
-      <input type="password" class="form-control" id="password" name="password" minlength="6" maxlength="20" pattern="^[A-Za-z0-9]{6,20}$" placeholder="Must be at least 6 characters long with no special characters e.g. @!%" aria-label="password" required>
-    </div>
-    <!-- Profile Bio -->
-    <div class="form-group">
-      <label for="bio">Profile Bio <i class="fas fa-user"></i></label>
-      <textarea class="form-control" id="bio" name="bio" minlength="50" maxlength="300" placeholder="Please write a little about yourself that will be displayed on your user profile page(min. 50 characters)" aria-label="profile bio" rows="3" required></textarea>
-    </div>
-    <!--Profile Picture -->
-    <div class="form-group">
-      <label for="profile-pic" class="form-label">Profile Picture</label>
-      <input type="url" class="form-control" id="profile-pic" name="profile-pic" placeholder="https://i.postimg.cc/AAAA/example.png" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.png)" required>
-      <small class="form-help"><em>Needs to be a URL - Make yours <a href="https://postimages.org/" target="_blank">here</a></em></small>
-    </div>
-    <!-- Submit -->
-    <button type="submit" class="btn btn-lg btn-primary authentication-submit">Submit</button>
-    <div class="form-help">
-      <small>Already have an account? <a href="#">Log In</a></small>
-    </div>
-  </form>
+{% if sign_up == True %}
+    <h3>Sign Up</h3>
+    <form class="container col-sm-12 col-md-8 authentication-form was-validated" method="POST" action="{{ url_for ('sign_up') }}" novalidate>
+
+{% else %}
+    <h3>Log In</h3>
+    <form class="container col-sm-12 col-md-8 authentication-form was-validated" method="POST" action="#" novalidate>
+
+{% endif %}
+        <!-- Username -->
+        <div class="form-group">
+            <label for="username">Username <i class="fas fa-user"></i></label>
+            <input type="text" class="form-control" id="username" name="username" minlength="3" maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" placeholder="Username is not case sensitive" aria-label="username" autofocus required>
+        </div>
+        <!-- Password -->
+        <div class="form-group">
+            <label for="password">Password <i class="fas fa-key"></i></label>
+            <input type="password" class="form-control" id="password" name="password" minlength="6" maxlength="20" pattern="^[A-Za-z0-9]{6,20}$" placeholder="Must be at least 6 characters long with no special characters e.g. @!%" aria-label="password" required>
+        </div>
+{% if sign_up == True %}
+        <!-- Profile Bio -->
+        <div class="form-group">
+            <label for="bio">Profile Bio <i class="fas fa-user"></i></label>
+            <textarea class="form-control" id="bio" name="bio" minlength="50" maxlength="300" placeholder="Please write a little about yourself that will be displayed on your user profile page(min. 50 characters)" aria-label="profile bio" rows="3" required></textarea>
+        </div>
+        <!--Profile Picture -->
+        <div class="form-group">
+            <label for="profile-pic" class="form-label">Profile Picture</label>
+            <input type="url" class="form-control" id="profile-pic" name="profile-pic" placeholder="https://i.postimg.cc/AAAA/example.png" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.png)" required>
+            <small class="form-help"><em>Needs to be a URL - Make yours <a href="https://postimages.org/" target="_blank">here</a></em></small>
+        </div>
+        <!-- Sign-Up -->
+        <button type="submit" class="btn btn-lg btn-primary authentication-submit">Sign Up</button>
+        <div class="form-help">
+            <small>Already have an account? <a href="#">Log In</a></small>
+        </div>
+{% else %}
+        <!-- Login -->
+        <button type="submit" class="btn btn-lg btn-primary authentication-submit">Log In</button>
+        <div class="form-help">
+            <small>Don't have an account? <a href="#">Sign Up</a></small>
+        </div>
+{% endif %}
+    </form>
