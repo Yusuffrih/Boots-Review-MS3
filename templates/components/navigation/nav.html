@@ -22,7 +22,7 @@
         <!-- If Logged In -->
       {% if session.user %}
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ url_for('profile') }}">
               Profile
             </a>
         </li>
