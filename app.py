@@ -59,16 +59,13 @@ def log_in():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            print("ADDED BY JO -- USER EXISTS")
             # check to see if the password matches that of the db
             if check_password_hash(existing_user["password"],
                request.form.get("password")):
-                print("ADDED BY JO -- USER GAVE CORRECT PASSWORD")
                 session["user"] = request.form.get("username").lower()
                 return redirect(url_for("profile"))
 
             else:
-                print("ADDED BY JO -- USER GAVE WRONG PASSWORD")
                 flash("Invalid username/password, try again!")
                 return redirect(url_for('log_in'))
 
