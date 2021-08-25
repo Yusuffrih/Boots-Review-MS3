@@ -47,6 +47,7 @@ def sign_up():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("You have successfully signed up!")
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("pages/authentication.html", sign_up=True)
 
@@ -63,7 +64,8 @@ def log_in():
             if check_password_hash(existing_user["password"],
                request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                return redirect(url_for("profile"))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
 
             else:
                 flash("Invalid username/password, try again!")
@@ -76,9 +78,17 @@ def log_in():
     return render_template("pages/authentication.html")
 
 
-@app.route("/profile")
-def profile():
-    return render_template("/pages/profile.html")
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # grab the session user's profile details from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    profile = mongo.db.users.find_one(
+        {"username": session["user"]})
+
+    return render_template("/pages/profile.html",
+                           username=username,
+                           profile=profile)
 
 
 @app.route("/reviews")

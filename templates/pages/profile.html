@@ -4,13 +4,13 @@
     <div class="container justify-content-center" id="profile-page-container">
         <div class="row">
             <div class="profile-img-container">
-                    <img src="#" alt="Profile picture">
+                    <img src="{{ profile.profile_pic}}" alt="Profile picture">
             </div>
-            <h2 class="align-center">Welcome to your profile page!</h2>
+            <h2 class="align-center">{{ username}}, welcome to your profile page!</h2>
         </div>
         <div class="row">
-            <h4 class="col" id="profile-bio-title">A little about you</h4>
-            <p class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa reprehenderit voluptate voluptatum odit corrupti iure. Sit accusantium illum repellat voluptate harum sequi deserunt, dicta, iure eius porro modi rem assumenda. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit et dolores voluptas quis dolor? Ipsum atque temporibus eveniet nulla quam, libero reprehenderit maiores consectetur. Repellat quia tempora suscipit accusamus ex.</p></div>
+            <h4 class="col" id="profile-bio-title">A little about {{ username }}</h4>
+            <p class="col">{{ profile.bio }}</p></div>
     </div>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
