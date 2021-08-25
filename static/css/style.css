@@ -156,19 +156,34 @@ a.navbar-brand {
 
 /* Profile Page */
 
-.profile-img-container {
-    border: 1px solid #0B0909;
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    margin-top: 20px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#profile-card {
+    min-width: 5em;
+    min-height: 5em;
+    border: 1px #0B0909 solid;
+    border-radius: 0.75rem;
+    background-color: #ECEAEC;
+    margin-top: 1rem;
 }
 
-#profile-page-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+#profile-card .card-body {
+    margin-top: 0;
+    padding: 0;
+    padding-bottom: 0.75rem;
+}
+
+#profile-card h3 {
+    background-color: #0B0909;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-top: 0;
+}
+
+#bio-section {
+    padding: 0 2rem 0 2rem;
+}
+
+#profile-bio-title {
+    margin-top: 1rem;
 }

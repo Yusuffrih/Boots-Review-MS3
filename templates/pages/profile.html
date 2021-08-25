@@ -3,14 +3,25 @@
 {% include 'components/navigation/nav.html' %}
     <div class="container justify-content-center" id="profile-page-container">
         <div class="row">
-            <div class="profile-img-container">
-                    <img src="{{ profile.profile_pic}}" alt="Profile picture">
+            <div class="col-sm-6 col-md-4">
+                <div id="profile-card" class="card">
+                    <img src="{{ profile.profile_pic}}" class="card-img-top" alt="Profile picture">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ username }}</h3>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-primary">Delete</a>
+                    </div>
+                </div>
             </div>
-            <h2 class="align-center">{{ username}}, welcome to your profile page!</h2>
+            <div id="bio-section" class="col-sm-6 col-md-8">
+                <div class="row">
+                    <h3 id="profile-bio-title">A little about {{ username }}</h3>
+                </div>
+                <div class="row">
+                    <p id="profile-bio">{{ profile.bio }}</p>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <h4 class="col" id="profile-bio-title">A little about {{ username }}</h4>
-            <p class="col">{{ profile.bio }}</p></div>
     </div>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
