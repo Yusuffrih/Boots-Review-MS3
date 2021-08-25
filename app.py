@@ -42,7 +42,6 @@ def sign_up():
             "profile_pic": request.form.get("profile-pic")
         }
         mongo.db.users.insert_one(sign_up)
-        return redirect(url_for("profile"))
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
@@ -86,9 +85,20 @@ def profile(username):
     profile = mongo.db.users.find_one(
         {"username": session["user"]})
 
-    return render_template("/pages/profile.html",
+    if session["user"]:
+        return render_template("/pages/profile.html",
                            username=username,
                            profile=profile)
+
+    return redirect(url_for("log_in"))
+
+
+@app.route("/log-out")
+def log_out():
+    # remove user from session cookies
+    flash("You have logged out successfully")
+    session.pop("user")
+    return redirect(url_for("log_in"))
 
 
 @app.route("/reviews")
