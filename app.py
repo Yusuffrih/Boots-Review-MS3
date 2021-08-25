@@ -103,8 +103,12 @@ def log_out():
 
 @app.route("/reviews")
 def reviews():
-    reviews = mongo.db.reviews.find()
-    return render_template("pages/reviews.html", reviews=reviews)
+    # Get all reviews created & display newest to oldest
+    if session:
+        reviews = list(mongo.db.reviews.find())
+        return render_template("pages/reviews.html", reviews=reviews)
+    else:
+        return redirect(url_for("home_page"))
 
 
 if __name__ == "__main__":
