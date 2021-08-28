@@ -87,8 +87,8 @@ def profile(username):
 
     if session["user"]:
         return render_template("/pages/profile.html",
-                           username=username,
-                           profile=profile)
+                               username=username,
+                               profile=profile)
 
     return redirect(url_for("log_in"))
 
