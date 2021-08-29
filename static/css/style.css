@@ -157,12 +157,18 @@ a.navbar-brand {
 /* Profile Page */
 
 #profile-card {
-    min-width: 5em;
-    min-height: 5em;
+    min-width: 20rem;
+    min-height: 30rem;
     border: 1px #0B0909 solid;
     border-radius: 0.75rem;
     background-color: #ECEAEC;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#profile-card img {
+    height: 100%;
+    width: 100%;
 }
 
 #profile-card .card-body {
@@ -186,4 +192,35 @@ a.navbar-brand {
 
 #profile-bio-title {
     margin-top: 1rem;
+}
+
+.carousel-control-prev {
+    padding-right: 4rem;
+}
+
+.carousel-control-next {
+    padding-left: 4rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0B0909;
+}
+
+/* Add Review Form */
+
+#form-container {
+    background-color: #ECEAEC;
+    color: #0B0909;
+    border-radius: 1.5rem;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    min-height: 45rem;
+    box-shadow: 5px 5px #0b090918;
+}
+
+#submit-add-review {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
