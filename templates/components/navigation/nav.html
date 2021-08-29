@@ -14,20 +14,20 @@
             Home
           </a>
         </li>
+      <!-- If Logged In -->
+      {% if session.user %}
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('reviews') }}">
             Reviews
           </a>
         </li>
-        <!-- If Logged In -->
-      {% if session.user %}
         <li class="nav-item">
             <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">
               Profile
             </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{{ url_for('add_review')}}">
             Add Review
           </a>
         </li>
