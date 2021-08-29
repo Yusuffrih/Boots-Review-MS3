@@ -84,11 +84,13 @@ def profile(username):
         {"username": session["user"]})["username"]
     profile = mongo.db.users.find_one(
         {"username": session["user"]})
+    reviews = list(mongo.db.reviews.find({"user_id": session["user"]}))
 
     if session["user"]:
         return render_template("/pages/profile.html",
                                username=username,
-                               profile=profile)
+                               profile=profile,
+                               reviews=reviews)
 
     return redirect(url_for("log_in"))
 
@@ -103,12 +105,42 @@ def log_out():
 
 @app.route("/reviews")
 def reviews():
-    # Get all reviews created & display newest to oldest
+    # Get all reviews created & display
     if session:
         reviews = list(mongo.db.reviews.find())
         return render_template("pages/reviews.html", reviews=reviews)
     else:
         return redirect(url_for("home_page"))
+
+
+@app.route("/add-review", methods=["GET", "POST"])
+def add_review():
+
+    makes = mongo.db.makes.find()
+    categories = mongo.db.categories.find()
+    stars = mongo.db.stars.find()
+
+    if session:
+        if request.method == "POST":
+            review = {
+                "boots_name": request.form.get("name"),
+                "make": request.form.get("make_id"),
+                "image_url": request.form.get("image_url"),
+                "category": request.form.get("category"),
+                "review_date": request.form.get("review_date"),
+                "star_rating_id": request.form.get("star_rating_id"),
+                "review": request.form.get("review"),
+                "user_id": session["user"]
+            }
+
+            mongo.db.reviews.insert_one(review)
+            flash("Review successfully added!")
+            return redirect(url_for("reviews"))
+
+    return render_template("pages/add_review.html",
+                           makes=makes,
+                           categories=categories,
+                           stars=stars)
 
 
 if __name__ == "__main__":
