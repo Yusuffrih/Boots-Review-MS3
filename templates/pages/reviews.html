@@ -2,23 +2,27 @@
 {% block content%}
 {% include 'components/navigation/nav.html' %}
     <div class="container justify-content-center" id="review-container">
-        {% for review in reviews %}
-            <div class="col-sm-6 col-md-4">
-                <div id="profile-card" class="card">
-                    <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
-                    <div class="card-body">
-                        <h3 class="card-title">{{ review.star_rating_id }}</h3>
-                        <h4 class="card-title">{{ review.review_date}}</h3>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Read Review</a>
-                        <div class="collapse multi-collapse" id="multiCollapseExample1">
-                            <div class="card card-body">
-                                {{ review.review }}
+        <div class="row">
+            {% for review in reviews %}
+                <div class="col-sm-6 col-md-4">
+                    <div id="profile-card" class="card">
+                        <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ review.star_rating_id }}</h3>
+                            <h4 class="card-title">{{ review.review_date}}</h3>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Read Review
+                            </button>
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    {{ review.review }}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
     
 {% include 'components/footer/footer.html' %}
