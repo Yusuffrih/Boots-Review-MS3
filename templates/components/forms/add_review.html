@@ -1,0 +1,60 @@
+{% include 'components/flash_messages/flash_messages.html' %}
+<h3>Add Review</h3>
+<form id="form-container" class="container was-validated" method="POST" action="{{ url_for('add_review')}}" novalidate>
+    <!-- Name of Boots -->
+    <div class="form-group col">
+        <label for="name">Name of Boots</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Boots Name" required>
+    </div>
+    <!-- Make -->
+    <div class="form-group col">
+        <label for="make_id">Make</label>
+        <select class="custom-select form-control" id="make_id" name="make_id" required>
+            <option value="" selected disabled>Choose...</option>
+            {% for make in makes %}
+                <option value="{{make.name}}" aria-label="Make name">{{make.name}}</option>
+            {% endfor %}
+        </select>
+    </div>  
+    <!-- Image URL -->
+    <div class="form-group col">
+        <label for="image_url">Image URL</label>
+        <input type="text" class="form-control" id="image_url" name="image_url" placeholder="Paste URL here" required>
+    </div>
+    <!-- Category -->
+    <div class="form-group col">
+        <label for="category">Category</label>
+        <select class="custom-select form-control" id="category" name="category" required>
+            <option value="" selected disabled>Choose...</option>
+            {% for category in categories %}
+                <option value="{{category.category_name}}">{{category.category_name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <!-- Date of Review -->
+    <div class="form-group col">
+        <label for="review_date">Date of Review</label>
+        <input type="date" class="form-control" id="review_date" name="review_date" required>
+    </div>
+    <!-- Star Rating -->
+    <div class="form-group col">
+        <label for="star_rating_id">Star Rating</label>
+        <select class="custom-select form-control" id="star_rating_id" name="star_rating_id" required>
+            <option value="" selected disabled>Choose...</option>
+            {% for star_rating in stars %}
+                <option value="{{star_rating.rating}}">{{star_rating.rating}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <!-- Review -->
+    <div class="form-group col">
+        <div class="form-row justify-content-center">
+            <label for="review">Review</label>
+        </div>
+        <div class="form-row">
+            <textarea class="form-control" id="review" name="review" minlength="50" maxlength="300" placeholder="Please write a little about your experience wearing these boots (min. 50 characters)" aria-label="Review text box" rows="3" required></textarea>
+        </div>
+    </div>
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Add Review</button>
+</form>
