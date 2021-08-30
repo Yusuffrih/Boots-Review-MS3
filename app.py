@@ -117,7 +117,7 @@ def reviews():
 def add_review():
 
     makes = mongo.db.makes.find()
-    categories = mongo.db.categories.find()
+    categories = mongo.db.categories.find().sort("category_name", 1)
     stars = mongo.db.stars.find()
 
     if session:
@@ -137,10 +137,11 @@ def add_review():
             flash("Review successfully added!")
             return redirect(url_for("reviews"))
 
-    return render_template("pages/add_review.html",
-                           makes=makes,
-                           categories=categories,
-                           stars=stars)
+    else:
+        return render_template("pages/add_review.html",
+                               makes=makes,
+                               categories=categories,
+                               stars=stars)
 
 
 if __name__ == "__main__":
