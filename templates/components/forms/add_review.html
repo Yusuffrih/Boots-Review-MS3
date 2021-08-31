@@ -1,6 +1,6 @@
 {% include 'components/flash_messages/flash_messages.html' %}
-<h3>Add Review</h3>
-<form id="form-container" class="container was-validated" method="POST" action="{{ url_for('add_review')}}" novalidate>
+    <h3>Add Review</h3>
+    <form id="form-container" class="container was-validated" method="POST" action="{{ url_for('add_review')}}" novalidate>
     <!-- Name of Boots -->
     <div class="form-group col">
         <label for="name">Name of Boots</label>
@@ -55,6 +55,6 @@
             <textarea class="form-control" id="review" name="review" minlength="50" maxlength="300" placeholder="Please write a little about your experience wearing these boots (min. 50 characters)" aria-label="Review text box" rows="3" required></textarea>
         </div>
     </div>
-    <!-- Submit -->
+    <!-- Add Review Submit -->
     <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Add Review</button>
 </form>
