@@ -8,14 +8,16 @@
                     <div id="profile-card" class="card">
                         <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
                         <div class="card-body">
-                            <h3 class="card-title">{{ review.star_rating_id }}</h3>
-                            <h4 class="card-title">{{ review.review_date}}</h3>
+                            <h3 class="card-title">{{ review.boots_name }}</h3>
+                            <p><em>Reviewed by:</em> {{ review.user_id}}</p>
+                            <p><em>Reviewed on:</em> {{ review.review_date}}</p>
+                            <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
                             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                                 Read Review
                             </button>
                             <div class="collapse" id="collapseExample">
                                 <div class="card card-body">
-                                    {{ review.review }}
+                                    <p>{{ review.review }}</p>
                                 </div>
                             </div>
                         </div>
