@@ -1,6 +1,7 @@
 {% extends 'layout/base.html' %}
 {% block content%}
 {% include 'components/navigation/nav.html' %}
+{% include 'components/flash_messages/flash_messages.html' %}
     <div class="container justify-content-center" id="review-container">
         <div class="row">
             {% for review in reviews %}
