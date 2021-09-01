@@ -137,11 +137,11 @@ def add_review():
             flash("Review successfully added!")
             return redirect(url_for("reviews"))
 
-    else:
         return render_template("pages/add_review.html",
                                makes=makes,
                                categories=categories,
-                               stars=stars)
+                               stars=stars,
+                               add=True)
 
 
 if __name__ == "__main__":
