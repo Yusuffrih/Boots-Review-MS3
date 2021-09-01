@@ -144,6 +144,39 @@ def add_review():
                                add=True)
 
 
+@app.route("/edit-review/<review_id>", methods=["GET", "POST"])
+def edit_review(review_id):
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    makes = mongo.db.makes.find()
+    stars = mongo.db.stars.find()
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session:
+        if request.method == "POST":
+            update = {
+                "boots_name": request.form.get("name"),
+                "make": request.form.get("make_id"),
+                "image_url": request.form.get("image_url"),
+                "category": request.form.get("category"),
+                "review_date": request.form.get("review_date"),
+                "star_rating_id": request.form.get("star_rating_id"),
+                "review": request.form.get("review"),
+                "user_id": session["user"]
+            }
+
+            mongo.db.reviews.update({"_id": ObjectId(review_id)}, update)
+            flash("Review successfully updated!")
+            return redirect(url_for("profile", username=username))
+
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template("pages/add_review.html",
+                               review=review,
+                               categories=categories,
+                               makes=makes,
+                               stars=stars)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
