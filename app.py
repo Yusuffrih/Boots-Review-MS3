@@ -101,31 +101,29 @@ def edit_profile(user_id):
     if session:
         profile_to_edit = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
-        # target a list of all existing users
-        users = list(mongo.db.users.find({"_id": ObjectId(user_id)}))
+        user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
 
-        for user in users:
-            username = user["username"]
-            # if the session user matches an existing user
-            if profile_to_edit == username:
-                if request.method == "POST":
-                    update_profile = {
-                        "username": request.form.get("username").lower(),
-                        "password": generate_password_hash(
-                            request.form.get("password")),
-                        "bio": request.form.get("bio"),
-                        "profile_pic": request.form.get("profile-pic")
-                    }
-                    session["user"] = request.form.get("username").lower()
-                    mongo.db.users.update(
-                        {"_id": ObjectId(user_id)}, update_profile)
-                    flash("You have successfully updated you profile!")
-                    return redirect(url_for("profile",
-                                            username=session['user']))
+        # if the user matches the profile to edit
+        if profile_to_edit == user["username"]:
+            if request.method == "POST":
+                update_profile = {
+                    "username": request.form.get("username").lower(),
+                    "password": generate_password_hash(
+                        request.form.get("password")),
+                    "bio": request.form.get("bio"),
+                    "profile_pic": request.form.get("profile-pic")
+                }
+                session["user"] = request.form.get("username").lower()
+                mongo.db.users.update(
+                    {"_id": ObjectId(user_id)}, update_profile)
+                flash("You have successfully updated you profile!")
+                return redirect(url_for("profile",
+                                        username=session['user']))
 
-            else:
-                flash("You do not have the permission to update this profile!")
-                return redirect(url_for("profile", username=session["user"]))
+        else:
+            flash("You do not have the permission to update this profile!")
+            return redirect(url_for("profile",
+                                    username=session["user"]))
 
     else:
         return redirect(url_for("home_page"))
