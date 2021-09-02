@@ -131,6 +131,27 @@ def edit_profile(user_id):
     return render_template("pages/edit_profile.html", user=user)
 
 
+# delete profile
+@app.route("/delete-profile/<user_id>")
+def delete_profile(user_id):
+    if session:
+        profile_to_delete = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+        # if the user matches the profile to edit
+        if profile_to_delete == user["username"]:
+            mongo.db.reviews.delete_many({"user_id": session["user"]})
+            mongo.db.users.delete_one({"_id": ObjectId(user_id)})
+            session.pop("user")
+            return redirect(url_for("home_page"))
+        else:
+            flash("You cannot delete this profile!")
+            return redirect(url_for("profile",
+                                    username=session["user"]))
+    else:
+        redirect(url_for("home_page"))
+
+
 @app.route("/log-out")
 def log_out():
     # remove user from session cookies
