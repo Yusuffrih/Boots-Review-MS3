@@ -1,6 +1,7 @@
 {% extends 'layout/base.html' %}
 {% block content %}
 {% include 'components/navigation/nav.html' %}
+{% include 'components/flash_messages/flash_messages.html' %}
     <div class="container justify-content-center" id="profile-page-container">
         <div class="row">
             <div class="col-sm-12 col-md-4">
@@ -8,7 +9,7 @@
                     <img src="{{ profile.profile_pic}}" class="card-img-top" alt="Profile picture">
                     <div class="card-body">
                         <h3 class="card-title">{{ username }}</h3>
-                        <a href="{{ url_for('edit_profile', user_id=user._id)}}" class="btn btn-primary">Edit</a>
+                        <a href="{{ url_for('edit_profile', user_id=profile._id)}}" class="btn btn-primary">Edit</a>
                         <a href="#" class="btn btn-primary">Delete</a>
                     </div>
                 </div>
