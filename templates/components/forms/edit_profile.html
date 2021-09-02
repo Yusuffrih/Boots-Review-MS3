@@ -1,4 +1,3 @@
-{% include 'components/flash_messages/flash_messages.html' %}
 <h3>Edit Profile</h3>
 <form class="container col-sm-12 col-md-8 authentication-form was-validated" method="POST" action="{{ url_for ('edit_profile', user_id=user._id) }}" novalidate>
     <!-- Username -->
@@ -14,7 +13,7 @@
     <!-- Profile Bio -->
     <div class="form-group">
         <label for="bio">Profile Bio <i class="fas fa-user"></i></label>
-        <textarea class="form-control" id="bio" name="bio" minlength="50" maxlength="300" value="{{user.bio}}" placeholder="Please write a little about yourself that will be displayed on your user profile page(min. 50 characters)" aria-label="profile bio" rows="3" required></textarea>
+        <textarea class="form-control" id="bio" name="bio" minlength="50" maxlength="300" value="{{user.bio}}" placeholder="Please write a little about yourself that will be displayed on your user profile page(min. 50 characters)" aria-label="profile bio" rows="3" required>{{user.bio}}</textarea>
     </div>
     <!--Profile Picture -->
     <div class="form-group">
