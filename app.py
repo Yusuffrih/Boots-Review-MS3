@@ -144,6 +144,7 @@ def add_review():
                                add=True)
 
 
+# edit boots review
 @app.route("/edit-review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
@@ -175,6 +176,23 @@ def edit_review(review_id):
                                categories=categories,
                                makes=makes,
                                stars=stars)
+
+
+# delete boots review
+@app.route("/delete_review/<review_id>")
+def delete_review(review_id):
+    # find user to redirect user to profile
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    # If the user is logged in
+    if session:
+        mongo.db.reviews.remove({"_id": ObjectId(review_id)})
+        flash("You have successfully deleted your review!")
+        return redirect(url_for("profile", username=username))
+    # if the user is not logged in
+    else:
+        flash("You cannot perform this action!")
+        return redirect(url_for("reviews"))
 
 
 if __name__ == "__main__":
