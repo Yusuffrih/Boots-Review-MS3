@@ -4,7 +4,7 @@
     <!-- Username -->
     <div class="form-group">
         <label for="username">Username <i class="fas fa-user"></i></label>
-        <input type="text" class="form-control" id="username" name="username" minlength="3" maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" placeholder="Username is not case sensitive" aria-label="username" autofocus required>
+        <input type="text" class="form-control" id="username" name="username" value="{{user.username}}" minlength="3" maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" placeholder="Username is not case sensitive" aria-label="username" autofocus required>
     </div>
     <!-- Password -->
     <div class="form-group">
@@ -14,12 +14,12 @@
     <!-- Profile Bio -->
     <div class="form-group">
         <label for="bio">Profile Bio <i class="fas fa-user"></i></label>
-        <textarea class="form-control" id="bio" name="bio" minlength="50" maxlength="300" placeholder="Please write a little about yourself that will be displayed on your user profile page(min. 50 characters)" aria-label="profile bio" rows="3" required></textarea>
+        <textarea class="form-control" id="bio" name="bio" minlength="50" maxlength="300" value="{{user.bio}}" placeholder="Please write a little about yourself that will be displayed on your user profile page(min. 50 characters)" aria-label="profile bio" rows="3" required></textarea>
     </div>
     <!--Profile Picture -->
     <div class="form-group">
         <label for="profile-pic" class="form-label">Profile Picture</label>
-        <input type="url" class="form-control" id="profile-pic" name="profile-pic" placeholder="https://i.postimg.cc/AAAA/example.png" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.png)" required>
+        <input type="url" class="form-control" id="profile-pic" name="profile-pic" value="{{user.profile_pic}}" placeholder="https://i.postimg.cc/AAAA/example.png" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.png)" required>
         <small class="form-help"><em>Needs to be a URL - Make yours <a href="https://postimages.org/" target="_blank">here</a></em></small>
     </div>
     <!-- Sign-Up -->
