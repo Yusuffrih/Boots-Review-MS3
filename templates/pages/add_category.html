@@ -1,10 +1,15 @@
-<h3>Add Category</h3>
-<form id="form-container" class="container was-validated" method="POST" action="{{ url_for('add_category')}}" novalidate>
-    <!-- Category Name -->
-    <div class="form-group col">
-        <label for="category_name">Category Name</label>
-        <input type="text" class="form-control" id="category_name" name="category_name" min-length="3" max-length="25" placeholder="Category Name" required>
-    </div>
-    <!-- Add Review Submit -->
-    <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Edit Categor</button>
-</form>
+{% extends 'layout/base.html' %}
+{% block content %}
+    {% include 'components/navigation/nav.html' %}
+    <h3>Add Category</h3>
+    <form id="form-container" class="container was-validated" method="POST" action="{{ url_for('add_category')}}" novalidate>
+        <!-- Category Name -->
+        <div class="form-group col">
+            <label for="category_name">Category Name</label>
+            <input type="text" class="form-control" id="category_name" name="category_name" min-length="3" max-length="25" placeholder="Category Name" required>
+        </div>
+        <!-- Add Review Submit -->
+        <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Add Category</button>
+    </form>
+    {% include 'components/footer/footer.html' %}
+{% endblock %}
