@@ -27,7 +27,8 @@
         <!-- User's Reviews -->
         <h3>Your Reviews</h3>
         <div class="row justify-content-center">
-            {% for review in reviews %}
+
+            {% for review in reviews if session.user|lower == review.user_id|lower %}
                 <div class="col-sm-12 col-md-4 col-lg-3">
                     <!-- Bootstrap Card -->
                     <div id="profile-card" class="card">
@@ -51,6 +52,12 @@
                         </div>
                     </div>
                 </div>
+            {% else %}
+                    <div class="col-sm-12 col-md-8">
+                        <h3>You haven't reviewd any boots just yet!</h3>
+                        <p>Why not review your favourite pair of boots now?</p>
+                        <a type="button" href="{{ url_for('add_review')}}" class="btn btn-lg btn-primary">Write Review</a>
+                    </div>
             {% endfor %}
         </div>
     </div>
