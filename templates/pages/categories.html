@@ -1,23 +1,26 @@
 {% extends 'layout/base.html' %}
 {% block content %}
-{% include 'components/navigation/nav.html' %}
-{% include 'components/flash_messages/flash_messages.html' %}
-    <div class="container">
-        <h3>Manage Categories</h3>
-            <div class="row justify-content-center">
-                {% for category in categories %}
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ category.category_name }}</h5>
-                                <a href="#" class="btn btn-primary">Edit</a>
-                                <a href="#" class="btn btn-primary">Delete</a>
+    {% include 'components/navigation/nav.html' %}
+        {% include 'components/flash_messages/flash_messages.html' %}
+            <div class="container">
+                <h3>Manage Categories</h3>
+                <div class="row justify-content-center m-4">
+                    <a type="button" href="{{ url_for('add_category') }}" class="btn btn-lg btn-primary">Add Category</a>
+                </div>
+                
+                    <div class="row justify-content-center">
+                        {% for category in categories %}
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card p-5">
+                                    <div class="card-body">
+                                        <h4 class="card-title ">{{ category.category_name }}</h4>
+                                        <a href="#" class="btn btn-primary">Edit</a>
+                                        <a href="#" class="btn btn-primary">Delete</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        {% endfor %}
                     </div>
-                {% endfor %}
             </div>
-    </div>
-        
-{% include 'components/footer/footer.html' %}
+    {% include 'components/footer/footer.html' %}
 {% endblock %}
