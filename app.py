@@ -252,11 +252,11 @@ def delete_review(review_id):
         return redirect(url_for("reviews"))
 
 
-@app.route("/manage_categories")
-def manage_categories():
+@app.route("/manage")
+def manage():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    makes = list(mongo.db.categories.find().sort("name", 1))
-    return render_template("pages/categories.html", categories=categories,
+    makes = list(mongo.db.makes.find().sort("name", 1))
+    return render_template("pages/manage.html", categories=categories,
                            makes=makes)
 
 
@@ -268,9 +268,22 @@ def add_category():
         }
         mongo.db.categories.insert_one(category)
         flash("You have successfully added a new category")
-        return redirect(url_for("manage_categories"))
+        return redirect(url_for("manage"))
 
     return render_template("pages/add_category.html")
+
+
+@app.route("/add_make", methods=["GET", "POST"])
+def add_make():
+    if request.method == "POST":
+        make = {
+            "name": request.form.get("name")
+        }
+        mongo.db.makes.insert_one(make)
+        flash("You have successfully added a new make")
+        return redirect(url_for("manage"))
+
+    return render_template("pages/add_make.html")
 
 
 if __name__ == "__main__":
