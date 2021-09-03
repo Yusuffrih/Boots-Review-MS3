@@ -294,6 +294,27 @@ def add_category():
         return redirect(url_for("home_page"))
 
 
+@app.route("/edit_category/<category_id>", methods=["GET", "POST"])
+def edit_category(category_id):
+    if session.get("user") == "admin":
+        if request.method == "POST":
+            update_category = {
+                "category_name": request.form.get("category_name")
+            }
+            # update the db with the new category details
+            mongo.db.categories.update(
+                {"_id": ObjectId(category_id)}, update_category)
+            flash("You have successfully update the category!")
+            return redirect(url_for("manage"))
+
+        category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+        return render_template("pages/edit_category.html", category=category)
+
+    else:
+        flash("You cannot perform this action!")
+        return redirect(url_for("home_page"))
+
+
 @app.route("/add_make", methods=["GET", "POST"])
 def add_make():
     # make sure that the user in session is "admin"
@@ -308,6 +329,27 @@ def add_make():
 
         return render_template("pages/add_make.html")
     # if the user in session is not "admin"
+    else:
+        flash("You cannot perform this action!")
+        return redirect(url_for("home_page"))
+
+
+@app.route("/edit_make/<make_id>", methods=["GET", "POST"])
+def edit_make(make_id):
+    if session.get("user") == "admin":
+        if request.method == "POST":
+            update_make = {
+                "name": request.form.get("name")
+            }
+            # update the db with the new category details
+            mongo.db.makes.update(
+                {"_id": ObjectId(make_id)}, update_make)
+            flash("You have successfully update the make!")
+            return redirect(url_for("manage"))
+
+        make = mongo.db.makes.find_one({"_id": ObjectId(make_id)})
+        return render_template("pages/edit_make.html", make=make)
+
     else:
         flash("You cannot perform this action!")
         return redirect(url_for("home_page"))
