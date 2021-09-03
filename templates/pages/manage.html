@@ -33,7 +33,7 @@
                                 <div class="card p-4 m-5">
                                     <div class="card-body">
                                         <h4 class="card-title">{{ make.name }}</h4>
-                                        <a href="#" class="btn btn-primary">Edit</a>
+                                        <a href="{{ url_for('edit_make', make_id=make._id )}}" class="btn btn-primary">Edit</a>
                                         <a href="#" class="btn btn-primary">Delete</a>
                                     </div>
                                 </div>
