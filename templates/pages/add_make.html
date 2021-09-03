@@ -1,0 +1,15 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+    {% include 'components/navigation/nav.html' %}
+    <h3>Add Make</h3>
+    <form id="form-container" class="container was-validated" method="POST" action="{{ url_for('add_make')}}" novalidate>
+        <!-- Make Name -->
+        <div class="form-group col">
+            <label for="name">Make Name</label>
+            <input type="text" class="form-control" id="name" name="name" min-length="3" max-length="25" placeholder="Make Name" required>
+        </div>
+        <!-- Add Review Submit -->
+        <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Add Make</button>
+    </form>
+    {% include 'components/footer/footer.html' %}
+{% endblock %}
