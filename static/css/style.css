@@ -223,3 +223,15 @@ a.navbar-brand {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+/* manage section */
+.card-container {
+    background-color: #ECEAEC;
+    color: #0B0909;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 5px 5px #0b090918;
+}
+   
