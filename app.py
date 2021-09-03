@@ -260,6 +260,10 @@ def manage_categories():
                            makes=makes)
 
 
+@app.route("/add_category")
+def add_category():
+    return render_template("pages/add_category.html")
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
