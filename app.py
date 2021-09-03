@@ -254,14 +254,22 @@ def delete_review(review_id):
 
 @app.route("/manage_categories")
 def manage_categories():
-    categories = list(mongo.db.categories.find().sort("categories_name", 1))
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
     makes = list(mongo.db.categories.find().sort("name", 1))
     return render_template("pages/categories.html", categories=categories,
                            makes=makes)
 
 
-@app.route("/add_category")
+@app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name")
+        }
+        mongo.db.categories.insert_one(category)
+        flash("You have successfully added a new category")
+        return redirect(url_for("manage_categories"))
+
     return render_template("pages/add_category.html")
 
 
