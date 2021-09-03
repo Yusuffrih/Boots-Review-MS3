@@ -254,36 +254,63 @@ def delete_review(review_id):
 
 @app.route("/manage")
 def manage():
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    makes = list(mongo.db.makes.find().sort("name", 1))
-    return render_template("pages/manage.html", categories=categories,
-                           makes=makes)
+    # make sure that the user in session is "admin"
+    if session.get("user") == "admin":
+        categories = list(mongo.db.categories.find().sort(
+            "category_name", 1))
+        makes = list(mongo.db.makes.find().sort("name", 1))
+        return render_template("pages/manage.html",
+                               categories=categories,
+                               makes=makes)
+    # if the user in session is not "admin"
+    else:
+        flash("You cannot perform this action!")
+        return redirect(url_for("home_page"))
 
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
-    if request.method == "POST":
-        category = {
-            "category_name": request.form.get("category_name")
-        }
-        mongo.db.categories.insert_one(category)
-        flash("You have successfully added a new category")
-        return redirect(url_for("manage"))
+    # make sure that the user in session is "admin"
+    if session.get("user") == "admin":
+        if request.method == "POST":
+            category = {
+                "category_name": request.form.get("category_name")
+            }
+            category_names = mongo.db.categories.find()
+            if category["category_name"] == category_names:
+                mongo.db.categories.insert_one(category)
+                flash("You have successfully added a new category")
+                return redirect(url_for("manage"))
+            else:
+                flash("This category alredy exists!")
+                return redirect(url_for("add_category"))
 
-    return render_template("pages/add_category.html")
+        else:
+            return render_template("pages/add_category.html")
+
+    # if the user in session is not "admin"
+    else:
+        flash("You cannot perform this action!")
+        return redirect(url_for("home_page"))
 
 
 @app.route("/add_make", methods=["GET", "POST"])
 def add_make():
-    if request.method == "POST":
-        make = {
-            "name": request.form.get("name")
-        }
-        mongo.db.makes.insert_one(make)
-        flash("You have successfully added a new make")
-        return redirect(url_for("manage"))
+    # make sure that the user in session is "admin"
+    if session.get("user") == "admin":
+        if request.method == "POST":
+            make = {
+                "name": request.form.get("name")
+            }
+            mongo.db.makes.insert_one(make)
+            flash("You have successfully added a new make")
+            return redirect(url_for("manage"))
 
-    return render_template("pages/add_make.html")
+        return render_template("pages/add_make.html")
+    # if the user in session is not "admin"
+    else:
+        flash("You cannot perform this action!")
+        return redirect(url_for("home_page"))
 
 
 if __name__ == "__main__":
