@@ -9,7 +9,9 @@
             <label for="name">Make Name</label>
             <input type="text" class="form-control" id="name" name="name" min-length="3" max-length="25" placeholder="Make Name" required>
         </div>
-        <!-- Add Review Submit -->
+        <!-- Cancel -->
+        <a type="button" href="{{ url_for('manage') }}" class="btn btn-lg btn-danger">Cancel</a>
+        <!-- Add Make Submit -->
         <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Add Make</button>
     </form>
     {% include 'components/footer/footer.html' %}
