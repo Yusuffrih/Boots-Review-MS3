@@ -307,22 +307,26 @@ def edit_category(category_id):
             update_category = {
                 "category_name": request.form.get("category_name")
             }
+            # retrieve the name of the users entry
             update_category_name = update_category["category_name"]
+            # match the user's entry to a record in the db
             existing_category = mongo.db.categories.find(
                 {"category_name": update_category_name})
+            # check if it does not exist
             if not existing_category:
                 # update the db with the new category details
                 mongo.db.categories.update(
                     {"_id": ObjectId(category_id)}, update_category)
                 flash("You have successfully update the category!")
                 return redirect(url_for("manage"))
+            # if it does exist already
             else:
                 flash("This category already exists, try again!")
                 return redirect(url_for("add_category"))
-
+        # if method = "GET"
         category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
         return render_template("pages/edit_category.html", category=category)
-
+    # if session user is not "admin"
     else:
         flash("You cannot perform this action!")
         return redirect(url_for("home_page"))
@@ -349,7 +353,7 @@ def add_make():
             else:
                 flash("This make already exists, try again!")
                 return redirect(url_for("add_make"))
-
+        # if method = "GET"
         return render_template("pages/add_make.html")
     # if the user in session is not "admin"
     else:
@@ -364,15 +368,25 @@ def edit_make(make_id):
             update_make = {
                 "name": request.form.get("name")
             }
-            # update the db with the new category details
-            mongo.db.makes.update(
-                {"_id": ObjectId(make_id)}, update_make)
-            flash("You have successfully update the make!")
-            return redirect(url_for("manage"))
-
-        make = mongo.db.makes.find_one({"_id": ObjectId(make_id)})
-        return render_template("pages/edit_make.html", make=make)
-
+            # retrieve the name of the users entry
+            update_make_name = update_make["name"]
+            # match the user's entry to a record in the db
+            existing_make = mongo.db.makes.find(
+                {"make": update_make_name})
+            if not existing_make:
+                # update the db with the new category details
+                mongo.db.makes.update(
+                    {"_id": ObjectId(make_id)}, update_make)
+                flash("You have successfully update the make!")
+                return redirect(url_for("manage"))
+            else:
+                flash("This make already exists, try again!")
+                return redirect(url_for("add_make"))
+        # if method = "GET"
+        else:
+            make = mongo.db.makes.find_one({"_id": ObjectId(make_id)})
+            return render_template("pages/edit_make.html", make=make)
+    # if session user is not "admin"
     else:
         flash("You cannot perform this action!")
         return redirect(url_for("home_page"))
