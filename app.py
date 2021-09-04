@@ -276,14 +276,17 @@ def add_category():
             category = {
                 "category_name": request.form.get("category_name")
             }
+            # retrieve the name of the users entry
             category_name = category["category_name"]
+            # match the user's entry to a record in the db
             existing_category = mongo.db.categories.find_one(
                 {"category_name": category_name})
-
+            # check if it does not exist
             if not existing_category:
                 mongo.db.categories.insert_one(category)
                 flash("You have successfully added a new category")
                 return redirect(url_for("manage"))
+            # if it does exist
             else:
                 flash("This category already exists, try again!")
                 return redirect(url_for("add_category"))
@@ -326,9 +329,19 @@ def add_make():
             make = {
                 "name": request.form.get("name")
             }
-            mongo.db.makes.insert_one(make)
-            flash("You have successfully added a new make")
-            return redirect(url_for("manage"))
+            # retrieve the name of the users entry
+            make_name = make["name"]
+            # match the user's entry to a record in the db
+            existing_make = mongo.db.makes.find_one({"name": make_name})
+            # check if it does not exist
+            if not existing_make:
+                mongo.db.makes.insert_one(make)
+                flash("You have successfully added a new make")
+                return redirect(url_for("manage"))
+            # if it does already exist
+            else:
+                flash("This make already exists, try again!")
+                return redirect(url_for("add_make"))
 
         return render_template("pages/add_make.html")
     # if the user in session is not "admin"
