@@ -176,11 +176,7 @@ def search():
         search = request.form.get("search")
         reviews = list(mongo.db.reviews.find(
             {"$text": {"$search": search}}))
-        if reviews == []:
-            flash("No results, try again!")
-            return redirect(url_for("reviews"))
-        else:
-            return render_template("pages/reviews.html", reviews=reviews)
+        return render_template("pages/reviews.html", reviews=reviews)
     else:
         return redirect(url_for("home_page"))
 

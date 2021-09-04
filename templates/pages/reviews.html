@@ -18,29 +18,33 @@
                 </div>
             </form>
         </div>
-        <div class="row">
-            {% for review in reviews %}
-                <div class="col-sm-6 col-md-4">
-                    <div id="profile-card" class="card">
-                        <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
-                        <div class="card-body">
-                            <h3 class="card-title">{{ review.boots_name }}</h3>
-                            <p><em>Reviewed by:</em> {{ review.user_id}}</p>
-                            <p><em>Reviewed on:</em> {{ review.review_date}}</p>
-                            <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
-                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
-                                Read Review
-                            </button>
-                            <div class="collapse" id="collapse-{{loop.index}}">
-                                <div class="card card-body">
-                                    <p>{{ review.review }}</p>
+        {% if reviews|length > 0 %}
+            <div class="row">
+                {% for review in reviews %}
+                    <div class="col-sm-6 col-md-4">
+                        <div id="profile-card" class="card">
+                            <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
+                            <div class="card-body">
+                                <h3 class="card-title">{{ review.boots_name }}</h3>
+                                <p><em>Reviewed by:</em> {{ review.user_id}}</p>
+                                <p><em>Reviewed on:</em> {{ review.review_date}}</p>
+                                <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
+                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
+                                    Read Review
+                                </button>
+                                <div class="collapse" id="collapse-{{loop.index}}">
+                                    <div class="card card-body">
+                                        <p>{{ review.review }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
-        </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h3>No Results Found, Try Another Search!</h3>
+        {% endif %}
     </div>
     
 {% include 'components/footer/footer.html' %}
