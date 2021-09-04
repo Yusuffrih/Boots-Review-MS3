@@ -307,11 +307,18 @@ def edit_category(category_id):
             update_category = {
                 "category_name": request.form.get("category_name")
             }
-            # update the db with the new category details
-            mongo.db.categories.update(
-                {"_id": ObjectId(category_id)}, update_category)
-            flash("You have successfully update the category!")
-            return redirect(url_for("manage"))
+            update_category_name = update_category["category_name"]
+            existing_category = mongo.db.categories.find(
+                {"category_name": update_category_name})
+            if not existing_category:
+                # update the db with the new category details
+                mongo.db.categories.update(
+                    {"_id": ObjectId(category_id)}, update_category)
+                flash("You have successfully update the category!")
+                return redirect(url_for("manage"))
+            else:
+                flash("This category already exists, try again!")
+                return redirect(url_for("add_category"))
 
         category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
         return render_template("pages/edit_category.html", category=category)
