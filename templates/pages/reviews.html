@@ -3,6 +3,21 @@
 {% include 'components/navigation/nav.html' %}
 {% include 'components/flash_messages/flash_messages.html' %}
     <div class="container justify-content-center" id="review-container">
+        <h3>Reviews</h3>
+        <div class="row card">
+            <form action="{{ url_for('search') }}" method="POST" class="col-sm-12 col-md-8">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-8 col-lg-6">
+                        <input type="text" name="search" id="search" minlength="3" placeholder="Search by User, Boots, Make or Category" required>
+                        <label for="search">Search Reviews</label>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-6">
+                        <a type="button" href="{{ url_for('reviews') }}" class="btn btn-danger btn-lg">Reset</a>
+                        <button type="submit" class="btn btn-lg btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div class="row">
             {% for review in reviews %}
                 <div class="col-sm-6 col-md-4">
