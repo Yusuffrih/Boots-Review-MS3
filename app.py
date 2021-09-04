@@ -334,7 +334,7 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
-    if session.get("user"):
+    if session.get("user") == "admin":
         mongo.db.categories.remove({"_id": ObjectId(category_id)})
         flash("You have successfully deleted the category!")
         return redirect(url_for("manage"))
@@ -405,7 +405,7 @@ def edit_make(make_id):
 
 @app.route("/delete_make/<make_id>")
 def delete_make(make_id):
-    if session.get("user"):
+    if session.get("user") == "admin":
         mongo.db.makes.remove({"_id": ObjectId(make_id)})
         flash("You have successfully deleted the make!")
         return redirect(url_for("manage"))
