@@ -1,6 +1,7 @@
 {% extends 'layout/base.html' %}
 {% block content %}
     {% include 'components/navigation/nav.html' %}
+    {% include 'components/flash_messages/flash_messages.html' %}
     <h3>Add Make</h3>
     <form id="form-container" class="container was-validated" method="POST" action="{{ url_for('add_make')}}" novalidate>
         <!-- Make Name -->
