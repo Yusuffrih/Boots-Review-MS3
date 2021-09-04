@@ -36,15 +36,15 @@
                         <div class="card-body">
                             <h3 class="card-title">{{ review.star_rating_id }}</h3>
                             <h4 class="card-title">{{ review.review_date}}</h3>
-                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
                                 Read Review
                             </button>
                             <div class="row justify-content-center">
                                 <a href="{{ url_for('edit_review', review_id=review._id )}}" class="btn btn-primary" type="button">Edit</a>
-                                <a href="#delete-review-modal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                                <a href="#delete-review-modal" class="btn btn-primary" data-toggle="modal" data-target="#modal-{{loop.index}}">Delete</a>
                                 {% include 'components/modals/delete_review.html' %}
                             </div>
-                            <div class="collapse" id="collapseExample">
+                            <div class="collapse" id="collapse-{{loop.index}}">
                                 <div class="card card-body">
                                     {{ review.review }}
                                 </div>

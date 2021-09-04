@@ -13,10 +13,10 @@
                             <p><em>Reviewed by:</em> {{ review.user_id}}</p>
                             <p><em>Reviewed on:</em> {{ review.review_date}}</p>
                             <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
-                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
                                 Read Review
                             </button>
-                            <div class="collapse" id="collapseExample">
+                            <div class="collapse" id="collapse-{{loop.index}}">
                                 <div class="card card-body">
                                     <p>{{ review.review }}</p>
                                 </div>
