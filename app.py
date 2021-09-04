@@ -403,6 +403,17 @@ def edit_make(make_id):
         return redirect(url_for("home_page"))
 
 
+@app.route("/delete_make/<make_id>")
+def delete_make(make_id):
+    if session.get("user"):
+        mongo.db.makes.remove({"_id": ObjectId(make_id)})
+        flash("You have successfully deleted the make!")
+        return redirect(url_for("manage"))
+    else:
+        flash("You cannot perform this action!")
+        return redirect(url_for("home_page"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
