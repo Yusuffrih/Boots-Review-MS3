@@ -1,18 +1,6 @@
 {% extends 'layout/base.html' %}
 {% block content %}
     {% include 'components/navigation/nav.html' %}
-    {% include 'components/flash_messages/flash_messages.html' %}
-    <h3>Add Make</h3>
-    <form id="form-container" class="container was-validated" method="POST" action="{{ url_for('add_make')}}" novalidate>
-        <!-- Make Name -->
-        <div class="form-group col">
-            <label for="name">Make Name</label>
-            <input type="text" class="form-control" id="name" name="name" min-length="3" max-length="25" placeholder="Make Name" required>
-        </div>
-        <!-- Cancel -->
-        <a type="button" href="{{ url_for('manage') }}" class="btn btn-lg btn-danger">Cancel</a>
-        <!-- Add Make Submit -->
-        <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Add Make</button>
-    </form>
+    {% include 'components/forms/add_make.html' %}
     {% include 'components/footer/footer.html' %}
 {% endblock %}
