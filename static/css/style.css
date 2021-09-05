@@ -20,14 +20,20 @@ body {
 
 /* Headers */
 
-h2 {
+.header {
     font-size: 3rem;
+    font-weight: 900;
     margin-top: 20px;
+    text-shadow: 2px 2px #0b090918;
+    text-transform: capitalize;
 }
 
-h3 {
-    font-size: 3rem;
-    margin-top: 20px;
+#profile-bio-title {
+    margin-top: 1rem;
+    text-shadow: 2px 2px #0b090918;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: capitalize;
 }
 
 /* Home Page */
@@ -131,6 +137,12 @@ a.navbar-brand {
     transition: 1s;
 }
 
+.card-btn {
+    margin: 2px; 
+    padding:4px;
+    border: 1px solid #0B0909;
+}
+
 /* Forms */
 
 .authentication-form {
@@ -158,7 +170,7 @@ a.navbar-brand {
 
 #profile-card {
     min-width: 20rem;
-    min-height: 30rem;
+    min-height: 20rem;
     border: 1px #0B0909 solid;
     border-radius: 0.75rem;
     background-color: #ECEAEC;
@@ -167,8 +179,15 @@ a.navbar-brand {
 }
 
 #profile-card img {
-    height: 100%;
-    width: 100%;
+    margin: 5px auto;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px #0b090918;
+    border-bottom: 1px #0B0909 solid;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25rem;
+    width: 25rem;
 }
 
 #profile-card .card-body {
@@ -190,8 +209,10 @@ a.navbar-brand {
     padding: 0 2rem 0 2rem;
 }
 
-#profile-bio-title {
-    margin-top: 1rem;
+#profile-bio {
+    height: 10em;
+    display: flex;
+    text-align: start;
 }
 
 .carousel-control-prev {
@@ -225,8 +246,8 @@ a.navbar-brand {
 }
 
 /* manage section */
-.card-container {
-    background-color: #ECEAEC;
+.section-container {
+    background-color: #9EB3C2;
     color: #0B0909;
     border-radius: 1.5rem;
     padding: 2rem;
@@ -234,4 +255,9 @@ a.navbar-brand {
     margin-bottom: 2rem;
     box-shadow: 5px 5px #0b090918;
 }
-   
+
+/* Reviews Page */
+
+#search {
+    width: 100%;
+}
