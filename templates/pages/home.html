@@ -1,19 +1,30 @@
 {% extends 'layout/base.html' %}
 {% block content %}
 {% include 'components/navigation/nav.html' %}
-<div class="container-fluid" id="home-container">
-    <div id="hero-image-home"></div>
+<div class="container" id="home-container">
+    <!-- header -->
+    <h1 class="header">Boots Review</h1>
+    <div class="row section-container justify-content-center">
+        <div id="hero-image-home"></div>
+    </div>
+    <!-- landing messages -->
     <div id="landing-messages">
-        <h3 class="header">Share your experiences of your favourite football boots here!</h3>
+        <h2>Share your experiences of your favourite football boots here!</h2>
         <p id="description-paragraph">
             Boots Review is a community built around a common passion for football boots. 
             Whether you play Soccer, Gaelic Football, Hurling, Rugby or just enjoy a good pair of football boots, 
             this is the place for you. You can easily browse our collection of reviews of the best 
             football boots and even review your own favourite pair.
         </p>
+    </div>
+    <!-- call to sign up now  -->
+    <div id="sign-up-now" class="section-container row justify-content-center">
         <h3 class="sub-header">Sing Up now to write your first review!</h3>
-        <a href="{{ url_for('sign_up') }}" class="btn btn-lg login-signup">Sign Up</a>
-        <a href="{{ url_for('log_in') }}" class="btn btn-lg login-signup">Log In</a>
+        <!-- buttons -->
+        <div class="row justify-content-center">
+            <a href="{{ url_for('sign_up') }}" class="btn btn-lg login-signup">Sign Up</a>
+            <a href="{{ url_for('log_in') }}" class="btn btn-lg login-signup">Log In</a>
+        </div>
     </div>
 </div>
 {% include 'components/footer/footer.html' %}
