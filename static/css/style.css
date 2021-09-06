@@ -64,6 +64,11 @@ body {
     margin: 0 auto;
 }
 
+#sign-up-now {
+    position: absolute;
+    top: 70%;
+}
+
 .login-signup {
     background-color: #ECEAEC;
     border: 2px solid #0B0909;
