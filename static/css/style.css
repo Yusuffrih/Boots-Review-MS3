@@ -186,18 +186,40 @@ a.navbar-brand {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 25rem;
-    width: 25rem;
+    height: 18rem;
+    width: 18rem;
 }
 
-.profile-card .card-body {
+.review-card {
+    min-width: 25rem;
+    min-height: 25rem;
+    border: 1px #0B0909 solid;
+    border-radius: 0.75rem;
+    background-color: #ECEAEC;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.review-card img {
+    margin: 5px auto;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px #0b090918;
+    border-bottom: 1px #0B0909 solid;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+    width: 20rem;
+}
+
+.review-card .card-body {
     margin-top: 0;
     padding: 0;
     padding-bottom: 0.75rem;
     color: #0B0909;
 }
 
-.profile-card h3 {
+.review-card h3 {
     background-color: #0B0909;
     color: #FFFFFF;
     margin-top: 0;
