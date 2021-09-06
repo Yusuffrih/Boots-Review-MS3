@@ -168,7 +168,7 @@ a.navbar-brand {
 
 /* Profile Page */
 
-#profile-card {
+.profile-card {
     min-width: 20rem;
     min-height: 20rem;
     border: 1px #0B0909 solid;
@@ -178,7 +178,7 @@ a.navbar-brand {
     margin-bottom: 2rem;
 }
 
-#profile-card img {
+.profile-card img {
     margin: 5px auto;
     border-radius: 1.5rem;
     box-shadow: 2px 2px #0b090918;
@@ -190,13 +190,14 @@ a.navbar-brand {
     width: 25rem;
 }
 
-#profile-card .card-body {
+.profile-card .card-body {
     margin-top: 0;
     padding: 0;
     padding-bottom: 0.75rem;
+    color: #0B0909;
 }
 
-#profile-card h3 {
+.profile-card h3 {
     background-color: #0B0909;
     color: #FFFFFF;
     margin-top: 0;
@@ -247,8 +248,8 @@ a.navbar-brand {
 
 /* manage section */
 .section-container {
-    background-color: #9EB3C2;
-    color: #0B0909;
+    background-color: #0B0909;
+    color: #FFFFFF;
     border-radius: 1.5rem;
     padding: 2rem;
     margin-top: 2rem;
