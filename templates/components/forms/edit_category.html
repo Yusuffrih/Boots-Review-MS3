@@ -7,7 +7,7 @@
         <input type="text" class="form-control" id="category_name" name="category_name" value="{{ category.category_name }}" min-length="3" max-length="25" placeholder="Category Name" required>
     </div>
     <!-- Cancel -->
-    <a type="button" href="{{ url_for('manage') }}" class="btn btn-lg btn-danger">Cancel</a>
+    <a type="button" href="{{ url_for('manage') }}" class="btn btn-lg btn-danger">Cancel <i class="fas fa-window-close"></i></a>
     <!-- Add Review Submit -->
     <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Edit Category</button>
 </form>
