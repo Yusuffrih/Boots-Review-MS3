@@ -153,6 +153,16 @@ a.navbar-brand {
     box-shadow: 5px 5px #0b090918;
 }
 
+#form-container {
+    background-color: #ECEAEC;
+    color: #0B0909;
+    border-radius: 1.5rem;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 5px 5px #0b090918;
+}
+
 .form-help {
     color: rgba(50, 50, 50, 0.5);
 }
@@ -236,18 +246,6 @@ a.navbar-brand {
     height: 10em;
     display: flex;
     text-align: start;
-}
-
-/* Add Review Form */
-
-#form-container {
-    background-color: #ECEAEC;
-    color: #0B0909;
-    border-radius: 1.5rem;
-    padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 5px 5px #0b090918;
 }
 
 #submit-add-review {
