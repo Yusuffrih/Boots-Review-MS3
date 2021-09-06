@@ -1,5 +1,5 @@
-<h3>Edit Profile</h3>
-<form class="container col-sm-12 col-md-8 authentication-form was-validated" method="POST" action="{{ url_for ('edit_profile', user_id=user._id) }}" novalidate>
+<h3 class="header">Edit Profile</h3>
+<form class="form-container container col-sm-12 col-md-8 was-validated" method="POST" action="{{ url_for ('edit_profile', user_id=user._id) }}" novalidate>
     <!-- Username -->
     <div class="form-group">
         <label for="username">Username <i class="fas fa-user"></i></label>

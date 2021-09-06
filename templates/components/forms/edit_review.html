@@ -1,6 +1,6 @@
 {% include 'components/flash_messages/flash_messages.html' %}
-    <h3>Edit Review</h3>
-    <form id="form-container" class="container was-validated" method="POST" action="{{ url_for('edit_review', review_id=review._id )}}" novalidate>
+    <h3 class="header">Edit Review</h3>
+    <form class="form-container container was-validated" method="POST" action="{{ url_for('edit_review', review_id=review._id )}}" novalidate>
     <!-- Name of Boots -->
     <div class="form-group col">
         <label for="name">Name of Boots</label>
