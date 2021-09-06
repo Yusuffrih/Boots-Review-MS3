@@ -37,7 +37,7 @@
         {% for review in reviews if session.user|lower == review.user_id|lower %}
             <div class="col-sm-12 col-md-4 col-lg-3">
                 <!-- Bootstrap Card -->
-                <div class="card profile-card">
+                <div class="card review-card">
                     <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
                     <div class="card-body">
                         <h3 class="card-title">{{ review.star_rating_id }}</h3>
