@@ -238,19 +238,6 @@ a.navbar-brand {
     text-align: start;
 }
 
-.carousel-control-prev {
-    padding-right: 4rem;
-}
-
-.carousel-control-next {
-    padding-left: 4rem;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #0B0909;
-}
-
 /* Add Review Form */
 
 #form-container {
