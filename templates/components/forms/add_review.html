@@ -1,5 +1,5 @@
 {% include 'components/flash_messages/flash_messages.html' %}
-    <h3>Add Review</h3>
+    <h3 class="header">Add Review</h3>
     <form id="form-container" class="container was-validated" method="POST" action="{{ url_for('add_review')}}" novalidate>
     <!-- Name of Boots -->
     <div class="form-group col">
@@ -56,5 +56,5 @@
         </div>
     </div>
     <!-- Add Review Submit -->
-    <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Add Review</button>
+    <button type="submit" class="btn btn-primary btn-lg" id="submit-add-review" value="submit">Add Review <i class="fas fa-plus-square"></i></button>
 </form>
