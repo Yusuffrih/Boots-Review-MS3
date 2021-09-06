@@ -145,15 +145,7 @@ a.navbar-brand {
 
 /* Forms */
 
-.authentication-form {
-    background-color: #ECEAEC;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 5px 5px #0b090918;
-}
-
-#form-container {
+.form-container {
     background-color: #ECEAEC;
     color: #0B0909;
     border-radius: 1.5rem;
