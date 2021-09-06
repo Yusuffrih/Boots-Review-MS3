@@ -160,6 +160,10 @@ a.navbar-brand {
     box-shadow: 5px 5px #0b090918;
 }
 
+.form-control {
+    font-size: 1.6rem;
+}
+
 .form-help {
     color: rgba(50, 50, 50, 0.5);
 }
