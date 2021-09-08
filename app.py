@@ -119,7 +119,6 @@ def edit_profile(user_id):
                 flash("You have successfully updated you profile!")
                 return redirect(url_for("profile",
                                         username=session['user']))
-
         else:
             flash("You do not have the permission to update this profile!")
             return redirect(url_for("profile",
