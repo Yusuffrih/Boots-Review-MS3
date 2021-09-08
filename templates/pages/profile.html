@@ -45,8 +45,10 @@
                     <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
                 </button>
                     <div class="card-body">
-                        <h3 class="card-title">{{ review.star_rating_id }}</h3>
-                        <h4 class="card-title">{{ review.review_date}}</h3>
+                        <h3 class="card-title">{{ review.make }} - {{ review.boots_name }}</h3>
+                        <p><em>Reviewed by:</em> {{ review.user_id}}</p>
+                        <p><em>Reviewed on:</em> {{ review.review_date}}</p>
+                        <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
                         <!-- Buttons section -->
                         <div class="row justify-content-center">
                             <a href="{{ url_for('edit_review', review_id=review._id )}}" class="btn btn-primary" type="button">Edit</a>
