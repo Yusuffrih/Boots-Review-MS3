@@ -1,24 +1,28 @@
 {% extends 'layout/base.html' %}
 {% block content %}
 {% include 'components/navigation/nav.html' %}
-<div class="container" id="home-container">
+
+<header>
     <!-- header -->
     <h1 class="header">Boots Review</h1>
     <div class="row justify-content-center">
         <a href="{{ url_for('sign_up') }}" class="btn btn-lg signup-btn">Sign Up</a>
         <a href="{{ url_for('log_in') }}" class="btn btn-lg login-btn">Log In</a>
     </div>
+</header>
+
+<div class="container" id="home-container">
     <div class="row section-container justify-content-center">
         <div id="hero-image-home"></div>
-    </div>
-    <!-- landing messages -->
-    <div id="landing-messages">
-        <h2>Share your experiences of your favourite football boots here!</h2>
-        <p id="description-paragraph">
-            Boots Review is a community built around a common passion for football boots. 
-            No matter the sport, if you enjoy a good pair of football boots, this is the place for you. 
-            You can easily browse our collection of reviews of the best football boots and even review your own favourite pair.
-        </p>
+        <!-- landing messages -->
+        <div id="landing-messages">
+            <h2>Share your experiences of your favourite football boots here!</h2>
+            <p id="description-paragraph">
+                Boots Review is a community built around a common passion for football boots. 
+                No matter the sport, if you enjoy a good pair of football boots, this is the place for you. 
+                You can easily browse our collection of reviews of the best football boots and even review your own favourite pair.
+            </p>
+        </div>
     </div>
 </div>
 {% include 'components/footer/footer.html' %}
