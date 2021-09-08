@@ -136,8 +136,11 @@ footer {
     background-color: #0B0909;
 }
 
+.navbar-dark .navbar-toggler,
+.navbar-dark .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255,255,255,1);
+    color: #e98d50;
+    border-color: #e98d50;
 }
 
 /* Buttons */
