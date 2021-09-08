@@ -124,12 +124,16 @@ footer {
 
 /* Navbar  */
 
-.navbar {
-    background-color: #0B0909;
+.navbar-dark .navbar-brand {
+    color: #e98d50;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #67b7e6;
+    font-weight: 900;
+    font-size: 3rem;
 }
 
-a.navbar-brand {
-    font-size: 3rem;
+.navbar {
+    background-color: #0B0909;
 }
 
 .navbar-dark .navbar-nav .nav-link {
