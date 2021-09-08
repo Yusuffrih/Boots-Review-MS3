@@ -155,6 +155,18 @@ footer {
     border: 1px solid #0B0909;
 }
 
+.edit-btn {
+    background-color: #8a8784;
+    color: #fff;
+    margin: 2px;
+}
+
+.delete-btn {
+    background-color: #d60f22;
+    color: #fff;
+    margin: 2px;
+}
+
 /* Forms */
 
 .form-container {
