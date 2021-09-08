@@ -160,11 +160,12 @@ footer {
 .form-container {
     background-color: #ECEAEC;
     color: #0B0909;
+    border: 2px solid #0B0909;
     border-radius: 1.5rem;
     padding-top: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 5px 5px #0b090918;
+    box-shadow: 10px 10px #0b090918;
 }
 
 .form-control {
