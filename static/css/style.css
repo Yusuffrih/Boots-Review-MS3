@@ -273,3 +273,9 @@ a.navbar-brand {
 #search {
     width: 100%;
 }
+
+/* modals */
+
+.modal-content {
+    color: #0B0909;
+}

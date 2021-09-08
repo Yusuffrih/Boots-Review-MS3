@@ -11,10 +11,10 @@
             <!-- Bootstrap Card -->
             <div class="card profile-card">
                 <img src="{{ profile.profile_pic}}" class="card-img-top" alt="Profile picture">
-                 <!-- Edit / Delete buttons -->
-                 <a href="{{ url_for('edit_profile', user_id=profile._id)}}" class="card-btn btn btn-secondary">Edit</a>
-                 <a href="#delete-profile-modal" class=" card-btn btn btn-danger" data-toggle="modal" data-target="#deleteProfile">Delete</a>
-                 {% include 'components/modals/delete_profile.html' %}
+                <!-- Edit / Delete buttons -->
+                <a href="{{ url_for('edit_profile', user_id=profile._id)}}" class="card-btn btn btn-secondary">Edit</a>
+                <a href="#delete-profile-modal" class=" card-btn btn btn-danger" data-toggle="modal" data-target="#deleteProfile">Delete</a>
+                {% include 'components/modals/delete_profile.html' %}
             </div>
         </div>
 
