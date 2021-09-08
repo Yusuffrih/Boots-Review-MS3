@@ -32,7 +32,7 @@
                                     <img class="card-img-top" src="{{ review.image_url }}" alt="picture of boots being reviewed">
                                 </button>
                                 <div class="card-body">
-                                    <h3 class="card-title">{{ review.boots_name }}</h3>
+                                    <h3 class="card-title">{{ review.make }} - {{ review.boots_name }}</h3>
                                     <p><em>Reviewed by:</em> {{ review.user_id}}</p>
                                     <p><em>Reviewed on:</em> {{ review.review_date}}</p>
                                     <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
