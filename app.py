@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -194,7 +195,7 @@ def add_review():
                 "make": request.form.get("make_id"),
                 "image_url": request.form.get("image_url"),
                 "category": request.form.get("category"),
-                "review_date": request.form.get("review_date"),
+                "review_date": datetime.date.today().strftime('%d/%m/%y'),
                 "star_rating_id": request.form.get("star_rating_id"),
                 "review": request.form.get("review"),
                 "user_id": session["user"]
@@ -427,4 +428,4 @@ def delete_make(make_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=os.environ.get("DEBUG"))
