@@ -149,19 +149,6 @@ footer {
     font-size: 2rem;
 }
 
-.authentication-submit {
-    background-color: #e98d50;
-    color: #FFFFFF;
-    border: 1px solid #0B0909;
-}
-
-.authentication-submit:hover {
-    background-color: #0B0909;
-    color: #FFFFFF;
-    border: 1px solid #0B0909;
-    transition: 1s;
-}
-
 .card-btn {
     margin: 2px; 
     padding:4px;
