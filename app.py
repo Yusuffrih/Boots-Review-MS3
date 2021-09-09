@@ -51,8 +51,8 @@ def sign_up():
     return render_template("pages/authentication.html", sign_up=True)
 
 
-@app.route("/log-in", methods=["GET", "POST"])
-def log_in():
+@app.route("/login", methods=["GET", "POST"])
+def login():
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -68,11 +68,11 @@ def log_in():
 
             else:
                 flash("Invalid username/password, try again!")
-                return redirect(url_for('log_in'))
+                return redirect(url_for('login'))
 
         else:
             flash("Invalid username/password, try again!")
-            return redirect(url_for("log_in"))
+            return redirect(url_for("login"))
 
     return render_template("pages/authentication.html")
 
@@ -92,7 +92,7 @@ def profile(username):
                                profile=profile,
                                reviews=reviews)
 
-    return redirect(url_for("log_in"))
+    return redirect(url_for("login"))
 
 
 # edit user profile
@@ -156,7 +156,7 @@ def log_out():
     # remove user from session cookies
     flash("You have logged out successfully")
     session.pop("user")
-    return redirect(url_for("log_in"))
+    return redirect(url_for("login"))
 
 
 @app.route("/reviews")
