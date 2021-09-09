@@ -5,7 +5,7 @@
 
 {% else %}
     <h3 class="header">Log In</h3>
-    <form class="container form-container col-sm-12 col-md-8 was-validated" method="POST" action="{{ url_for ('log_in') }}" novalidate>
+    <form class="container form-container col-sm-12 col-md-8 was-validated" method="POST" action="{{ url_for ('login') }}" novalidate>
 
 {% endif %}
         <!-- Username -->
@@ -33,7 +33,7 @@
         <!-- Sign-Up -->
         <button type="submit" class="btn btn-lg btn-primary signup-btn">Sign Up</button>
         <div class="form-help">
-            <small>Already have an account? <a href="{{ url_for ('log_in') }}">Log In</a></small>
+            <small>Already have an account? <a href="{{ url_for ('login') }}">Log In</a></small>
         </div>
 {% else %}
         <!-- Login -->
