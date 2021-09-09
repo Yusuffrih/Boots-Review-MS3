@@ -38,7 +38,6 @@ def sign_up():
         sign_up = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
-            "bio": request.form.get("bio"),
             "profile_pic": request.form.get("profile-pic")
         }
         mongo.db.users.insert_one(sign_up)
