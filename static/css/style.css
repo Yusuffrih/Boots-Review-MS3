@@ -144,7 +144,7 @@ footer {
 }
 
 .card-btn {
-    margin: 2px; 
+    margin: 2px;
     padding:4px;
     border: 1px solid #0B0909;
 }
@@ -199,17 +199,18 @@ footer {
 
 /* Profile Page */
 
-.profile-card {
+#profile-card {
     min-width: 20rem;
     min-height: 20rem;
     border: 1px #0B0909 solid;
     border-radius: 0.75rem;
     background-color: #ECEAEC;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
+    margin-right: 2rem;
 }
 
-.profile-card img {
+#profile-card img {
     margin: 5px auto;
     border-radius: 1.5rem;
     box-shadow: 2px 2px #0b090918;
@@ -260,7 +261,6 @@ footer {
 
 #bio-section {
     padding: 0 2rem 0 2rem;
-    margin: 0 2px 0 0;
 }
 
 #profile-bio {
@@ -306,7 +306,7 @@ footer {
 
 /* Responsive Design */
 
-@media screen and (max-width:768px) and (min-width:575px) {
+@media screen and (max-width:767px) and (min-width:575px) {
     .review-card img {
         width:15rem;
         height: 15rem;
@@ -314,17 +314,32 @@ footer {
     .review-card .card-body {
         font-size: 1.5rem;
     }
+    #profile-card {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:575px) {
+    #profile-card {
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width:474px) {
     #profile-bio {
         font-size: 1.6rem;
     }
+    #profile-card {
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width:396px) {
     #profile-bio {
         font-size: 1.3rem;
+    }
+    #profile-card {
+        margin-right: 0;
     }
 }
 
@@ -338,5 +353,11 @@ footer {
     }
     #search-label {
         font-size: 1.6rem ;
+    }
+    #profile-container {
+        height: 30em;
+    }
+    #profile-card {
+        margin-right: 0;
     }
 }
