@@ -229,7 +229,7 @@ footer {
 
 .review-card img {
     margin: 5px auto;
-    border-radius: 1.5rem;
+    border-radius: 0.75rem;
     box-shadow: 2px 2px #0b090918;
     border-bottom: 1px #0B0909 solid;
     background-position: center center;
