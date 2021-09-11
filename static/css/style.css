@@ -161,7 +161,7 @@ footer {
     margin: 2px;
 }
 
-.btn:not(:disabled):not(.disabled):hover {
+.review-card button:hover {
     background-color: #e98d50;
     border: 1px solid #fff;
     transition: 0.5s;
