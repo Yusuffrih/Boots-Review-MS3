@@ -315,6 +315,18 @@ footer {
     }
 }
 
+@media screen and (max-width:474px) {
+    #profile-bio {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width:396px) {
+    #profile-bio {
+        font-size: 1.3rem;
+    }
+}
+
 @media screen and (max-width:321px) {
     .review-card img {
         width:15rem;
