@@ -8,7 +8,7 @@
         <form action="{{ url_for('search') }}" method="POST" class="row card section-container">
             <div class="row">
                 <div class="col-3">
-                    <label for="search">Search Reviews</label>
+                    <label id="search-label" for="search">Search Reviews</label>
                 </div>
                 <div class="col-9 justify-content-start">
                     <input type="text" name="search" id="search" minlength="3" placeholder="Search by User, Boots, Make or Category" required>
