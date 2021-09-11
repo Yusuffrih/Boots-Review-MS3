@@ -39,12 +39,6 @@ body {
 /* Home Page */
 
 #home-container {
-    padding-left: 0;
-    padding-right: 0;
-    position: relative;
-}
-
-#hero-image-home {
     background-image: url('../images/boots-images/hero-image-home/hero-image-home.jpg');
     background-position: center center;
     background-repeat: no-repeat;
