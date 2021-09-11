@@ -44,14 +44,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #0B0909;
-    height: 100vh;
+    height: 75vh;
     width: 100%;
 }
 
 #landing-messages {
     padding-top: 25px;
     position: relative;
-    bottom: 85rem;
     width: 80%;
     color: white;
     margin: 0 auto;
