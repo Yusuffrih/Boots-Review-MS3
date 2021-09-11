@@ -302,3 +302,28 @@ footer {
 .modal-content {
     color: #0B0909;
 }
+
+/* Responsive Design */
+
+@media screen and (max-width:768px) and (min-width:575px) {
+    .review-card img {
+        width:15rem;
+        height: 15rem;
+    }
+    .review-card .card-body {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .review-card img {
+        width:15rem;
+        height: 15rem;
+    }
+    .review-card .card-body {
+        font-size: 1.5rem;
+    }
+    #search-label {
+        font-size: 1.6rem ;
+    }
+}
