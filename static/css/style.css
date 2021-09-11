@@ -60,6 +60,7 @@ body {
 .login-btn,
 .signup-btn {
     border: 2px solid #0B0909;
+    border-radius: 0.75rem;
     margin: 0 4px 0 4px;
     width: 10rem;
 }
@@ -293,6 +294,7 @@ footer {
 
 #search {
     width: 100%;
+    border-radius: 0.75rem;
 }
 
 /* modals */
