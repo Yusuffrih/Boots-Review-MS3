@@ -361,3 +361,9 @@ footer {
         margin-right: 0;
     }
 }
+
+@media screen and (max-width:286px) {
+    .contact li, .social-media li{
+        font-size: 1.6rem;
+    }
+}
