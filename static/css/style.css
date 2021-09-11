@@ -62,7 +62,7 @@ body {
     border: 2px solid #0B0909;
     border-radius: 0.75rem;
     margin: 0 4px 0 4px;
-    width: 10rem;
+    min-width: 10rem;
 }
 
 .login-btn:hover,
