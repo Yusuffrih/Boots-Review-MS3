@@ -1,11 +1,11 @@
 {% include 'components/flash_messages/flash_messages.html' %}
 {% if sign_up == True %}
     <h3 class="header">Sign Up</h3>
-    <form class="container form-container col-sm-12 col-md-8 was-validated" method="POST" action="{{ url_for ('sign_up') }}" novalidate>
+    <form class="container form-container col-sm-12 col-md-8" method="POST" action="{{ url_for ('sign_up') }}">
 
 {% else %}
     <h3 class="header">Log In</h3>
-    <form class="container form-container col-sm-12 col-md-8 was-validated" method="POST" action="{{ url_for ('login') }}" novalidate>
+    <form class="container form-container col-sm-12 col-md-8" method="POST" action="{{ url_for ('login') }}">
 
 {% endif %}
         <!-- Username -->
