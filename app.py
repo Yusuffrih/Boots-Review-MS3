@@ -152,7 +152,7 @@ def edit_profile(user_id):
                 session["user"] = request.form.get("username").lower()
                 mongo.db.users.update(
                     {"_id": ObjectId(user_id)}, update_profile)
-                flash("You have successfully updated you profile!")
+                flash("You have successfully updated your profile!")
                 return redirect(url_for("profile",
                                         username=session['user']))
         else:
