@@ -30,6 +30,7 @@
                             <div class="card review-card">
                                 <button class="btn" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
                                     <img class="card-img-top" src="{{ review.image_url }}" alt="picture of boots being reviewed">
+                                    <i id="chevron" class="d-block fas fa-chevron-down"></i>
                                 </button>
                                 <div class="card-body">
                                     <h3 class="card-title">{{ review.make }} - {{ review.boots_name }}</h3>
@@ -37,7 +38,7 @@
                                     <p><em>Reviewed on:</em> {{ review.review_date }}</p>
                                     <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
                                     <div class="collapse" id="collapse-{{loop.index}}">
-                                        <div class="card card-body">
+                                        <div class="card-body">
                                             <p>{{ review.review }}</p>
                                         </div>
                                     </div>
