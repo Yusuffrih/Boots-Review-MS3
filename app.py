@@ -550,8 +550,17 @@ def edit_make(make_id):
         return redirect(url_for("home_page"))
 
 
+# delete make
 @app.route("/delete_make/<make_id>")
 def delete_make(make_id):
+
+    """
+    if user in session is admin
+    find make to remove with make_id and remove from db
+    flsh msg & redirect to manage
+    if user in session is not admin flash msg & redirect home
+    """
+
     if session.get("user") == "admin":
         mongo.db.makes.remove({"_id": ObjectId(make_id)})
         flash("You have successfully deleted the make!")
