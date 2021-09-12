@@ -301,6 +301,13 @@ footer {
     margin-bottom: 2rem;
 }
 
+#profile-icon {
+    font-size: 8rem;
+    color: #0B0909;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
 /* manage section */
 .section-container {
     background-color: #0B0909;
