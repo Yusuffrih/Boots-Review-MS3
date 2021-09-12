@@ -1,3 +1,11 @@
+const chevronRef = document.querySelectorAll("#chevron")
+    
+chevronRef.addEventListener("click", e => {
+chevronRef.classList.remove('fa-chevron-down');
+chevronRef.classList.add('fa-chevron-up');
+});
+
+
 // Bootstrap form validation code from documentation
 (function() {
     'use strict';
