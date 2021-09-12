@@ -190,6 +190,10 @@ footer {
     transition: 0.5s;
 }
 
+.review-card button i {
+    font-size: 2rem;
+}
+
 /* Forms */
 
 .form-container {
