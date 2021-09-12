@@ -1,6 +1,6 @@
 {% include 'components/flash_messages/flash_messages.html' %}
 <h3 class="header">Edit Category</h3>
-<form class="container form-container was-validated" method="POST" action="{{ url_for('edit_category', category_id=category._id )}}" novalidate>
+<form class="container form-container" method="POST" action="{{ url_for('edit_category', category_id=category._id )}}">
     <!-- Category Name -->
     <div class="form-group col">
         <label for="category_name">Category Name</label>

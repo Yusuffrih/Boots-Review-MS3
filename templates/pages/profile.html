@@ -24,15 +24,15 @@
 
         <!-- Bio -->
         <div id="bio-section" class="col-sm-12 col-md-8 col-lg-9">
-            <div class="row">
+            <div class="row no-gutters">
                 <h4 id="profile-bio-title">A little about {{ username }}</h4>
             </div>
             {% if profile.bio %}
-                <div class="row">
+                <div class="row no-gutters">
                     <p id="profile-bio">{{ profile.bio }}</p>
                 </div>
             {% else %}
-                <div class="row">
+                <div class="row no-gutters">
                     <p id="profile-bio">Click Edit Profile to Add A Bio Here</p>
                 </div>
             {% endif %}
