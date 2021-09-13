@@ -183,18 +183,19 @@ The site features are as follows:
 * Registration page where the user can input their details, username and password
 * Search bar for users to be able to search through the database:
     * to find reviews of particular boots that they want to read review of
-    * to find reviews of boots that are in a particular price range
-    * to find reviews of boots that are made with specific materials
     * to find reviews of boots that are of a certain make
     * to find reviews of boots that are of a certain star rating
-* To be able to follow the link attached to the boots review which will take the user to an external site where they can purchase the boots
 * User feedback whenever they carry out any of the CRUD operations
-* User feedback on forms
+* User feedback on forms in the case that they have not filled the form in correctly
 * Bootstrap css design features such as navabr, buttons cards etc.
 * Bootstraps responsive web design which allows users to use the site on all device sizes
+* A beautiful looking profile page displaying a photo of the user, a bio and their reviews that they have written
+* A landing page that lets the user know what the site is about at a glance
+* To be able to sign out whenever the user is finished
+* For the admin user to be able to manage the site such as add categories and makes
 
 ## Features Yet To Implement
-None
+* None
 
 ## Technologies Used
 
