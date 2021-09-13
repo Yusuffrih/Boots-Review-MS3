@@ -351,6 +351,22 @@ footer {
     color: #0B0909;
 }
 
+.modal-header,
+.modal-footer,
+.close {
+    background-color: #0B0909;
+    color: #ffffff;
+}
+
+.close:hover{
+    color: red;
+}
+
+.modal-body {
+    background-color: #e98d50;
+
+}
+
 /* Responsive Design */
 
 @media screen and (max-width:767px) and (min-width:575px) {
