@@ -292,7 +292,6 @@ footer {
 
 #profile-bio {
     height: 10em;
-    display: flex;
     text-align: start;
 }
 
@@ -359,7 +358,7 @@ footer {
     }
 }
 
-@media screen and (max-width:474px) {
+@media screen and (max-width:501px) {
     #profile-bio {
         font-size: 1.6rem;
     }
@@ -375,12 +374,16 @@ footer {
     #profile-card {
         margin-right: 0;
     }
+    #bio-section {
+        margin-bottom: 2rem;
+        margin-top: -2rem;
+    }
 }
 
-@media screen and (max-width:321px) {
+@media screen and (max-width:330px) {
     .review-card img {
-        width:15rem;
-        height: 15rem;
+        width:11rem;
+        height: 11rem;
     }
     .review-card .card-body {
         font-size: 1.5rem;
@@ -393,6 +396,20 @@ footer {
     }
     #profile-card {
         margin-right: 0;
+    }
+    #profile-card img{
+        width:11rem;
+        height: 11rem;
+    }
+    #profile-bio-title {
+        font-size: 1.6rem;
+    }
+    #bio-section {
+        margin-bottom: 8rem;
+        margin-top: -8rem;
+    }
+    .navbar-dark .navbar-brand {
+        font-size: 2rem;
     }
 }
 
@@ -417,5 +434,12 @@ footer {
     }
     .contact li, .social-media li{
         font-size: 1.4rem;
+    }
+    #bio-section {
+        margin-bottom: 8rem;
+        margin-top: -8rem;
+    }
+    #profile-bio {
+        font-size: 1.3rem;
     }
 }
