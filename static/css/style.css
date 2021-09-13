@@ -306,7 +306,7 @@ footer {
     text-align: start;
 }
 
-#submit-add-review {
+.form-btn {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
