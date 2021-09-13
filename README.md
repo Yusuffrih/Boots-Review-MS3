@@ -115,8 +115,8 @@ The colours I have chosen are:
 * Rich Black Fogra 39 - Hex (0B0909)
 * White - Hex (FFFFFF)
 * Platinum - Hex (ECEAEC)
-* Capri - Hex (21C2FD)
-* Red RYB - Hex (FF1F0A)
+* Aero - Hex (67B7E6)
+* Persian Orange - Hex (E98D50)
 
 ### Icons 
 I have gone to [Font Awesome](https://fontawesome.com/) for the icons that I have used in the site. The icons, I feel just add a little bit extra to the site in terms of style and make it a bit more visually appealing which ultimately provides a better User Experience.
