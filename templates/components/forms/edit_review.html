@@ -67,6 +67,8 @@
             <textarea class="form-control" id="review" name="review" minlength="50" maxlength="300" value="{{ review.review }}" placeholder="Please write a little about your experience wearing these boots (min. 50 characters)" aria-label="Review text box" rows="3" required>{{ review.review }}</textarea>
         </div>
     </div>
+    <!-- Cancel -->
+    <a type="button" href="{{ url_for('reviews') }}" class="btn btn-lg orange-btn">Cancel <i class="fas fa-window-close"></i></a>
     <!-- Edit Review -->
     <button type="submit" class="btn blue-btn btn-lg" id="submit-add-review" value="submit">Edit Review <i class="fas fa-edit"></i></button>
 </form>

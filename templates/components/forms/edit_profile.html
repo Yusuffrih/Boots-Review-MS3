@@ -21,6 +21,8 @@
         <input type="url" class="form-control" id="profile-pic" name="profile-pic" value="{{user.profile_pic}}" placeholder="https://i.postimg.cc/AAAA/example.png" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.png)" required>
         <small class="form-help"><em>Needs to be a URL - Make yours <a href="https://postimages.org/" target="_blank">here</a></em></small>
     </div>
+    <!-- Cancel -->
+    <a type="button" href="{{ url_for('profile', username=session['user']) }}" class="btn btn-lg orange-btn">Cancel <i class="fas fa-window-close"></i></a>
     <!-- Sign-Up -->
     <button type="submit" class="btn btn-lg blue-btn mb-2">Update Profile <i class="fas fa-save"></i></button>
 </form>
