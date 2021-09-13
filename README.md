@@ -47,7 +47,7 @@ A secondary aim of the site is that when these people have bought their pair of 
 * As a site owner, I would like to collect a database of star ratings of the football boots that are reviewed so that I can eventually create a ranking of the top rated boots
 * As a site owner, I would like the site to be easy to use and intuitive
 * As a site owner, I would like the site to have an attractive UI with an obvious color scheme
-* As a site owner, I would like the user to be able to creat, read, update and delete their profile
+* As a site owner, I would like the user to be able to create, read, update and delete their profile
 * As a site owner, I would like the user to be able to creat, read, update and delete their boots reviews
 * As a site owner, I would like to have access to the admin section of the site that is off limits to the normal user.
 * As a site owner, I want to be able to create read and update and delete the categories and makes of the football boots
@@ -55,9 +55,18 @@ A secondary aim of the site is that when these people have bought their pair of 
 
 ### User Goals
 * I would like the site to be responsive to different screen sizes so that I can use different devices to view the site
-* I would like to feel like I am part of a community of people who have the same interests
+* I would like to feel like I am part of a community of people who have the same interest in football boots
 * I would like to be given feedback from the site confirming when I have completed an action such as creating or deleting a review of a pair of football boots
+* I would like to be able to create, read, update and delete my profile
+* I would like to be able to create, read, update and delete my reviews
 * I would like to be able to contact the site owner and provide some feedback on the site
+* I would like to be able to search for specific boots
+* I would lile to be able to search for reviews created by specific users based on their user names
+* I would like to be able to search for reviews based on specific boot makes
+* I would like to be able to search for reviews based on specific boot categories
+* I would like to be able to have a record of all the reviews that I have created on my profile page
+* I would like to be able to securely log out and end my user session
+
 
 ### User Stories
 * As a user of the site, I would like to be able to register my details and create a secure account with a username and password
