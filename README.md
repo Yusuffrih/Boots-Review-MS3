@@ -75,29 +75,28 @@ A secondary aim of the site is that when these people have bought their pair of 
 * As a user, I would like to be able to update/edit a review that I wrote
 * As a user, I would like to be able to delete a review that I wrote on a pair of boots
 * As a user, I would like to be able to see pictures of boots that have been reviewed
-* As a user, I would like to be able to follow a link to a purchase boots that have been reviewed
-* As a user, I would like to be able to search the database for boot reviews based on certain criteria
-* As a user, I would like to be able to save boots that have been reviewed so that I may see them at a later stage
+* As a user, I would like to be able to search the database for boot reviews based on makes, categories, reviewer, or Boots name 
+* As a user, I would like to be able view, edit, and delete my profile 
+* As a user, I would like to be able to view my reviews that I created in a centralised location in my profile page
 
 ### User Requirements
 * The site needs to be easy to navigate between the different features via good UX and a concise navbar
-* To be able easily see whether or not an CRUD action has been successful or not
+* To be able easily see whether or not a CRUD action has been successful or not
 * To have a landing page that tells the user what the page is at a glance
 * To have a well laid out site that is easy to use and understandable
 * To be able to read clearly any messaging that is displayed on screen via constrasting backgrounds
-* To be given clear and easy to understand instructions via really good UX
+* To be given clear and easy to understand instructions via good UX
 * To be able to contact the site owner to provide feedback or make a complaint if necessary
-* To have my registration and personal data secure in the database
-* All features need to be operating efficiently
-* All features and functionality need to be well laid out and very intuitive
+* To have my registration and personal data and password secure in the database
+* All features need to be working as expected
+* All features and functionality need to be well laid out and intuitive
 * The site needs to be responsive across all devices and browsers
 
 ### User Expectations
-* Any external links need to open in a separate tab so that I don't lose where I am on the site and have to navigate there again
 * All of the content needs to be easily readable and contrasting with the background colours and imagery
 * Navigation of the site needs to be really easy and intuitive
 * The site owner should be easily contactable - contact page and contact info in the footer of the site
-* Any forms should always provide me with feedback so that I know what input it expects
+* Any forms should always provide me with instructions so that I know what input it expects
 
 ## Design Choices
 Generally, football boots tend to be quite sleek and stylish so I decided to try and keep this site the same way. The overall look and feel of the site is very soft touch with nice lines and angles. The colours are quite simple with lots of black and white but with a bit of colour to give it that little bit of extra style.
