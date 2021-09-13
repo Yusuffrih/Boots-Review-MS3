@@ -326,9 +326,16 @@ footer {
 }
 
 .manage-card {
-    background-color: #ECEAEC;
+    background-color: #e98d50;
     color: #0B0909;
+    border: 2px solid #67b7e6;
     text-shadow: 2px 2px #0b090918;
+}
+
+.manage-card:hover {
+    background-color: #67b7e6;
+    color: #0B0909;
+    border: 2px solid #e98d50;
 }
 
 /* Reviews Page */
