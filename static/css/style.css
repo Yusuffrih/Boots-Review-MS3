@@ -74,29 +74,6 @@ h2 {
     margin: 0 auto;
 }
 
-.login-btn,
-.signup-btn {
-    border: 2px solid #0B0909;
-    border-radius: 0.75rem;
-    margin: 0 4px 0 4px;
-    min-width: 10rem;
-}
-
-.login-btn:hover,
-.signup-btn:hover{
-    border: 2px solid #FFFFFF;
-    background-color: #0B0909;
-    color: #FFFFFF;
-    transition: 1s;
-}
-
-.login-btn {
-    background-color: #e98d50;
-}
-
-.signup-btn {
-    background-color: #67b7e6;
-}
 
 /* Footer */
 
@@ -168,6 +145,30 @@ footer {
 
 /* Buttons */
 
+.login-btn,
+.signup-btn {
+    border: 2px solid #0B0909;
+    border-radius: 0.75rem;
+    margin: 0 4px 0 4px;
+    min-width: 10rem;
+}
+
+.login-btn:hover,
+.signup-btn:hover{
+    border: 2px solid #FFFFFF;
+    background-color: #0B0909;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.login-btn {
+    background-color: #e98d50;
+}
+
+.signup-btn {
+    background-color: #67b7e6;
+}
+
 .btn-lg {
     font-size: 2rem;
 }
@@ -184,9 +185,15 @@ footer {
     margin: 2px;
 }
 
-.review-card button:hover {
+
+.review-card button{
     background-color: #e98d50;
     border: 1px solid #fff;
+}
+
+.review-card button:hover {
+    background-color: #ECEAEC;
+    border: 1px solid #0B0909;
     transition: 0.5s;
 }
 
