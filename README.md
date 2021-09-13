@@ -41,12 +41,17 @@ A secondary aim of the site is that when these people have bought their pair of 
 ## User Experience (UX)
 
 ### Site Owner Goals
-* As a site owner, I want to give users some usability of the site without the requirement to register.
+* As a site owner, I want to give users no usability of the site without the requirement to register. This will ecourage registration.
 * As a site owner, I would like to make it a requirement to sign up if users want to review a pair of football boots they have recently worn and then update and delete their reviews thereafter. 
-* As a site owner, I would like to give unregistered user of the site the ability to read reviews of football boots that other users have created
-* As a site owner, I would like to collect a database of reviews of football boots which may ultimately be used for other purposes in the future
+* As a site owner, I would like to collect a database of reviews of football boots
 * As a site owner, I would like to collect a database of star ratings of the football boots that are reviewed so that I can eventually create a ranking of the top rated boots
-* As a site owner, I would like to collect a database of price ranges of football boots so that site owners would be able to search for the best rated boots within their price range
+* As a site owner, I would like the site to be easy to use and intuitive
+* As a site owner, I would like the site to have an attractive UI with an obvious color scheme
+* As a site owner, I would like the user to be able to creat, read, update and delete their profile
+* As a site owner, I would like the user to be able to creat, read, update and delete their boots reviews
+* As a site owner, I would like to have access to the admin section of the site that is off limits to the normal user.
+* As a site owner, I want to be able to create read and update and delete the categories and makes of the football boots
+
 
 ### User Goals
 * I would like the site to be responsive to different screen sizes so that I can use different devices to view the site
