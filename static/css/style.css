@@ -186,18 +186,18 @@ footer {
 }
 
 
-.review-card button{
+.review-btn{
     background-color: #e98d50;
     border: 1px solid #fff;
 }
 
-.review-card button:hover {
+.review-btn:hover {
     background-color: #ECEAEC;
     border: 1px solid #0B0909;
     transition: 0.5s;
 }
 
-.review-card button i {
+.review-btn i {
     font-size: 2rem;
 }
 
@@ -259,7 +259,7 @@ footer {
 .review-card {
     border: 1px #0B0909 solid;
     border-radius: 0.75rem;
-    background-color: #ECEAEC;
+    background-color: #e98d50;
     margin: 1.6rem;
 }
 
@@ -362,7 +362,7 @@ footer {
     color: red;
 }
 
-.modal-body {
+.modal-content {
     background-color: #e98d50;
 
 }

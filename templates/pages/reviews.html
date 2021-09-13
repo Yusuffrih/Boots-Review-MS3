@@ -28,7 +28,7 @@
                     {% for review in reviews %}
                         <div class="col-sm-6 col-lg-4">
                             <div class="card review-card">
-                                <button class="btn" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
+                                <button class="btn review-btn" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
                                     <img class="card-img-top" src="{{ review.image_url }}" alt="picture of boots being reviewed">
                                     <i id="chevron" class="d-block fas fa-chevron-down"></i>
                                 </button>
