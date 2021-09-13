@@ -132,11 +132,8 @@ I created mock ups for my page to fit into the main device types - Desktop, Tabl
 ### Data Schema
 To carry out the functionality of the site, I needed to create three different collections of data. They are: 
 1. Users 
-2. Boots
 3. Categories
 4. Reviews
-5. Colours
-6. Price Ranges
 7. Makes
 8. Star Ratings
 
@@ -149,45 +146,23 @@ The Users collection is made up of the following fields:
 | password | string    | N/A     |
 | bio      | string    | N/A     | 
 
-The Boots collection is made up of the following fields:
-| Field         | Data Type | Default |
-|---------------|-----------|---------|
-| id            | ObjectId  | N/A     |
-| name          | string    | N/A     |
-| make_id       | string    | N/A     |
-| color_id  | string    | N/A     |
-| price-range_id| string    | N/A     |
-| purchase_url  | string    | N/A     |
-| image_url     | string    | N/A     |
-| star_rating_id| number    | N/A     |
-| review_id     | array     | N/A     |
-| category_id     | string     | N/A  |
-
 The Categories collection is made up of the following fields:
-| Field | Data Type | Default |
-|-------|-----------|---------|
-| id    | ObjectId  | N/A     |
-| name  | string    | N/A     |
+| Field          | Data Type | Default |
+|----------------|-----------|---------|
+| id             | ObjectId  | N/A     |
+| category_name  | string    | N/A     |
 
 The Reviews collection is made up of the following fields:
-| Field       | Data Type | Default |
-|-------------|-----------|---------|
-| id          | ObjectId  | N/A     |
-| boot_id     | string    | N/A     |
-| user_id     | string    | N/A     |
-| review_date | string    | N/A     |
-
-The Colours collections is made up of the following fields:
-| Field         | Data Type | Default |
-|---------------|-----------|---------|
-| id            | ObjectId  | N/A     |
-| color | string    | N/A     |
-
-The Price Ranges collection is made up of the following fields:
-| Field       | Data Type | Default |
-|-------------|-----------|---------|
-| id          | ObjectId  | N/A     |
-| price_range | string    | N/A     |
+| Field             | Data Type | Default |
+|-------------------|-----------|---------|
+| id                | ObjectId  | N/A     |
+| user_id           | string    | N/A     |
+| review            | string    | N/A     |
+| star_rating_id    | string    | N/A     |
+| image_url         | string    | N/A     |
+| category          | string    | N/A     |
+|boots_name         | string    | N/A     |
+| make              | string    | N/A     |
 
 The Makes collection is made up of the following fields:
 | Field | Data Type | Default |
@@ -195,11 +170,11 @@ The Makes collection is made up of the following fields:
 | id    | ObjectId  | N/A     |
 | name  | string    | N/A     |
 
-The Star Ratings collection is made up of the following fields:
-| Field | Data Type | Default |
-|-------|-----------|---------|
-| id    | ObjectId  | N/A     |
-| stars | number    | N/A     |
+The Stars collection is made up of the following fields:
+| Field  | Data Type | Default |
+|--------|-----------|---------|
+| id     | ObjectId  | N/A     |
+| rating | number    | N/A     |
 
 
 ## Features
