@@ -23,7 +23,8 @@
     <!-- Image URL -->
     <div class="form-group col">
         <label for="image_url">Image URL</label>
-        <input type="text" class="form-control" id="image_url" name="image_url" value="{{ review.image_url }}" placeholder="Paste URL here" required>
+        <!-- Pattern from W3Schools -->
+        <input type="text" class="form-control" id="image_url" name="image_url" pattern="https?://.+" value="{{ review.image_url }}" placeholder="Paste URL here" required>
     </div>
     <!-- Category -->
     <div class="form-group col">
@@ -38,11 +39,6 @@
                 {% endif %}
             {% endfor %}
         </select>
-    </div>
-    <!-- Date of Review -->
-    <div class="form-group col">
-        <label for="review_date">Date of Review</label>
-        <input type="date" class="form-control" id="review_date" name="review_date" value="{{ review.review_date }}" required>
     </div>
     <!-- Star Rating -->
     <div class="form-group col">
