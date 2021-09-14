@@ -259,7 +259,7 @@ def add_review():
     """
 
     if session:
-        makes = mongo.db.makes.find().sort("makes", 1)
+        makes = mongo.db.makes.find().sort("name", 1)
         categories = mongo.db.categories.find().sort("category_name", 1)
         stars = mongo.db.stars.find()
         if request.method == "POST":
