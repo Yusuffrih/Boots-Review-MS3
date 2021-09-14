@@ -238,35 +238,151 @@ The site features are as follows:
 ## Testing
 
 ### User Story Testing
-1. User Registration
-    1. Create a secure account with a username and password
+1. #### User Registration
+    1. #### Create a secure account with a username and password
+    * #### Plan
+    I planned to create the landing page with a button to for login and signup on the actual page as well as having nav items to these same pages so as to increase the likelyhood of the user seeing the link.
+    The plan once the user gets to the registration page is to request that they create a username and secure password and click signup. I will discuss the form authentication for the patterns required in the username and password in the form authentication testing section.   
+    * #### Implementation
+    I did exactly as planned on this and created the landing page with the links found in Bootstrap buttons on the page and in the Bootstrap navbar as well so that the user would find it as easy as possible to get to these pages while also being able to see an attractive landing page.
+    I created a separate page for the signup form to rest in and the set up the backend function to allow the user to add a record to the user collection in the database when they signup correctly.
+    * #### Test
+    To test the different scenarios of this part of the user story, I needed to test registering with a brand new username and an already existing username. I also tested the form validation to ensure the user data integrity and this is discussed in the form validation testing below.
+    * #### Result
+    The user registration worked exactly as expected and the user was not able to signup with an existing username and succesfully signed up with a username that didn't exist. When signup was successfull the user received a flash message to make them aware of same.
+    
+    This is a pass
+
     2. View profile (see profile testing no.8 below)
     3. Edit (see profile testing no.8 below)
-    4. Delete
+    4. Delete (see profile testing no.8 below)
 
-2. Reviews:
-    1. View
-    2. Edit
-    3. Delete
+2. #### Reviews:
+    1. #### View
 
-3. Read a review that someone else wrote
+    * #### Plan
 
-4. Update/edit a review that I wrote
+    * #### Implementation
 
-5. Delete a review that I wrote
+    * #### Test
 
-6. See pictures of boots that have been reviewed
+    * #### Result
 
-7. Search the database for boot reviews based on makes, categories, reviewer, or Boots name 
+    2. #### Edit
+    * #### Plan
 
-8. Profile:
-    1. View 
+    * #### Implementation
 
-    2. Edit 
+    * #### Test
 
-    3. Delete 
+    * #### Result
 
-9. View my reviews on my profile page
+    3. #### Delete
+    * #### Plan
+
+    * #### Implementation
+
+    * #### Test
+    
+    * #### Result
+
+3. #### Read a review that someone else wrote
+    * #### Plan
+
+    * #### Implementation
+
+    * #### Test
+    
+    * #### Result
+
+4. #### Update/edit a review that I wrote
+    * #### Plan
+
+    * #### Implementation
+
+    * #### Test
+    
+    * #### Result
+
+5. #### Delete a review that I wrote
+    * #### Plan
+
+    * #### Implementation
+
+    * #### Test
+    
+    * #### Result
+
+6. #### See pictures of boots that have been reviewed
+    * #### Plan
+
+    * #### Implementation
+
+    * #### Test
+    
+    * #### Result
+
+7. #### Search the database for boot reviews based on makes, categories, reviewer, or Boots name 
+    * #### Plan
+
+    * #### Implementation
+
+    * #### Test
+    
+    * #### Result
+
+8. #### Profile:
+    1. #### View 
+    * #### Plan
+    The plan is that when the user signs up, logs in or clicks on the profile tab in the navbar, that they will be able to view their profile page which should display they username, photo and bio (if added to profile) or if not already to the profile page, I plan on putting in place a default icon for the profile picture and a message in the place of the profile bio to let the user know that they can edit their profile and add the bio in it's place
+    * #### Implementation
+    To implement this, I created a profile page with the outlined elements above and linked the profile page where relevant. I put in place an if statement using Jinja syntax to check if the user collection has any data in the fields for the profile picture and bio and if they do, then to display the relevant data in the rendered page. If they do not have data in those fields, I put in place a default profile icon and bio message as mentioned above. Of course the functionality for the relevant features was created using the profile function in the backend. 
+
+    * #### Test
+    To test this, I logged in as a new user to first see if the expected default profile pic would be in place and also the default message in the place of the profile bio. I then logged in as an existing user who had some data in place i.e. profile pic and bio. 
+
+    * #### Result
+    I was able to see all of the features of the profile page as expected and all of the information was correct and displaying as expected.
+    
+    This is a pass
+
+    2. #### Edit
+    * #### Plan
+    For the user to edit their profile page, I wanted to give them an edit button which sat directly underneath their profile picture and that made it really clear that they could edit their profile using good UX. As all of the other buttons in the site, this button would be made with Bootstrap and would have custom styling. The edit button would take the user to a new page where they would find the edit profile form. Once they fill in the form, they can click a submit button or they can cancel the edit profile action which would take them back to their profile page. The aim is for the user to have to input their password to be able to update their profile page. I also want to provide the user with confirmation that the profile has been successfully updated.
+
+    * #### Implementation
+    I created the button to edit the profile page with Bootstraps buttons and placed it under the profile picture. Once the user clicks this button, it redirects them to the edit profile page using Jinja and Python routing. I created the form in html and added the action and method to this so that it's a post method and made all of the input fields mandatory so that the user has to input the data which will make the site more rich and ultimately provide a better UX.
+
+    * #### Test
+    The test for this is to go into a users profile and click edit profile. It should take them to the edit profile page where they can fill in the form in it's entirity or cancel editing the profile. If they fill in a new password, this will become their new password or they can fill in their existing one to complete the form. 
+
+    * #### Result
+    I was able to carry out all of the forementioned actions without any errors. I got a flash message once I hit the submit button to say that I had successfully updated the profile page.
+    This test was a success.
+
+    3. #### Delete 
+    * #### Plan
+    The delete button is planned to be placed beside the edit button underneath the profile picture but I want it to be cloured in red to let the user know that it is not to be pressed without thinking first. Once the user clicks the delete button, I plan on a modal popping up for them as a form of defensive programming. The user will then warned in the modal and they would have to click another red delete button before the profile is deleted. 
+
+    * #### Implementation
+    To implement this feature and satisfy the user story, the delete button and modal was created using Bootstrap. The button targets the modal which triggers it to be brought up on screen. There is then another set of buttons in the modal and the delete button calls the delete function which is in Python to delete the user profile from the database and also delete that user's reviews. Once the deletion has occured, then the user is redirected to the homepage via the delete profile function in the backend.  
+
+    * #### Test
+    To test this, the user clicks the delete button, a modal should pop up for them as a form of defensive programming. The user will then be warned in the modal and they would have to click another red delete button before the profile is deleted. Once the claimant deletes the profile, they are redirected to the home page. Alternatively, if the user decides that they do not want to delete the page, they can click the close button to get out of the modal. 
+
+    * #### Result
+    This test was carried out on a couple of occassions and the result was as expected. The delete button was clicked, a modal popped up with a warning before deletion is completed. The close button was clicked to ensure that I could cancel the deletion of the profile page which worked as expected. The delete button was then clicked and the site was rediected to the home page and the login and signup buttons are displayed. 
+    
+    This test was a success.
+
+9. #### View my reviews on my profile page
+    * #### Plan
+
+    * #### Implementation
+
+    * #### Test
+    
+    * #### Result
 
 
 ### Validator Testing 
