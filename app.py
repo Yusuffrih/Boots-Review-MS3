@@ -426,6 +426,8 @@ def edit_category(category_id):
 
     if session.get("user") == "admin":
         if request.method == "POST":
+            category = mongo.db.categories.find_one(
+                {"_id": ObjectId(category_id)})
             update_category = {
                 "category_name": request.form.get("category_name")
             }
@@ -439,9 +441,11 @@ def edit_category(category_id):
                 return redirect(url_for("manage"))
             else:
                 flash("This category already exists, try again!")
-                return redirect(url_for("edit_category"))
-        category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-        return render_template("pages/edit_category.html", category=category)
+                return render_template(
+                    "pages/edit_category.html", category=category)
+        
+        return render_template(
+            "pages/edit_category.html", category=category)
     else:
         flash("You cannot perform this action!")
         return redirect(url_for("home_page"))
