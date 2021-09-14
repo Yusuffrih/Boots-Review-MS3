@@ -443,7 +443,7 @@ def edit_category(category_id):
                 flash("This category already exists, try again!")
                 return render_template(
                     "pages/edit_category.html", category=category)
-        
+
         return render_template(
             "pages/edit_category.html", category=category)
     else:
@@ -527,6 +527,8 @@ def edit_make(make_id):
 
     if session.get("user") == "admin":
         if request.method == "POST":
+            make = mongo.db.makes.find_one(
+                {"_id": ObjectId(make_id)})
             update_make = {
                 "name": request.form.get("name")
             }
@@ -543,7 +545,8 @@ def edit_make(make_id):
                 return redirect(url_for("manage"))
             else:
                 flash("This make already exists, try again!")
-                return redirect(url_for("edit_make"))
+                return render_template(
+                    "pages/edit_make.html", make=make)
         # if method = "GET"
         else:
             make = mongo.db.makes.find_one({"_id": ObjectId(make_id)})
