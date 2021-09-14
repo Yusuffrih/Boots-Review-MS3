@@ -274,21 +274,24 @@ The site features are as follows:
 
     1. #### View
     * #### Plan
-
+    To view the reviews, the plan is for the user to be able to view their own reviews that they have created in their profile page. These will be visible underneath the user profile section where they will be able to see the profile pic and bio. The reviews will be listed and sorted by category alphabetically. The listed reviews, when visible in the profile page will have all the data that the user inputs in the add review form, including the review photo. The reviews will also have edit and delete buttons as well as a drop down to see the main body of the review. 
     * #### Implementation
-
+    To implement this, I created a card for the reviews to be displayed and then looped through the reviews and created a card for each one in the database that belongs to the user in session. The cards contatain bootstrap buttons to edit and delete and also a button that targets a dropdown to display the written review. When the user is new to the site and does not have any reviews, there will be an alternative placeholder in the place of the reviews just letting the user know that they have no reviews as of yet and that they can add one by clicking the button found on the page. 
+    
     * #### Test
-
+    To test this, it would mean signing into the site with a user profile and initially not having any reviews created to see if there is some placeholder text in the space where the reviews should be. Then once this part is established, add a review and once you are directed back to the home page after completing the review, you should see the review on the profile page. 
     * #### Result
+    Once the above steps are carried out and review is added, it appears on the home page as expected and displays in a grid format. The testing is a success. If more reviews are added, they all are displayed on the user's profile page.
 
     2. #### Edit
     * #### Plan
-
+    The user should be able to edit the reviews that they create. The plan is to have an edit button on the review cards on the profile pages of the users so that the users can only edit their own reviews that they created. Once the button is pressed, they will be rrouted to the edit reviews page where they will see a form the same as the add review form. The only difference is that it will be pre-populated with the details of the review in question. Once the user changes any details of their boots review and submits the form, the will be redirected back to the profile page where the updates will be rendered.
     * #### Implementation
-
+    Implementing this meant building a button and putting it in the card for the button and routing the user to the edit page via a function in the backend which passes the relevant review information to the page from the database. The user can then change the information in the html form and submit the data which is posted to the database and the user gets redirected to the homepage. 
     * #### Test
-
+    To test this, I would have to have already have a review created and I would have to click on the edit button to ensure that the edit review page renders. Once this renders properly, I would have to ensure that all the data is being taken from the database correctly and put into the relevant fields in the form. I would then make some changes to this data and click on the submit button to post these changes back to the database. Once the profile page displays again, I would have to ensure that the edited changes have displayed correctly as this would provide confirmation of the edits being posted correctly. 
     * #### Result
+    After completing the action outlined above, all of the desired results were achieved. The test is a success.
 
     3. #### Delete
     * #### Plan
@@ -300,24 +303,6 @@ The site features are as follows:
     * #### Result
 
 3. #### Read a review that someone else wrote
-    * #### Plan
-
-    * #### Implementation
-
-    * #### Test
-    
-    * #### Result
-
-4. #### Update/edit a review that I wrote
-    * #### Plan
-
-    * #### Implementation
-
-    * #### Test
-    
-    * #### Result
-
-5. #### Delete a review that I wrote
     * #### Plan
 
     * #### Implementation
