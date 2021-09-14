@@ -370,15 +370,6 @@ The site features are as follows:
     
     This test was a success.
 
-9. #### View my reviews on my profile page
-    * #### Plan
-
-    * #### Implementation
-
-    * #### Test
-    
-    * #### Result
-
 
 ### Validator Testing 
 #### HTML Validator
