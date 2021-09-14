@@ -301,7 +301,7 @@ footer {
     padding: 0 2rem 0 2rem;
 }
 
-#profile-bio {
+.profile-bio {
     height: 10em;
     text-align: start;
 }
@@ -393,7 +393,7 @@ footer {
 }
 
 @media screen and (max-width:501px) {
-    #profile-bio {
+    .profile-bio {
         font-size: 1.6rem;
     }
     #profile-card {
@@ -402,7 +402,7 @@ footer {
 }
 
 @media screen and (max-width:396px) {
-    #profile-bio {
+    .profile-bio {
         font-size: 1.3rem;
     }
     #profile-card {
@@ -473,7 +473,7 @@ footer {
         margin-bottom: 8rem;
         margin-top: -8rem;
     }
-    #profile-bio {
+    .profile-bio {
         font-size: 1.3rem;
     }
 }
