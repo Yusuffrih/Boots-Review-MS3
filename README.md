@@ -238,9 +238,16 @@ The site features are as follows:
 ## Testing
 
 ### User Story Testing
-1. Registration create a secure account with a username and password
+1. User Registration
+    1. Create a secure account with a username and password
+    2. View profile (see profile testing no.8 below)
+    3. Edit (see profile testing no.8 below)
+    4. Delete
 
-2. Write a review
+2. Reviews:
+    1. View
+    2. Edit
+    3. Delete
 
 3. Read a review that someone else wrote
 
@@ -264,6 +271,8 @@ The site features are as follows:
 
 ### Validator Testing 
 #### HTML Validator
+As Flask is a framework, you will need to validate the HTML code using the URL to avoid false error flags due to jinja2. 
+
 * Errors:
 
 * Fixes:
@@ -319,6 +328,7 @@ The Lighthouse tool, which can be found in Chrome Dev Tools is a really useful t
 [Desktop]()
 
 ### Compatability Testing
+
 ### CRUD Testing
 ### Bugs
 
