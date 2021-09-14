@@ -305,31 +305,26 @@ The site features are as follows:
 
 3. #### Read a review that someone else wrote
     * #### Plan
-    All users should be able to see the main database of review records in a centralised location. The reviews page should display all the reviews in the database. The user should be able to see the card of each review be able to click on the dropdown to be able to read the review part itself.
+    All users should be able to see the main database of review records in a centralised location. The reviews page should display all the reviews in the database. The user should be able to see the card of each review be able to click on the dropdown to be able to read the review part itself. The card button for the dropdown is also going to be the picture of the boots. 
     * #### Implementation
-    The review are rendered to the database via the backend in a list. All the reviews are displayed in a card that has been looped through in the html document using jinja. Each review has all the information from the review displayed and contains a button to display the dropdown which contains the reviewers comments on the review. The button is in the review image.
+    The review are rendered to the database via the backend in a list. All the reviews are displayed in a card that has been looped through in the html document using jinja. Each review has all the information from the review displayed and contains a button/picture to display the dropdown which contains the reviewers comments on the review. The button is in the review image which is a pair of football boots.
     * #### Test
     The test for this is simply for the tester to navigate to the reviews page through the navbar and ensure that they can view the reviews
     * #### Result
     All of the results were as expected. Successfull test. 
 
-6. #### See pictures of boots that have been reviewed
-    * #### Plan
-
-    * #### Implementation
-
-    * #### Test
-    
-    * #### Result
-
 7. #### Search the database for boot reviews based on makes, categories, reviewer, or Boots name 
     * #### Plan
+    The plan is to give the user the feature that they can search the entire database of review records for certain types of boots reviews based on the above mentioned criteria. This feature is to sit on the reviews page where the reviews are to be renderred in a list anyway. The search bar will have a seach button and a reset button to reset the search the renderred data after a search has been made. If the users result is not found i.e., they are searching for something that doesn't exist, then there will be a message displayed in the place of the reviews to inform the user.
 
     * #### Implementation
+    The search bar is a form in the html and posts a request for the database to send back the database records. This is done using the indexing which was done in the terminal and which allows the user to target the criteria as described above. 
 
     * #### Test
-    
+    The test is simply to input some search criteria that you know does not exist. Then to input some search criteria that does exist for each of the different criteria that is searchable under the index.
+
     * #### Result
+    After carrying out the testing as outline above all of the search criteria displayed as expected and the correct message displayed if the search could not be found.
 
 8. #### Profile:
     1. #### View 
