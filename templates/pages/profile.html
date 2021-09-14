@@ -29,11 +29,11 @@
             </div>
             {% if profile.bio %}
                 <div class="row no-gutters">
-                    <p id="profile-bio">{{ profile.bio }}</p>
+                    <p class="profile-bio">{{ profile.bio }}</p>
                 </div>
             {% else %}
                 <div class="row no-gutters">
-                    <p id="profile-bio">Click Edit Profile to Add A Bio Here</p>
+                    <p class="profile-bio">Click Edit Profile to Add A Bio Here</p>
                 </div>
             {% endif %}
         </div>
@@ -61,7 +61,7 @@
                         <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
                         <!-- Buttons section -->
                         <div class="row justify-content-center">
-                            <a href="{{ url_for('edit_review', review_id=review._id )}}" class="btn edit-btn" type="button">Edit</a>
+                            <a href="{{ url_for('edit_review', review_id=review._id )}}" class="btn edit-btn">Edit</a>
                             <a href="#delete-review-modal" class="btn delete-btn" data-toggle="modal" data-target="#modal-{{loop.index}}">Delete</a>
                             {% include 'components/modals/delete_review.html' %}
                         </div>
