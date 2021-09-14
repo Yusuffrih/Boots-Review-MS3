@@ -295,21 +295,23 @@ The site features are as follows:
 
     3. #### Delete
     * #### Plan
-
+    The user should be able to delete the reviews that they create. The plan is to have a delete button on the review cards on the profile pages of the users so that the users can only delete their own reviews that they created. Once the user clicks the delete button, it is planned that a warning modal should pop up on screen requesting them to confirm that they want to delete the review. This is good defensive programming. The user should then be able to either exit out of the modal or confirm the deletion. The modal then closes and the review deletes and dissapears from the page. A flash messsage should then display to confirm the action has been successfull. 
     * #### Implementation
-
+    To implement this, it was important to put in place some defensive programming and making the first delete button trigger the modal to pop up rather than have the review delete immediately. So the delete function in the backend is only triggered by the modal delete button.
     * #### Test
-    
+    The user should click the delete button and see the modal appear immediately warning them that the data is irretrievable once it's been deleted and requesting them to confirm deletion. If the user clicks to close the modal, the modal should close and if they click the delete button, the review should delete from the database and disappear from the user's profile page.
     * #### Result
+    The review deleted when this test was carried out. This is a successfull test.
 
 3. #### Read a review that someone else wrote
     * #### Plan
-
+    All users should be able to see the main database of review records in a centralised location. The reviews page should display all the reviews in the database. The user should be able to see the card of each review be able to click on the dropdown to be able to read the review part itself.
     * #### Implementation
-
+    The review are rendered to the database via the backend in a list. All the reviews are displayed in a card that has been looped through in the html document using jinja. Each review has all the information from the review displayed and contains a button to display the dropdown which contains the reviewers comments on the review. The button is in the review image.
     * #### Test
-    
+    The test for this is simply for the tester to navigate to the reviews page through the navbar and ensure that they can view the reviews
     * #### Result
+    All of the results were as expected. Successfull test. 
 
 6. #### See pictures of boots that have been reviewed
     * #### Plan
