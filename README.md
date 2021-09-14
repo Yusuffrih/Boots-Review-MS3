@@ -258,8 +258,21 @@ The site features are as follows:
     4. Delete (see profile testing no.8 below)
 
 2. #### Reviews:
-    1. #### View
+    1. #### Create
+    * #### Plan
+    The plan is for the user to be able to add a review is to have a button in the navbar and the profile page to allow them to essentially add a review from anyhere in the site as long as they are signed in. The user will click the button which will route them to the add review form. The form, again is valiated using the browsers in-built validation system. The user must fill in all the fields before they will be allowed to add a review so that the information is good in the database and also so that the page looks good when rendered.
+    The user will be able to press the cancel button which will redirect them away from the add review form and to their profile page. Once the user clicks the submit button, this will send the record to the database and redirect the user to the profile page where they will be able to see a flash message confirming the action was successful and also see the review they just created alongside any other reviews they might have already made.
 
+    * #### Implementation
+    I created the buttons needed in the nav bar and the profile page to be able to add the reviews. I linked up the route to these buttons and created the form to add the review in html. Each of the fields is validated using the browser validation system and has a required attribute and a pattern for validation. In the form, the user can choose from a few predetermined select options for things like the boots category and make and star rating which ensures data integrity in the database. For simplification when filling out the form, I made the date of the review autofilled through the backend which always puts the date the review was actually completed. Once all the fields are filled in the user can click the submit button which sends the data to the database.
+
+    * #### Test
+    The test for this is to be signed into the site as a user to be able to access this feature and then click the button in the nav to add review which should take me to the relevant page to add a review and then add the review and ensure that the form and the submit button works as expected. Once the button is clicked the user should then be redirected to the profile page where a flash should appear confirming the action was successful and also see the review they just created alongside any other reviews they might have already made.
+    The same will be done using the add review button that is in the profile page to ensure that both methods / routes are working as expected.
+    * #### Result
+    All of the features described above worked as expected and the testing was a success.
+
+    1. #### View
     * #### Plan
 
     * #### Implementation
