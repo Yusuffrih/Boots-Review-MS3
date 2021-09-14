@@ -238,9 +238,51 @@ The site features are as follows:
 ## Testing
 
 ### User Story Testing
+
 ### Validator Testing 
-### Feature Testing 
+### Feature Testing
+
+1. Navigation bar
+
+2. Registration page - username and password
+
+3. Search bar to search through the database for:
+    1. to find reviews of particular boots
+
+    2. to find reviews of a certain make of boots
+
+    3. to find reviews of boots of a certain star rating
+
+4. User feedback for CRUD operations
+
+5. User feedback & validation on forms
+
+6. Bootstrap css design features such as navabr, buttons cards etc.
+
+7. Responsive design 
+
+8. profile page displaying the following:
+    1. Profile photo
+    2. Bio 
+    3. Reviews
+ 
+9. Landing page
+    1. Informative
+    2. Sign up
+    3. Log-in
+
+10. Sign out
+
+11. Admin to manage categories and makes
+
 ### Lighthouse Testing
+
+The Lighthouse tool, which can be found in Chrome Dev Tools is a really useful tool for testing the performance, accesibility and overall correctness of a page. All you have to do to use it is right click on a page, click inspect and click into the Lighthouse extension. Once there, all you do is generate a report for each page of the website. The report gives an overall score of how your webpage has performed in the test and it will give areas for improvement. This should be repeated for Mobile and Desktop. The reports for Simon's Piano can be found below:
+
+[Mobile]()
+
+[Desktop]()
+
 ### Compatability Testing
 ### CRUD Testing
 ### Bugs
@@ -271,6 +313,9 @@ To run the project locally, follow these simple steps:
 8. Project should be running in local IDE now
 
 ### Deploying in Heroku
+To deploy using Heroku, the following actions were carried out:
+1. Created the .gitignore file and added env.py file to this as well as pycache/directory so that these files are not viewable to users
+
 
 ## Credits
 
