@@ -238,8 +238,43 @@ The site features are as follows:
 ## Testing
 
 ### User Story Testing
+1. Registration create a secure account with a username and password
+
+2. Write a review
+
+3. Read a review that someone else wrote
+
+4. Update/edit a review that I wrote
+
+5. Delete a review that I wrote
+
+6. See pictures of boots that have been reviewed
+
+7. Search the database for boot reviews based on makes, categories, reviewer, or Boots name 
+
+8. Profile:
+    1. View 
+
+    2. Edit 
+
+    3. Delete 
+
+9. View my reviews on my profile page
+
 
 ### Validator Testing 
+#### HTML Validator
+* Errors:
+
+* Fixes:
+
+
+#### CSS Validator
+* Errors:
+
+* Fixes:
+
+
 ### Feature Testing
 
 1. Navigation bar
