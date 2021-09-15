@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root{
+    --rich-black-fogra : #0B0909;
+    --white:#FFFFFF;
+    --platinum:#ECEAEC;
+    --aero-blue:#67B7E6;
+    --persian-orange:#E98D50;
+
+    --delete-red:#d60f22;
+    --edit-grey:#8a8784;
+
+    --transparent-black:#0b090918;
+
+    --transition: 0.5s;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -24,7 +39,7 @@ body {
     font-size: 3rem;
     font-weight: 900;
     margin-top: 20px;
-    text-shadow: 2px 2px #0b090918;
+    text-shadow: 2px 2px var;
     text-transform: capitalize;
 }
 
@@ -37,14 +52,14 @@ h2 {
 
 #profile-bio-title {
     margin-top: 1rem;
-    text-shadow: 2px 2px #0b090918;
+    text-shadow: 2px 2px var;
     font-weight: 700;
     font-size: 2rem;
     text-transform: capitalize;
 }
 
 #no-result {
-    color: red;
+    color: var(--delete-red);
 }
 
 /* Home Page */
@@ -54,10 +69,10 @@ h2 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #0B0909;
+    background-color: var(--rich-black-fogra);
     height: 75vh;
     width: 100%;
-    border: 2rem solid #0B0909;
+    border: 2rem solid var(--rich-black-fogra);
     position: relative;
 }
 
@@ -65,7 +80,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #0b09094f;
+    background-color: var(--rich-black-fogra)4f;
     width: 100%;
     height: 100%;
 }
@@ -74,7 +89,7 @@ h2 {
     padding-top: 25px;
     position: relative;
     width: 80%;
-    color: white;
+    color: var(--white);
     margin: 0 auto;
 }
 
@@ -82,7 +97,7 @@ h2 {
 /* Footer */
 
 footer {
-    background-color: #0B0909;
+    background-color: var(--rich-black-fogra);
     margin-top: auto;
 }
 
@@ -104,7 +119,7 @@ footer {
 
 .contact li a,
 .social-media li a {
-    color: #e98d50;
+    color: var(--persian-orange);
     font-size: 100%;
 }
 
@@ -117,41 +132,45 @@ footer {
 /* Navbar  */
 
 .navbar-dark .navbar-brand {
-    color: #e98d50;
+    color: var(--persian-orange);
     text-transform: uppercase;
-    text-shadow: 2px 2px #67b7e6;
+    text-shadow: 2px 2px var(--aero-blue);
     font-weight: 900;
     font-size: 3rem;
 }
 
 .navbar-dark .navbar-brand:hover {
-    color: #67b7e6 ;
-    text-shadow: 2px 2px#e98d50;
+    color: var(--aero-blue) ;
+    text-shadow: 2px 2pxvar(--persian-orange);
 }
 
 .navbar {
-    background-color: #0B0909;
+    background-color: var(--rich-black-fogra);
 }
 
 .navbar-dark .navbar-toggler,
 .navbar-dark .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .nav-link {
-    color: #e98d50;
-    border-color: #e98d50;
+    color: var(--persian-orange);
+    border-color: var(--persian-orange);
 }
 
 .navbar-dark .navbar-toggler,
 .navbar-dark .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #67b7e6 ;
-    text-shadow: 1px 1px#e98d50;
+    color: var(--aero-blue) ;
+    text-shadow: 1px 1pxvar(--persian-orange);
 }
 
 /* Buttons */
 
+.btn {
+    font-size: 1.6rem;
+}
+
 .orange-btn,
 .blue-btn {
-    border: 2px solid #0B0909;
+    border: 2px solid var(--rich-black-fogra);
     border-radius: 0.75rem;
     margin: 0 4px 0 4px;
     min-width: 10rem;
@@ -159,18 +178,18 @@ footer {
 
 .orange-btn:hover,
 .blue-btn:hover{
-    border: 2px solid #FFFFFF;
-    background-color: #0B0909;
-    color: #FFFFFF;
-    transition: 0.5s;
+    border: 2px solid var(--white);
+    background-color: var(--rich-black-fogra);
+    color: var(--white);
+    transition: var(--transition);
 }
 
 .orange-btn {
-    background-color: #e98d50;
+    background-color: var(--persian-orange);
 }
 
 .blue-btn {
-    background-color: #67b7e6;
+    background-color: var(--aero-blue);
 }
 
 .btn-lg {
@@ -178,27 +197,27 @@ footer {
 }
 
 .edit-btn {
-    background-color: #8a8784;
-    color: #fff;
+    background-color: var(--edit-grey);
+    color: var(--white);
     margin: 2px;
 }
 
 .delete-btn {
-    background-color: #d60f22;
-    color: #fff;
+    background-color: var(--delete-red);
+    color: var(--white);
     margin: 2px;
 }
 
 
 .review-btn{
-    background-color: #e98d50;
-    border: 1px solid #fff;
+    background-color: var(--persian-orange);
+    border: 1px solid var(--white);
 }
 
 .review-btn:hover {
-    background-color: #ECEAEC;
-    border: 1px solid #0B0909;
-    transition: 0.5s;
+    background-color: var(--platinum);
+    border: 1px solid var(--rich-black-fogra);
+    transition: var(--transition);
 }
 
 .review-btn i {
@@ -208,14 +227,14 @@ footer {
 /* Forms */
 
 .form-container {
-    background-color: #ECEAEC;
-    color: #0B0909;
-    border: 2px solid #0B0909;
+    background-color: var(--platinum);
+    color: var(--rich-black-fogra);
+    border: 2px solid var(--rich-black-fogra);
     border-radius: 1.5rem;
     padding-top: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 10px 10px #0b090918;
+    box-shadow: 10px 10px var;
 }
 
 .form-control {
@@ -223,16 +242,16 @@ footer {
 }
 
 .form-help {
-    color: rgba(50, 50, 50, 0.5);
+    color: var(--transparent);
 }
 
 /* Flash messages */
 
 #flash-message {
-    background-color: #0B0909;
-    color: #FFFFFF;
+    background-color: var(--rich-black-fogra);
+    color: var(--white);
     border-radius: 5px;
-    box-shadow: 5px 5px #0b090918;
+    box-shadow: 5px 5px var;
 }
 
 /* Profile Page */
@@ -240,9 +259,9 @@ footer {
 #profile-card {
     min-width: 20rem;
     min-height: 20rem;
-    border: 1px #0B0909 solid;
+    border: 1px var(--rich-black-fogra) solid;
     border-radius: 0.75rem;
-    background-color: #ECEAEC;
+    background-color: var(--platinum);
     margin-top: 1rem;
     margin-bottom: 2rem;
     margin-right: 2rem;
@@ -251,8 +270,8 @@ footer {
 #profile-card img {
     margin: 5px auto;
     border-radius: 1.5rem;
-    box-shadow: 2px 2px #0b090918;
-    border-bottom: 1px #0B0909 solid;
+    box-shadow: 2px 2px var;
+    border-bottom: 1px var(--rich-black-fogra) solid;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -261,17 +280,17 @@ footer {
 }
 
 .review-card {
-    border: 1px #0B0909 solid;
+    border: 1px var(--rich-black-fogra) solid;
     border-radius: 0.75rem;
-    background-color: #e98d50;
+    background-color: var(--persian-orange);
     margin: 1.6rem;
 }
 
 .review-card img {
     margin: 5px auto;
     border-radius: 0.75rem;
-    box-shadow: 2px 2px #0b090918;
-    border-bottom: 1px #0B0909 solid;
+    box-shadow: 2px 2px var;
+    border-bottom: 1px var(--rich-black-fogra) solid;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -283,14 +302,14 @@ footer {
     margin-top: 0;
     padding: 0;
     padding-bottom: 0.75rem;
-    color: #0B0909;
-    background-color: #67b7e6;
+    color: var(--rich-black-fogra);
+    background-color: var(--aero-blue);
     border-radius: 0.75rem;
 }
 
 .review-card h3 {
-    background-color: #0B0909;
-    color: #FFFFFF;
+    background-color: var(--rich-black-fogra);
+    color: var(--white);
     margin-top: 0;
     margin-bottom: 0.75rem;
     padding-bottom: 0.75rem;
@@ -313,33 +332,33 @@ footer {
 
 #profile-icon {
     font-size: 8rem;
-    color: #0B0909;
+    color: var(--rich-black-fogra);
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
 /* manage section */
 .section-container {
-    background-color: #0B0909;
-    color: #FFFFFF;
+    background-color: var(--rich-black-fogra);
+    color: var(--white);
     border-radius: 1.5rem;
     padding: 2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 5px 5px #0b090918;
+    box-shadow: 5px 5px var;
 }
 
 .manage-card {
-    background-color: #e98d50;
-    color: #0B0909;
-    border: 2px solid #67b7e6;
-    text-shadow: 2px 2px #0b090918;
+    background-color: var(--persian-orange);
+    color: var(--rich-black-fogra);
+    border: 2px solid var(--aero-blue);
+    text-shadow: 2px 2px var;
 }
 
 .manage-card:hover {
-    background-color: #67b7e6;
-    color: #0B0909;
-    border: 2px solid #e98d50;
+    background-color: var(--aero-blue);
+    color: var(--rich-black-fogra);
+    border: 2px solid var(--persian-orange);
 }
 
 /* Reviews Page */
@@ -352,14 +371,14 @@ footer {
 /* modals */
 
 .modal-content {
-    color: #0B0909;
+    color: var(--rich-black-fogra);
 }
 
 .modal-header,
 .modal-footer,
 .close {
-    background-color: #0B0909;
-    color: #ffffff;
+    background-color: var(--rich-black-fogra);
+    color: var(--white);
 }
 
 .close:hover{
@@ -367,7 +386,7 @@ footer {
 }
 
 .modal-content {
-    background-color: #e98d50;
+    background-color: var(--persian-orange);
 
 }
 
