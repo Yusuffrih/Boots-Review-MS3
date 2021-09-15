@@ -5,7 +5,7 @@
             <div class="container">
                 <h3 class="header">Manage Categories</h3>
                 <div class="row justify-content-center m-4">
-                    <a type="button" href="{{ url_for('add_category') }}" class="btn btn-lg blue-btn">Add Category <i class="fas fa-plus-square"></i></a>
+                    <a type="button" href="{{ url_for('add_category') }}" class="btn btn-lg blue-btn" aria-label="Add category button">Add Category <i class="fas fa-plus-square"></i></a>
                 </div>
                 <div class="section-container">
                     <div class="row">
@@ -14,8 +14,8 @@
                                 <div class="card manage-card p-4 m-5">
                                     <div class="card-body">
                                         <h4 class="card-title">{{ category.category_name }}</h4>
-                                        <a href="{{ url_for('edit_category', category_id=category._id )}}" class="btn edit-btn">Edit</a>
-                                        <a href="#delete-category-modal" class="btn delete-btn" data-toggle="modal" data-target="#category-modal-{{loop.index}}">Delete</a>
+                                        <a href="{{ url_for('edit_category', category_id=category._id )}}" class="btn edit-btn" aria-label="Edit category button">Edit</a>
+                                        <a href="#delete-category-modal" class="btn delete-btn" data-toggle="modal" data-target="#category-modal-{{loop.index}}" aria-label="Delete catgory button">Delete</a>
                                         {% include 'components/modals/delete_category.html' %}
                                     </div>
                                 </div>
@@ -25,7 +25,7 @@
                 </div>
                 <h3 class="header">Manage Makes</h3>
                 <div class="row justify-content-center m-4">
-                    <a type="button" href="{{ url_for('add_make') }}" class="btn btn-lg blue-btn">Add Make <i class="fas fa-plus-square"></i></a>
+                    <a type="button" href="{{ url_for('add_make') }}" class="btn btn-lg blue-btn" aria-label="Add make button">Add Make <i class="fas fa-plus-square"></i></a>
                 </div>
                 <div class="section-container">
                     <div class="row">
@@ -34,8 +34,8 @@
                                 <div class="card manage-card p-4 m-5">
                                     <div class="card-body">
                                         <h4 class="card-title">{{ make.name }}</h4>
-                                        <a href="{{ url_for('edit_make', make_id=make._id )}}" class="btn edit-btn">Edit</a>
-                                        <a href="#delete-make-modal" class="btn delete-btn" data-toggle="modal" data-target="#make-modal-{{loop.index}}">Delete</a>
+                                        <a href="{{ url_for('edit_make', make_id=make._id )}}" class="btn edit-btn" aria-label="Edit make button">Edit</a>
+                                        <a href="#delete-make-modal" class="btn delete-btn" data-toggle="modal" data-target="#make-modal-{{loop.index}}" aria-label="Delete make button">Delete</a>
                                         {% include 'components/modals/delete_make.html' %}
                                     </div>
                                 </div>

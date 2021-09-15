@@ -1,6 +1,6 @@
  <!-- Navbar from Bootstrap -->
 <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="{{ url_for('home_page') }}">Boots Review</a>
+  <a class="navbar-brand" href="{{ url_for('home_page') }}" aria-label="Navbar Brand link to home page">Boots Review</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" 
   data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
   aria-expanded="false" aria-label="Toggle navigation">
@@ -12,41 +12,41 @@
       <!-- If Logged In -->
       {% if session.user %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('reviews') }}">
+          <a class="nav-link" href="{{ url_for('reviews') }}" aria-label="Nav-item to reviews page">
             Reviews
           </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">
+            <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}" aria-label="Nav-item to profile page">
               Profile
             </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('add_review')}}">
+          <a class="nav-link" href="{{ url_for('add_review')}}" aria-label="Nav-item to add review page">
             Add Review
           </a>
         </li>
         {% if session.user|lower == "admin"|lower %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('manage')}}">
+            <a class="nav-link" href="{{ url_for('manage')}}" aria-label="Nav-item to manage page">
               Manage
             </a>
           </li>
         {% endif %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('log_out') }}">
+          <a class="nav-link" href="{{ url_for('log_out') }}" aria-label="Nav-item to logout">
             Logout
           </a>
         </li>
         <!-- If Not Logged In -->
       {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('login') }}">
+          <a class="nav-link" href="{{ url_for('login') }}" aria-label="Nav-item for login">
             Log In
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('sign_up') }}">
+          <a class="nav-link" href="{{ url_for('sign_up') }}" aria-label="Nav-item to signup">
             Sign Up
           </a>
         </li>

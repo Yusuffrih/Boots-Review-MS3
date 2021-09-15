@@ -22,13 +22,13 @@
         <!-- Sign-Up -->
         <button type="submit" class="btn btn-lg blue-btn form-btn">Sign Up</button>
         <div class="form-help">
-            <small>Already have an account? <a href="{{ url_for ('login') }}">Log In</a></small>
+            <small>Already have an account? <a href="{{ url_for ('login') }}" aria-label="Link to Login">Log In</a></small>
         </div>
 {% else %}
         <!-- Login -->
         <button type="submit" class="btn btn-lg orange-btn form-btn">Log In</button>
         <div class="form-help">
-            <small>Don't have an account? <a href="{{ url_for ('sign_up') }}">Sign Up</a></small>
+            <small>Don't have an account? <a href="{{ url_for ('sign_up') }}" aria-label="Link to Sign Up">Sign Up</a></small>
         </div>
 {% endif %}
     </form>
