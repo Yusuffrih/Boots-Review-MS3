@@ -39,7 +39,7 @@ body {
     font-size: 3rem;
     font-weight: 900;
     margin-top: 20px;
-    text-shadow: 2px 2px var;
+    text-shadow: 2px 2px var(--transparent-black);
     text-transform: capitalize;
 }
 
@@ -52,7 +52,7 @@ h2 {
 
 #profile-bio-title {
     margin-top: 1rem;
-    text-shadow: 2px 2px var;
+    text-shadow: 2px 2px var(--transparent-black);
     font-weight: 700;
     font-size: 2rem;
     text-transform: capitalize;
@@ -80,7 +80,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--rich-black-fogra)4f;
+    background-color: var(--rich-black-fogra);
     width: 100%;
     height: 100%;
 }
@@ -141,7 +141,7 @@ footer {
 
 .navbar-dark .navbar-brand:hover {
     color: var(--aero-blue) ;
-    text-shadow: 2px 2pxvar(--persian-orange);
+    text-shadow: 2px 2px var(--persian-orange);
 }
 
 .navbar {
@@ -159,7 +159,7 @@ footer {
 .navbar-dark .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .nav-link:hover {
     color: var(--aero-blue) ;
-    text-shadow: 1px 1pxvar(--persian-orange);
+    text-shadow: 1px 1px var(--persian-orange);
 }
 
 /* Buttons */
@@ -251,7 +251,7 @@ footer {
     background-color: var(--rich-black-fogra);
     color: var(--white);
     border-radius: 5px;
-    box-shadow: 5px 5px var;
+    box-shadow: 5px 5px var(--transparent-black);
 }
 
 /* Profile Page */
@@ -270,7 +270,7 @@ footer {
 #profile-card img {
     margin: 5px auto;
     border-radius: 1.5rem;
-    box-shadow: 2px 2px var;
+    box-shadow: 2px 2px var(--transparent-black);
     border-bottom: 1px var(--rich-black-fogra) solid;
     background-position: center center;
     background-repeat: no-repeat;
@@ -289,7 +289,7 @@ footer {
 .review-card img {
     margin: 5px auto;
     border-radius: 0.75rem;
-    box-shadow: 2px 2px var;
+    box-shadow: 2px 2px var(--transparent-black);
     border-bottom: 1px var(--rich-black-fogra) solid;
     background-position: center center;
     background-repeat: no-repeat;
@@ -345,14 +345,14 @@ footer {
     padding: 2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 5px 5px var;
+    box-shadow: 5px 5px var(--transparent-black);
 }
 
 .manage-card {
     background-color: var(--persian-orange);
     color: var(--rich-black-fogra);
     border: 2px solid var(--aero-blue);
-    text-shadow: 2px 2px var;
+    text-shadow: 2px 2px var(--transparent-black);
 }
 
 .manage-card:hover {
