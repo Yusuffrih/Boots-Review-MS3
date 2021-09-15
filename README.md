@@ -370,6 +370,86 @@ The site features are as follows:
     
     This test was a success.
 
+### Admin Testing
+#### Manage Categories
+1. #### Add Category
+    * #### Plan
+    The plan is that only the 'admin' user will be able to access the manage page. This page will display the manage categories section which will have a button for adding categories. The user will have to click that button which will render the add category form which is a one field form. This form will be filled out and submitted and the manage categories page will be rendered again with the data posted to the database and the new data should be displaying in the manage categories section. 
+    * #### Implement 
+    To implement this, I had to create a button on bootstrap and a render the add category form on the add category page. This page takes the uses input and posts it to the database. Before this can happen though, the backend checks to see if there category name already exists. If it does, the user is given a flash message to say try again. If it doesn't exist already, the new category is added to the database and the user is redirected back to the manage page where the nw category is displayed.
+    * #### Test
+    To test this, the admin user must follow the steps above and try and add a category that is already there and see if the database will accept this. The admin must also try and add a category name that isn't in existence already.
+    * #### Result
+    The result is that the expected results are returned and the test is successfull
+
+2. #### Read
+    * #### Plan
+    When the admin first goes to the manage page, they should be able to see the categories to manage. The backend should be rendering the categories in a list on the page and they should be sorted alphabetically.
+    * #### Implement 
+    Added a card to the html and looped over the card to add in the category name for each category on the databse. This is then passed through the manage route and displayed on the page.
+    * #### Test
+    Look at the database in mongo db and see what cateogories are there. Cross reference them with the ones that are on the manage page. Add a category as above and then see if that one is being rendered to the page as well. Also check to see if they are in alphabetical order.
+    * #### Result
+    All results are as expected.
+
+3. #### Edit Category
+    * #### Plan
+    On the manage page, the admin user should be able to see an edit button on each of the cards. When this button is clicked, the user should be taken to the edit category page which will be the same as the add category page but it will be pre-populated. Once the user makes the change to the name of the category, the same check will be done to see if the new category name exists already. If not, the new name will be posted to the database and the user will be redirected to the manage page where the new name will be displayed along with the other existing categories.
+    * #### Implement 
+    Created a button that renders the edit category page which is auto-populated. This is done using html and jinja templates. The backend then checks the database to see if the user input exists or not. If this new category does not exist, it is added to the database, the user is redirected to the manage page and the category displays alongside the other existing categories.
+    * #### Test
+    Try to add a category that exists & a category that doesn't exist.
+    * #### Result
+    Everything worked as expected and the result is a success.
+
+4. #### Delete Category
+    * #### Plan
+    The admin user will visit the homepage and want to remove a category. They will click the delete button which will be attached to each category. The button, when clicked will trigger a modal to appear on the screen warning the user that the category cannot be retrieved when it's deleted. The modal will also have a confirm deletion button and a close modal button.
+    * #### Implement 
+    Created a button for each category card. The button when clicked triggers the modal and each one has it's own individual id so that the backend knows what to delete from the database.
+    * #### Test
+    Attemp to delete something and make sure that the correct item is being deleted.
+    * #### Result
+    Result is as expected. Test succeeded.
+
+1. #### Add Make
+    * #### Plan
+    The plan is that only the 'admin' user will be able to access the manage page. This page will display the manage makes section which will have a button for adding makes. The user will have to click that button which will render the add makes form which is a one field form. This form will be filled out and submitted and the manage makes page will be rendered again with the data posted to the database and the new data should be displaying in the manage makes section. 
+    * #### Implement 
+    To implement this, I had to create a button on bootstrap and a render the add makes form on the add category page. This page takes the uses input and posts it to the database. Before this can happen though, the backend checks to see if there make name already exists. If it does, the user is given a flash message to say try again. If it doesn't exist already, the new make is added to the database and the user is redirected back to the manage page where the nw make is displayed.
+    * #### Test
+    To test this, the admin user must follow the steps above and try and add a make that is already there and see if the database will accept this. The admin must also try and add a make name that isn't in existence already.
+    * #### Result
+    The result is that the expected results are returned and the test is successfull
+2. #### Read Make
+    * #### Plan
+    When the admin first goes to the manage page, they should be able to see the make to manage. The backend should be rendering the makes in a list on the page and they should be sorted alphabetically.
+    * #### Implement 
+    Added a card to the html and looped over the card to add in the make name for each category on the databse. This is then passed through the manage route and displayed on the page.
+    * #### Test
+    Look at the database in mongo db and see what makes are there. Cross reference them with the ones that are on the manage page. Add a make as above and then see if that one is being rendered to the page as well. Also check to see if they are in alphabetical order.
+    * #### Result
+    All results are as expected.
+
+3. #### Edit Make
+    * #### Plan
+    On the manage page, the admin user should be able to see an edit button on each of the cards. When this button is clicked, the user should be taken to the edit make page which will be the same as the add make page but it will be pre-populated. Once the user makes the change to the name of the make, the same check will be done to see if the new make name exists already. If not, the new name will be posted to the database and the user will be redirected to the manage page where the new name will be displayed along with the other existing makes.
+    * #### Implement 
+    Created a button that renders the edit make page which is auto-populated. This is done using html and jinja templates. The backend then checks the database to see if the user input exists or not. If this new make does not exist, it is added to the database, the user is redirected to the manage page and the make displays alongside the other existing categories.
+    * #### Test
+    Try to add a make that exists & a make that doesn't exist.
+    * #### Result
+    Everything worked as expected and the result is a success.
+4. #### Delete Make
+    * #### Plan
+    The admin user will visit the homepage and want to remove a make. They will click the delete button which will be attached to each make. The button, when clicked will trigger a modal to appear on the screen warning the user that the make cannot be retrieved when it's deleted. The modal will also have a confirm deletion button and a close modal button.
+    * #### Implement 
+    Created a button for each make card. The button when clicked triggers the modal and each one has it's own individual id so that the backend knows what to delete from the database.
+    * #### Test
+    Attemp to delete something and make sure that the correct item is being deleted.
+    * #### Result
+    Result is as expected. Test succeeded.
+
 
 ### Validator Testing 
 #### HTML Validator
