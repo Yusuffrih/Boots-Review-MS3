@@ -15,7 +15,7 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{ category.category_name }}</h4>
                                         <a href="{{ url_for('edit_category', category_id=category._id )}}" class="btn edit-btn">Edit</a>
-                                        <a href="#delete-category-modal" class="btn delete-btn" data-toggle="modal" data-target="#modal-{{loop.index}}">Delete</a>
+                                        <a href="#delete-category-modal" class="btn delete-btn" data-toggle="modal" data-target="#category-modal-{{loop.index}}">Delete</a>
                                         {% include 'components/modals/delete_category.html' %}
                                     </div>
                                 </div>
@@ -35,7 +35,7 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{ make.name }}</h4>
                                         <a href="{{ url_for('edit_make', make_id=make._id )}}" class="btn edit-btn">Edit</a>
-                                        <a href="#delete-make-modal" class="btn delete-btn" data-toggle="modal" data-target="#modal-{{loop.index}}">Delete</a>
+                                        <a href="#delete-make-modal" class="btn delete-btn" data-toggle="modal" data-target="#make-modal-{{loop.index}}">Delete</a>
                                         {% include 'components/modals/delete_make.html' %}
                                     </div>
                                 </div>
