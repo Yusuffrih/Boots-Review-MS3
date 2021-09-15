@@ -120,7 +120,7 @@ def profile(username):
 
 
 # edit user profile
-@app.route("/edit-profile/<user_id>", methods=["GET", "POST"])
+@app.route("/profile/edit/<user_id>", methods=["GET", "POST"])
 def edit_profile(user_id):
 
     """
@@ -167,7 +167,7 @@ def edit_profile(user_id):
 
 
 # delete profile
-@app.route("/delete-profile/<user_id>")
+@app.route("/profile/delete/<user_id>")
 def delete_profile(user_id):
 
     """
@@ -197,7 +197,7 @@ def delete_profile(user_id):
 
 
 # log out
-@app.route("/log-out")
+@app.route("/logout")
 def log_out():
 
     """
@@ -248,7 +248,7 @@ def search():
 
 
 # add boots review
-@app.route("/add-review", methods=["GET", "POST"])
+@app.route("/review/add", methods=["GET", "POST"])
 def add_review():
 
     """
@@ -286,7 +286,7 @@ def add_review():
 
 
 # edit boots review
-@app.route("/edit-review/<review_id>", methods=["GET", "POST"])
+@app.route("/review/edit/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
 
     """
@@ -329,7 +329,7 @@ def edit_review(review_id):
 
 
 # delete boots review
-@app.route("/delete_review/<review_id>")
+@app.route("/review/delete/<review_id>")
 def delete_review(review_id):
 
     """
@@ -375,7 +375,7 @@ def manage():
 
 
 # add category
-@app.route("/add_category", methods=["GET", "POST"])
+@app.route("/category/add", methods=["GET", "POST"])
 def add_category():
 
     """
@@ -411,7 +411,7 @@ def add_category():
 
 
 # edit category
-@app.route("/edit_category/<category_id>", methods=["GET", "POST"])
+@app.route("/category/edit/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
 
     """
@@ -452,7 +452,7 @@ def edit_category(category_id):
 
 
 # delete category
-@app.route("/delete_category/<category_id>")
+@app.route("/category/delete/<category_id>")
 def delete_category(category_id):
 
     """
@@ -472,7 +472,7 @@ def delete_category(category_id):
 
 
 # add make
-@app.route("/add_make", methods=["GET", "POST"])
+@app.route("/make/add", methods=["GET", "POST"])
 def add_make():
 
     """
@@ -512,7 +512,7 @@ def add_make():
 
 
 # edit make
-@app.route("/edit_make/<make_id>", methods=["GET", "POST"])
+@app.route("/make/edit/<make_id>", methods=["GET", "POST"])
 def edit_make(make_id):
 
     """
@@ -558,7 +558,7 @@ def edit_make(make_id):
 
 
 # delete make
-@app.route("/delete_make/<make_id>")
+@app.route("/make/delete/<make_id>")
 def delete_make(make_id):
 
     """
