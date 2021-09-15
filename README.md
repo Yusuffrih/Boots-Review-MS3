@@ -3,40 +3,67 @@
 The Boots review site has the main goal of being a site where people can go to view reviews of different pairs of football boots that other people have owned. The aim is that this will be a site they can visit to assist them in making the decision of what pair of boots to purchase. 
 
 A secondary aim of the site is that when these people have bought their pair of boots, they will be able to review their new pair of boots and assist others in making their decision. 
+- [Boots Review](#boots-review)
+  * [User Experience (UX)](#user-experience--ux-)
+    + [Site Owner Goals](#site-owner-goals)
+    + [User Goals](#user-goals)
+    + [User Stories](#user-stories)
+    + [User Requirements](#user-requirements)
+    + [User Expectations](#user-expectations)
+  * [Design Choices](#design-choices)
+    + [Fonts](#fonts)
+    + [Colours](#colours)
+    + [Icons](#icons)
+    + [Wireframes](#wireframes)
+    + [Data Schema](#data-schema)
+  * [Features](#features)
+  * [Features Yet To Implement](#features-yet-to-implement)
+  * [Technologies Used](#technologies-used)
+    + [Languages](#languages)
+    + [Frameworks & Libraries](#frameworks---libraries)
+    + [Tools](#tools)
+  * [Testing](#testing)
+    + [User Story Testing](#user-story-testing)
+      - [User Registration](#user-registration)
+      - [Create a secure account with a username and password](#create-a-secure-account-with-a-username-and-password)
+      - [Reviews:](#reviews-)
+      - [Create](#create)
+      - [View](#view)
+      - [Edit](#edit)
+      - [Delete](#delete)
+      - [Read a review that someone else wrote](#read-a-review-that-someone-else-wrote)
+      - [Search the database for boot reviews based on makes, categories, reviewer, or Boots name](#search-the-database-for-boot-reviews-based-on-makes--categories--reviewer--or-boots-name)
+      - [Profile:](#profile-)
+      - [View](#view-1)
+      - [Edit](#edit-1)
+      - [Delete](#delete-1)
+    + [Admin Testing](#admin-testing)
+      - [Manage Categories](#manage-categories)
+      - [Add Category](#add-category)
+      - [Read](#read)
+      - [Edit Category](#edit-category)
+      - [Delete Category](#delete-category)
+      - [Add Make](#add-make)
+      - [Read Make](#read-make)
+      - [Edit Make](#edit-make)
+      - [Delete Make](#delete-make)
+    + [Validator Testing](#validator-testing)
+      - [HTML Validator](#html-validator)
+      - [CSS Validator](#css-validator)
+    + [Feature Testing](#feature-testing)
+    + [Lighthouse Testing](#lighthouse-testing)
+    + [Compatability Testing](#compatability-testing)
+    + [CRUD Testing](#crud-testing)
+    + [Bugs](#bugs)
+  * [Deployment](#deployment)
+    + [Github Pages](#github-pages)
+    + [Run Locally](#run-locally)
+    + [Deploying in Heroku](#deploying-in-heroku)
+  * [Credits](#credits)
+  * [Final Comments](#final-comments)
 
-## Table of Contents
-* User Experience (UX)
-    * Site Owner Goals
-    * User Goals
-    * User Stories
-        * First Time User
-        * Registered User
-    * User Requirements
-    * User Expectations
-    * Design Choices
-        * Fonts
-        * Colours
-        * Icons
-        * Wireframes
-        * Data Schema 
-* Features
-    * Implemented Features
-    * Features Yet To Implemented
-* Technologies Used
-    * Languages
-    * Frameworks & Libraries
-    * Tools
-* Testing
-    * User Story Testing
-    * Validator Testing 
-    * Feature Testing 
-    * Lighthouse Testing
-    * Compatability Testing
-    * CRUD Testing
-    * Bugs
-* Deployment
-* Credits
-* Final Comments
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## User Experience (UX)
 
@@ -138,31 +165,32 @@ To carry out the functionality of the site, I needed to create three different c
 8. Star Ratings
 
 The Users collection is made up of the following fields: 
-| Field    | Data Type | Default |
-|----------|-----------|---------|
-| id       | ObjectId  | N/A     |
-| is_admin | boolean   | True    |
-| username | string    | N/A     |
-| password | string    | N/A     |
-| bio      | string    | N/A     | 
+| Field       | Data Type | Default |
+|-------------|-----------|---------|
+| id          | ObjectId  | " "     |
+| username    | string    | " "     |
+| password    | string    | " "     |
+| profile_pic | string    | " "     |
+| bio         | string    | " "     | 
 
 The Categories collection is made up of the following fields:
 | Field          | Data Type | Default |
 |----------------|-----------|---------|
-| id             | ObjectId  | N/A     |
-| category_name  | string    | N/A     |
+| id             | ObjectId  | " "     |
+| category_name  | string    | " "     |
 
 The Reviews collection is made up of the following fields:
 | Field             | Data Type | Default |
 |-------------------|-----------|---------|
-| id                | ObjectId  | N/A     |
-| user_id           | string    | N/A     |
-| review            | string    | N/A     |
-| star_rating_id    | string    | N/A     |
-| image_url         | string    | N/A     |
-| category          | string    | N/A     |
-|boots_name         | string    | N/A     |
-| make              | string    | N/A     |
+| id                | ObjectId  | " "     |
+| user_id           | string    | " "     |
+| review            | string    | " "     |
+| star_rating_id    | string    | " "     |
+| image_url         | string    | " "     |
+| category          | string    | " "     |
+| boots_name        | string    | " "     |
+| make              | string    | " "     |
+| review_date       | string    | " "     |
 
 The Makes collection is made up of the following fields:
 | Field | Data Type | Default |
@@ -511,7 +539,6 @@ The Lighthouse tool, which can be found in Chrome Dev Tools is a really useful t
 
 ### Compatability Testing
 
-### CRUD Testing
 ### Bugs
 
 ## Deployment
