@@ -163,7 +163,7 @@ def edit_profile(user_id):
     else:
         return redirect(url_for("home_page"))
 
-    return render_template("pages/edit_profile.html", user=user)
+    return render_template("pages/edit-profile.html", user=user)
 
 
 # delete profile
@@ -278,7 +278,7 @@ def add_review():
             flash("Review successfully added!")
             return redirect(url_for("reviews"))
 
-        return render_template("pages/add_review.html",
+        return render_template("pages/add-review.html",
                                makes=makes,
                                categories=categories,
                                stars=stars,
@@ -321,7 +321,7 @@ def edit_review(review_id):
             return redirect(url_for("profile", username=username))
 
         categories = mongo.db.categories.find().sort("category_name", 1)
-        return render_template("pages/add_review.html",
+        return render_template("pages/add-review.html",
                                review=review,
                                categories=categories,
                                makes=makes,
@@ -402,9 +402,9 @@ def add_category():
                 return redirect(url_for("manage"))
             else:
                 flash("This category already exists, try again!")
-                return redirect(url_for("add_category"))
+                return redirect(url_for("add-category"))
         else:
-            return render_template("pages/add_category.html")
+            return render_template("pages/add-category.html")
     else:
         flash("You cannot perform this action!")
         return redirect(url_for("home_page"))
@@ -442,10 +442,10 @@ def edit_category(category_id):
             else:
                 flash("This category already exists, try again!")
                 return render_template(
-                    "pages/edit_category.html", category=category)
+                    "pages/edit-category.html", category=category)
 
         return render_template(
-            "pages/edit_category.html", category=category)
+            "pages/edit-category.html", category=category)
     else:
         flash("You cannot perform this action!")
         return redirect(url_for("home_page"))
@@ -502,9 +502,9 @@ def add_make():
             # if it does already exist
             else:
                 flash("This make already exists, try again!")
-                return redirect(url_for("add_make"))
+                return redirect(url_for("add-make"))
         # if method = "GET"
-        return render_template("pages/add_make.html")
+        return render_template("pages/add-make.html")
     # if the user in session is not "admin"
     else:
         flash("You cannot perform this action!")
@@ -546,11 +546,11 @@ def edit_make(make_id):
             else:
                 flash("This make already exists, try again!")
                 return render_template(
-                    "pages/edit_make.html", make=make)
+                    "pages/edit-make.html", make=make)
         # if method = "GET"
         else:
             make = mongo.db.makes.find_one({"_id": ObjectId(make_id)})
-            return render_template("pages/edit_make.html", make=make)
+            return render_template("pages/edit-make.html", make=make)
     # if session user is not "admin"
     else:
         flash("You cannot perform this action!")
