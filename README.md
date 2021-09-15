@@ -75,7 +75,7 @@ A secondary aim of the site is that when these people have bought their pair of 
 * As a site owner, I would like the site to be easy to use and intuitive
 * As a site owner, I would like the site to have an attractive UI with an obvious color scheme
 * As a site owner, I would like the user to be able to create, read, update and delete their profile
-* As a site owner, I would like the user to be able to creat, read, update and delete their boots reviews
+* As a site owner, I would like the user to be able to create, read, update and delete their boots reviews
 * As a site owner, I would like to have access to the admin section of the site that is off limits to the normal user.
 * As a site owner, I want to be able to create read and update and delete the categories and makes of the football boots
 
@@ -98,10 +98,9 @@ A secondary aim of the site is that when these people have bought their pair of 
 ### User Stories
 * As a user of the site, I would like to be able to register my details and create a secure account with a username and password
 * As a user, I would like to be able to write a review of a pair of boots I wore
-* As a user, I would like to be able to read a review that someone else wrote on a pair of boots
 * As a user, I would like to be able to update/edit a review that I wrote
+* As a user, I would like to be able to read a review that someone else wrote on a pair of boots
 * As a user, I would like to be able to delete a review that I wrote on a pair of boots
-* As a user, I would like to be able to see pictures of boots that have been reviewed
 * As a user, I would like to be able to search the database for boot reviews based on makes, categories, reviewer, or Boots name 
 * As a user, I would like to be able view, edit, and delete my profile 
 * As a user, I would like to be able to view my reviews that I created in a centralised location in my profile page
