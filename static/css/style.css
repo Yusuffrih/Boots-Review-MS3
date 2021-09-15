@@ -10,8 +10,8 @@
     --delete-red:#d60f22;
     --edit-grey:#8a8784;
 
-    --transparent-black:#0b090918;
-
+    --transparent-black:#0b09094f;
+    --less-transparent-black:
     --transition: 0.5s;
 }
 
@@ -80,7 +80,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--rich-black-fogra);
+    background-color: var(--less-transparent-black);
     width: 100%;
     height: 100%;
 }
