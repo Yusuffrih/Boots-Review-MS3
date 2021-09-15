@@ -481,16 +481,16 @@ The site features are as follows:
 
 ### Validator Testing 
 #### HTML Validator
-As Flask is a framework, you will need to validate the HTML code using the URL to avoid false error flags due to jinja2. 
+As Flask is a framework, I had to validate the HTML code using the URL to avoid false error flags due to jinja2. 
 
 * Errors:
-
+No errors. See screenshots of passed tests [here](static/testing-screenshots/code-validation/html)
 * Fixes:
-
+None.
 
 #### CSS Validator
 * Errors:
-None
+No errors. See screenshot of passed test [here](static/testing-screenshots/code-validation/css)
 * Fixes:
 None
 
