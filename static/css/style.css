@@ -234,7 +234,7 @@ footer {
     padding-top: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 10px 10px var;
+    box-shadow: 10px 10px var(--transparent-black);
 }
 
 .form-control {
