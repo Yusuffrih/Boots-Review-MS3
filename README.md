@@ -490,9 +490,9 @@ As Flask is a framework, you will need to validate the HTML code using the URL t
 
 #### CSS Validator
 * Errors:
-
+None
 * Fixes:
-
+None
 
 ### Feature Testing
 
