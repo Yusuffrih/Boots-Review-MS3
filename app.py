@@ -542,7 +542,6 @@ def edit_make(make_id):
                     "pages/edit-make.html", make=make)
         else:
             return render_template("pages/edit-make.html", make=make)
-    # if session user is not "admin"
     else:
         flash("You cannot perform this action!")
         return redirect(url_for("home_page"))
