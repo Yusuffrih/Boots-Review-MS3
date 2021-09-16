@@ -217,7 +217,7 @@ The site features are as follows:
     * to find reviews of boots that are of a certain star rating
 * User feedback whenever they carry out any of the CRUD operations
 * User feedback on forms in the case that they have not filled the form in correctly
-* Bootstrap css design features such as navabr, buttons cards etc.
+* Bootstrap css design features such as navbar, buttons cards etc.
 * Bootstraps responsive web design which allows users to use the site on all device sizes
 * A beautiful looking profile page displaying a photo of the user, a bio and their reviews that they have written
 * A landing page that lets the user know what the site is about at a glance
@@ -535,23 +535,25 @@ The user must try filling in the forms that are on the site and purposely leave 
 #### Result
 This test is a success with all of the forms operating as expected. See the relevant screenshots [here](testing/feature/form-validation) for one example of each form validating the data.
 
-6. Bootstrap css design features such as navabr, buttons cards etc.
+6. Bootstrap css design features such as navbar, buttons cards etc.
 #### Plan
-
+For this feature of the site, the plan is to use the Bootstrap framework for components such as buttons, navbar cards among other components.
 #### Implementation
-
+To implement this, I linked the Bootstrap CSS to the head of the website pages and also the js links in the body. I then added the Bootstrap classes to the HTML files where needed and customised them to make them suit my project and the style that I was looking for. 
 #### Test
-
+To test these, the user must go into the site ensure that all buttons and other Bootstrap components as outlined above are functioning as expected.
 #### Result
+This test was a success. All of the components are operating as expected and look appealing to the user as is desired.
 
 7. Responsive design 
 #### Plan
-
+The plan for this is to give the user a positive experience no matter what size screen they are viewing the site on. All the elements of the site need to be dynamic and change with the screen sizes as needed.
 #### Implementation
-
+Bootstrap was very helpful in creating a responsive website. The grid system was extremly useful in this. I also used some media queries to help the responsive design where some elements needed it.
 #### Test
-
+The tester needs to go into each page on the site and right click to inspect the site for responsiveness. Try out the different breakpoints to ensure that the site looks good and the different components of the site do not get distorted.
 #### Result
+The site is fully resopnsive and looks appealing to the user at all different screen sizes and breakpoints. 
 
 8. profile page displaying the following: (See Testing completed in user story testing section)
     1. Profile photo
@@ -584,6 +586,9 @@ The Lighthouse tool, which can be found in Chrome Dev Tools is a really useful t
 
 ### Compatability Testing
 
+| Browser                                          | Chrome | Firefox | Edge |
+| -------------------------------------------------| ------ | ------- | ---- |
+| Compatable                                       |   Yes  |    Yes  |  Yes |
 
 ### Bugs
 
