@@ -188,14 +188,14 @@ def delete_profile(user_id):
             mongo.db.users.delete_one({"_id": ObjectId(user_id)})
             session.pop("user")
             flash("You have successfully deleted your profile!")
-            return redirect(url_for("home_page"))
+            return redirect(url_for("sign_up"))
         else:
             flash("You cannot delete this profile!")
             return redirect(url_for("profile",
                                     username=session["user"]))
     else:
         flash("You cannot delete this profile!")
-        redirect(url_for("sign_up"))
+        redirect(url_for("home_page"))
 
 
 # log out
