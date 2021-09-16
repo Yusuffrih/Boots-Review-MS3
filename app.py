@@ -195,7 +195,7 @@ def delete_profile(user_id):
                                     username=session["user"]))
     else:
         flash("You cannot delete this profile!")
-        redirect(url_for("home_page"))
+        redirect(url_for("sign_up"))
 
 
 # log out
