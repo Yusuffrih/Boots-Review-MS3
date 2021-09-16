@@ -1,8 +1,9 @@
 # Boots Review 
 
-The Boots review site has the main goal of being a site where people can go to view reviews of different pairs of football boots that other people have owned. The aim is that this will be a site they can visit to assist them in making the decision of what pair of boots to purchase. 
+The Boots review site has the main goal of being a site where people can go to view reviews of different pairs of football boots that other people have owned. One aspect of he site is that this will be a site they can visit to assist them in making the decision of what pair of boots to purchase. 
 
-A secondary aim of the site is that when these people have bought their pair of boots, they will be able to review their new pair of boots and assist others in making their decision. 
+A secondary aspect is that when these people have bought their pair of boots, they will be able to review their new pair of boots and assist others in making their decision. 
+
 - [Boots Review](#boots-review)
   * [User Experience (UX)](#user-experience--ux-)
     + [Site Owner Goals](#site-owner-goals)
@@ -224,7 +225,7 @@ The site features are as follows:
 * For the admin user to be able to manage the site such as add categories and makes
 
 ## Features Yet To Implement
-* None
+* I would have like to implement a feature that allows the users to attacha link to a site where you can purchase the pair of boots that they are reviewing but I did not have time to develop this feature.
 
 ## Technologies Used
 
