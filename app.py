@@ -524,30 +524,23 @@ def edit_make(make_id):
     """
 
     if session.get("user") == "admin":
+        make = mongo.db.makes.find_one(
+            {"_id": ObjectId(make_id)})
         if request.method == "POST":
-            make = mongo.db.makes.find_one(
-                {"_id": ObjectId(make_id)})
-            update_make = {
-                "name": request.form.get("name")
-            }
-            # retrieve the name of the users entry
-            update_make_name = update_make["name"]
-            # match the user's entry to a record in the db
-            existing_make = mongo.db.makes.find(
-                {"make": update_make_name})
+            new_make = {
+                "name": request.form.get("name")}
+            existing_make = mongo.db.makes.find_one(
+                {"name": request.form.get("name")})
             if not existing_make:
-                # update the db with the new category details
                 mongo.db.makes.update(
-                    {"_id": ObjectId(make_id)}, update_make)
+                    {"_id": ObjectId(make_id)}, new_make)
                 flash("You have successfully updated the make!")
                 return redirect(url_for("manage"))
             else:
                 flash("This make already exists, try again!")
                 return render_template(
                     "pages/edit-make.html", make=make)
-        # if method = "GET"
         else:
-            make = mongo.db.makes.find_one({"_id": ObjectId(make_id)})
             return render_template("pages/edit-make.html", make=make)
     # if session user is not "admin"
     else:
