@@ -484,60 +484,100 @@ The site features are as follows:
 As Flask is a framework, I had to validate the HTML code using the URL to avoid false error flags due to jinja2. 
 
 * Errors:
-No errors. See screenshots of passed tests [here](static/testing-screenshots/code-validation/html)
+No errors. See screenshots of passed tests [here](testing/code-validation/html)
 * Fixes:
 None.
 
 #### CSS Validator
 * Errors:
-No errors. See screenshot of passed test [here](static/testing-screenshots/code-validation/css)
+No errors. See screenshot of passed test [here](testing/code-validation/css)
 * Fixes:
 None
 
 ### Feature Testing
 
 1. Navigation bar
+#### Plan
 
-2. Registration page - username and password
+#### Implementation
 
-3. Search bar to search through the database for:
+#### Test
+
+#### Result
+
+2. Registration page - username and password (See Testing completed in user story testing section)
+
+3. Search bar to search through the database for: (See Testing completed in user story testing section)
     1. to find reviews of particular boots
-
     2. to find reviews of a certain make of boots
-
     3. to find reviews of boots of a certain star rating
 
 4. User feedback for CRUD operations
+#### Plan
+
+#### Implementation
+
+#### Test
+
+#### Result
 
 5. User feedback & validation on forms
+#### Plan
+
+#### Implementation
+
+#### Test
+
+#### Result
 
 6. Bootstrap css design features such as navabr, buttons cards etc.
+#### Plan
+
+#### Implementation
+
+#### Test
+
+#### Result
 
 7. Responsive design 
+#### Plan
 
-8. profile page displaying the following:
+#### Implementation
+
+#### Test
+
+#### Result
+
+8. profile page displaying the following: (See Testing completed in user story testing section)
     1. Profile photo
     2. Bio 
     3. Reviews
  
-9. Landing page
-    1. Informative
+9. Landing page (See Testing completed in user story testing section)
     2. Sign up
     3. Log-in
 
 10. Sign out
+#### Plan
 
-11. Admin to manage categories and makes
+#### Implementation
+
+#### Test
+
+#### Result
+
+11. Admin to manage categories and makes (See Testing completed in user story testing section)
 
 ### Lighthouse Testing
 
-The Lighthouse tool, which can be found in Chrome Dev Tools is a really useful tool for testing the performance, accesibility and overall correctness of a page. All you have to do to use it is right click on a page, click inspect and click into the Lighthouse extension. Once there, all you do is generate a report for each page of the website. The report gives an overall score of how your webpage has performed in the test and it will give areas for improvement. This should be repeated for Mobile and Desktop. The reports for Simon's Piano can be found below:
+The Lighthouse tool, which can be found in Chrome Dev Tools is a really useful tool for testing the performance, accesibility and overall correctness of a page. All you have to do to use it is right click on a page, click inspect and click into the Lighthouse extension. Once there, all you do is generate a report for each page of the website. The report gives an overall score of how your webpage has performed in the test and it will give areas for improvement. This should be repeated for Mobile and Desktop. The reports for Boots Review can be found in the links below:
 
-[Mobile]()
+[Mobile](testing/lighthouse/mobile)
 
-[Desktop]()
+[Desktop](testing/lighthouse/desktop)
 
 ### Compatability Testing
+
 
 ### Bugs
 
