@@ -187,12 +187,14 @@ def delete_profile(user_id):
             mongo.db.reviews.delete_many({"user_id": session["user"]})
             mongo.db.users.delete_one({"_id": ObjectId(user_id)})
             session.pop("user")
+            flash("You have successfully deleted your profile!")
             return redirect(url_for("home_page"))
         else:
             flash("You cannot delete this profile!")
             return redirect(url_for("profile",
                                     username=session["user"]))
     else:
+        flash("You cannot delete this profile!")
         redirect(url_for("home_page"))
 
 
