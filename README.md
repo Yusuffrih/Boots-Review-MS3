@@ -561,12 +561,13 @@ This was a success.
 
 10. Sign out
 #### Plan
-
+The plan for signing out is that the user will be able to click the button in the navbar at any given moment. This provides a positive UX. 
 #### Implementation
-
+To implement this, a link is was created in the navbar that called the backend to pop the session user off and redirect them to the login page. The user then gets a flash message which is also called from the backend which lets them know that they have signed out successfully. 
 #### Test
-
+The tester must sign in to their account and then click the logout button in the navbar and they should see the flash message on the page login page when they get redirected.
 #### Result
+This was a success and the user see's the message. No session cookie can be found on the dev tools. If the user is logged into the same account on a different device they also get logged out when they next try and action which requires them to be logged in.
 
 11. Admin to manage categories and makes (See Testing completed in user story testing section)
 
