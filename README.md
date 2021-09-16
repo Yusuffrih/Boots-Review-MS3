@@ -498,12 +498,14 @@ None
 
 1. Navigation bar
 #### Plan
-
+The navbar should work as expected and bring the user to the the different links that they want and expect to be brought to. The navbar should also be responsive on different screen sizes. It should also be dynamic in that, it should display different items depending on whether the user is logged in or not or if the user is admin or not
 #### Implementation
-
+The navbar was taken from bootstraps components section and customized for my own project. It comes responsive through Bootstraps built in features and a toggler  appears at a certain small screen size. 
+To make the navbar dynamic, I used jinja to create conditional checks to see the above mentioned criteria and make the navbar dynamic.
 #### Test
-
+Try and follow all of the available navbar links and ensure they work. Only the login and signup navbar items should be available to see if the user is not logged in. If the user is logged in, they should be able to see all the navbar items except for the manage navbar item which only appears for the admin user.
 #### Result
+This was a success.
 
 2. Registration page - username and password (See Testing completed in user story testing section)
 
