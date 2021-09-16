@@ -584,6 +584,7 @@ The Lighthouse tool, which can be found in Chrome Dev Tools is a really useful t
 
 ### Bugs
 
+
 ## Deployment
 All of the code was written in Gitpod, a cloud-based IDE. Github is used in conjunction with Gitpod you can deploy your project to Github Pages through the following steps: 
 
@@ -617,3 +618,9 @@ To deploy using Heroku, the following actions were carried out:
 ## Credits
 
 ## Final Comments
+I would like to thank the following people for all of the assistance throughout the development of this project:
+
+* Everybody on the Slack community for always being on hand to answer any questions I had
+* My family and partner for being so patient with me throughout the stressful process.
+* Code Institute Tutors.
+* My Mentor Simen Daehlin for all of the great advice and wisdom he passed onto me.
