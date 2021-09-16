@@ -502,7 +502,7 @@ def add_make():
             # if it does already exist
             else:
                 flash("This make already exists, try again!")
-                return redirect(url_for("add-make"))
+                return redirect(url_for("add_make"))
         # if method = "GET"
         return render_template("pages/add-make.html")
     # if the user in session is not "admin"
