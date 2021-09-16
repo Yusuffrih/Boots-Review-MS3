@@ -428,15 +428,13 @@ def edit_category(category_id):
         category = mongo.db.categories.find_one(
                 {"_id": ObjectId(category_id)})
         if request.method == "POST":
-            update_category = {
-                "category_name": request.form.get("category_name")
-            }
-            update_category_name = update_category["category_name"]
-            existing_category = mongo.db.categories.find(
-                {"category_name": update_category_name})
+            new_category = {
+                "category_name": request.form.get("category_name")}
+            existing_category = mongo.db.categories.find_one(
+                {"category_name": request.form.get("category_name")})
             if not existing_category:
                 mongo.db.categories.update(
-                    {"_id": ObjectId(category_id)}, update_category)
+                    {"_id": ObjectId(category_id)}, new_category)
                 flash("You have successfully update the category!")
                 return redirect(url_for("manage"))
             else:
