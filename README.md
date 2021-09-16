@@ -517,12 +517,13 @@ This was a success.
 
 4. User feedback for CRUD operations
 #### Plan
-
+The user should be able to carry out the CRUD operations on all the collections of the databse throughout their use of the app. This excludes categories and makes as they are only for the admin user to be able to perform the crud actions on. Once they perform these actions, they should ideally recieve some feedback from the backend to let them know that they have been successful.
 #### Implementation
-
+To implement the user feedback to the crud testing, I created functions for each of the crud operations and if the crud operation was successfull or not, the user would get a flash message to say one way or the other.
 #### Test
-
+The tester should test out all of the crud operations on all aspects of the website and see if there is feedback for all the operations whether successful or not.
 #### Result
+The user gets a flash message upon all of the relevant crud operations. See screenshots of testing [here](testing/feature/crud-feedback) which includes all the crud operations feedback exceot for read of course as the feedback for this is simply that the user can see the data.
 
 5. User feedback & validation on forms
 #### Plan
