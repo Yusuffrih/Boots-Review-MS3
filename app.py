@@ -402,7 +402,7 @@ def add_category():
                 return redirect(url_for("manage"))
             else:
                 flash("This category already exists, try again!")
-                return redirect(url_for("add-category"))
+                return redirect(url_for("add_category"))
         else:
             return render_template("pages/add-category.html")
     else:
