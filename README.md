@@ -617,6 +617,28 @@ To deploy using Heroku, the following actions were carried out:
 
 ## Credits
 
+#### [Python](https://docs.python.org/3/library/index.html) Documentation - 
+This was a useful reference guide to keep to hand. This was used on multiple occasions if I had any queries on how Python worked. 
+
+#### Bootstrap - 
+I used [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) to assist in achieving responsive design. This is a very useful tool to use.
+
+[W3 Schools](https://www.w3schools.com/)
+I got some good assistance throughout the development of my project from W3 Schools. This is a brilliant website for general coding tips and tricks. I used this for any kind of queries from CSS to HTML to Python and it is extremely easy to follow.
+
+[Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2)
+Font Awesome is where I went to get the icons that I used in my project. All you have to do is copy in the CDN to the head of the HTML document and use the code that they provide.
+
+### Coolors
+[Coolors](https://coolors.co/) - Coolors was where I went to to generate my colour scheme for the webpage. This is a brilliant and handy tool to have available as it gives the hex value of the colour that you chose to use.
+
+### [Code Institute](https://codeinstitute.net/)
+Example Project - 
+There was a fantastic example project run through in the Code Institute course material which really teaches you a lot about how to put together a project like this. There was a lot of time spent looking at the videos to better understand concepts and some of the code logic was taken for the some of the similar functions in my project but of course, there was a lot of customisation to make it work for how I wanted my project to function.
+
+CI Mentor session - 
+Code institute provide each student with an industry professional as a mentor. This is a great resource as I get 3 sessions with them to discuss my project and get any questions answered about the planning of the project.
+
 ## Final Comments
 I would like to thank the following people for all of the assistance throughout the development of this project:
 
