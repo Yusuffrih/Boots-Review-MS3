@@ -527,12 +527,13 @@ The user gets a flash message upon all of the relevant crud operations. See scre
 
 5. User feedback & validation on forms
 #### Plan
-
+The plan for this is that the user should not be able to fill in a form and submit it without the form matching the required pattern or without it not being filled in at all. The plan is that the browser validation system will provide the user with some feedback as to what the issue is if they have not filled in the form properly
 #### Implementation
-
+To implement this, the all of the forms have the required attributes and they also have patter attributes to ensure that the user inputs the correct data. The browser validation system should inhibit the user from submitting the form if any of the fields are not filled in correctly.
 #### Test
-
+The user must try filling in the forms that are on the site and purposely leave out some fields or put in incorrect data.
 #### Result
+This test is a success with all of the forms operating as expected. See the relevant screenshots [here](testing/feature/form-validation) for one example of each form validating the data.
 
 6. Bootstrap css design features such as navabr, buttons cards etc.
 #### Plan
