@@ -591,7 +591,48 @@ The Lighthouse tool, which can be found in Chrome Dev Tools is a really useful t
 | Compatable                                       |   Yes  |    Yes  |  Yes |
 
 ### Bugs
+I ran into some issues throughout the development phase of the project. Some of these are logged here:
 
+#### Bug 1
+**Bug** - Review card dropdowns would expand for each review card when the read button in the review card was pressed instead of just the relevant review expanding. 
+
+**Fix** - I realised that I wasn’t giving them unique id and data-target values which caused them to all expand at the same time. To fix this I used 'collapse-{{loop.index}}' to target the collapse items of the review cards and then give it the index in the list of reviews to give it an indvidual id.
+
+#### Bug 2
+**Bug** - Could not access the collections in the DB that had a Dash (“-“) in the name of the collection.
+
+**Fix** - Had to delete the collection and rename it and recreate the collection. Unfortunately, I could not simply rename the collections.
+
+#### Bug 3
+**Bug** - Could not render the edit profile function as I was not passing the correct variable into the template. I was also trying to render a template that did not exist yet.
+
+**Fix** - I created the template needed that I was trying to render and included the correct template in the backend to render and made sure I was passing the profile object to the page to render the data from the database through jinja syntax.
+
+#### Bug 4
+**Bug** - When I put in a modal for defensive programming when trying to delete a category from the database, I did not assign the modal an unique id and so the first item on the database would delete.
+
+Fix- To counter this, I used “modal-{{loop.index}}” to give each modal a unique id and then input that into the data-target attribute for the button to delete. This was a very similar issue to the first bug.
+
+#### Bug 5 
+**Bug** - Tried to make the date of boots review automatically become the ‘today’ date using - ‘from datetime import datetime” and use this in the backend to autofill the field in the database.
+
+**Fix** - Had to use ‘from datetime import date’ instead as of 'from datetime import datetime' which fixed the issue. This was a learning that I got from [Odoo](https://www.odoo.com/forum/help-1/how-to-auto-fill-datefield-with-today-date-23928) 
+
+
+#### Bug 6
+**Bug** - Edit category and edit make functions were not operating correctly as I was not performing the correct conditional checks. I was checking if the item being edited matched an existing item in the database (which was true as it was being edited, not added). 
+**Fix** - I had to change the conditional check to ensure that the new user input did not match an existing category or make in the database. 
+
+#### Bug 7
+**Bug** - The background colour of the modal which appeared during the attempt to delete a review was being inherited from the review card itself due to the way that I was targeting the element
+
+**Fix** - I had to change the way I targeted the review card in the css sheet which then allowed the modal to have its own background colour and not inherit it.
+
+
+#### Bug 7
+**Bug** - Hero image on the home page had different shades of darkness in it which made the overlay text on it hard to see at times. I really wanted to use that particular image though as I liked it.
+
+**Fix** - I had to add an extra div around the hero image section and then give it an opaque background colour that I wanted to overlay ontop of the hero image.This made the text much easier to read. 
 
 ## Deployment
 All of the code was written in Gitpod, a cloud-based IDE. Github is used in conjunction with Gitpod you can deploy your project to Github Pages through the following steps: 
@@ -625,27 +666,33 @@ To deploy using Heroku, the following actions were carried out:
 
 ## Credits
 
-#### [Python](https://docs.python.org/3/library/index.html) Documentation - 
+#### Python Documentation
+[Python](https://docs.python.org/3/library/index.html) - 
 This was a useful reference guide to keep to hand. This was used on multiple occasions if I had any queries on how Python worked. 
 
-#### Bootstrap - 
+#### Bootstrap
 I used [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) to assist in achieving responsive design. This is a very useful tool to use.
 
-[W3 Schools](https://www.w3schools.com/)
+### W3 Schools
+[W3 Schools](https://www.w3schools.com/) -
 I got some good assistance throughout the development of my project from W3 Schools. This is a brilliant website for general coding tips and tricks. I used this for any kind of queries from CSS to HTML to Python and it is extremely easy to follow.
 
-[Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2)
-Font Awesome is where I went to get the icons that I used in my project. All you have to do is copy in the CDN to the head of the HTML document and use the code that they provide.
+### Font Awesome 
+[Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2) is where I went to get the icons that I used in my project. All you have to do is copy in the CDN to the head of the HTML document and use the code that they provide.
+
+### Odoo 
+[Odoo](https://www.odoo.com/forum/help-1/how-to-auto-fill-datefield-with-today-date-23928) - I used this to help me overcome the date bug that I have outlined above in the bugs section.
 
 ### Coolors
-[Coolors](https://coolors.co/) - Coolors was where I went to to generate my colour scheme for the webpage. This is a brilliant and handy tool to have available as it gives the hex value of the colour that you chose to use.
+[Coolors](https://coolors.co/) was where I went to to generate my colour scheme for the webpage. This is a brilliant and handy tool to have available as it gives the hex value of the colour that you chose to use.
 
-### [Code Institute](https://codeinstitute.net/)
+### Code Institute 
+[Code Institute](https://codeinstitute.net/)
 Example Project - 
 There was a fantastic example project run through in the Code Institute course material which really teaches you a lot about how to put together a project like this. There was a lot of time spent looking at the videos to better understand concepts and some of the code logic was taken for the some of the similar functions in my project but of course, there was a lot of customisation to make it work for how I wanted my project to function.
 
-CI Mentor session - 
-Code institute provide each student with an industry professional as a mentor. This is a great resource as I get 3 sessions with them to discuss my project and get any questions answered about the planning of the project.
+CI Mentor sessions - 
+Code institute provide each student with an industry professional as a mentor. Simen Daehlin was my mentor on this project. This is a great resource as I get 3 sessions with them to discuss my project and get any questions answered about the planning of the project.
 
 ## Final Comments
 I would like to thank the following people for all of the assistance throughout the development of this project:
