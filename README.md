@@ -1,4 +1,5 @@
 # Boots Review 
+![Am I responsive image to go here](static/images/am-i-responsive.png)
 
 The Boots review site has the main goal of being a site where people can go to view reviews of different pairs of football boots that other people have owned. One aspect of he site is that this will be a site they can visit to assist them in making the decision of what pair of boots to purchase. 
 
