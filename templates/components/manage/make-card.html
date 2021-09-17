@@ -1,0 +1,16 @@
+<div class="section-container">
+    <div class="row">
+        {% for make in makes %}
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card manage-card p-4 m-5">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ make.name }}</h4>
+                        <a href="{{ url_for('edit_make', make_id=make._id )}}" class="btn edit-btn" aria-label="Edit make button">Edit</a>
+                        <a href="#delete-make-modal" class="btn delete-btn" data-toggle="modal" data-target="#make-modal-{{loop.index}}" aria-label="Delete make button">Delete</a>
+                        {% include 'components/modals/delete_make.html' %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
