@@ -762,6 +762,9 @@ I got some good assistance throughout the development of my project from W3 Scho
 ### Font Awesome 
 [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2) is where I went to get the icons that I used in my project. All you have to do is copy in the CDN to the head of the HTML document and use the code that they provide.
 
+### Stack Overflow
+[Stack Overflow](https://stackoverflow.com/) - I used this to troubleshoot loads of stumbling blocks along the way to developing this project.
+
 ### Odoo 
 [Odoo](https://www.odoo.com/forum/help-1/how-to-auto-fill-datefield-with-today-date-23928) - I used this to help me overcome the date bug that I have outlined above in the bugs section.
 
