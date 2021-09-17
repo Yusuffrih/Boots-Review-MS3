@@ -18,6 +18,7 @@
     <!--Profile Picture -->
     <div class="form-group">
         <label for="profile-pic" class="form-label">Profile Picture <i class="fas fa-user"></i></label>
+        <!-- Pattern from Stack Overflow - See Readme -->
         <input type="url" class="form-control" id="profile-pic" name="profile-pic" value="{{user.profile_pic}}" placeholder="https://i.postimg.cc/AAAA/example.png" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.png)" required>
         <small class="form-help"><em>Needs to be a URL - Make yours <a href="https://postimages.org/" target="_blank" aria-label="Link to create image url">here</a></em></small>
     </div>
