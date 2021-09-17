@@ -4,57 +4,8 @@
 {% include 'components/flash_messages/flash_messages.html' %}
     <div class="container justify-content-center">
         <h3 class="header">Reviews</h3>
-        <!-- Search -->
-        <form action="{{ url_for('search') }}" method="POST" class="row card section-container">
-            <div class="row">
-                <div class="col-3">
-                    <label id="search-label" for="search">Search Reviews</label>
-                </div>
-                <div class="col-9 justify-content-start">
-                    <input type="text" name="search" id="search" minlength="3" placeholder="Search by User, Boots, Make or Category" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <!-- Reset Button -->
-                    <a type="button" href="{{ url_for('reviews') }}" class="btn blue-btn btn-lg" aria-label="Reset search button">Reset</a>
-                    <!-- Search Button -->
-                    <button type="submit" class="btn btn-lg orange-btn">Search</button>
-                </div>
-            </div>
-        </form>
-            {% if reviews|length > 0 %}
-                <div class="row section-container">
-                    {% for review in reviews %}
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="card review-card">
-                                <button class="btn review-btn" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
-                                    {% if review.image_url %}
-                                        <img class="card-img-top" src="{{ review.image_url }}" alt="Picture Of Boots Being Reviewed">
-                                    {% else %}
-                                        <h2 class="header">Boots Image Here</h2>
-                                    {% endif %}
-                                    <i class="d-block fas fa-chevron-down"></i>
-                                </button>
-                                <div class="card-body">
-                                    <h3 class="card-title">{{ review.make }} - {{ review.boots_name }}</h3>
-                                    <p><em>Category:</em> {{ review.category }}</p>
-                                    <p><em>Reviewed by:</em> {{ review.user_id }}</p>
-                                    <p><em>Reviewed on:</em> {{ review.review_date }}</p>
-                                    <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
-                                    <div class="collapse" id="collapse-{{loop.index}}">
-                                        <div class="card-body">
-                                            <p>{{ review.review }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            {% else %}
-                <h3 id="no-result" class="header section-container">No Results Found, Try Another Search!</h3>
-            {% endif %}
+        {% include 'components/reviews/search.html' %}
+        {% include 'components/reviews/review-card.html' %}
     </div>
     
 {% include 'components/footer/footer.html' %}

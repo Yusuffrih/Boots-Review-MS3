@@ -1,0 +1,35 @@
+{% if reviews|length > 0 %}
+    <div class="row section-container">
+        {% for review in reviews %}
+            <div class="col-sm-6 col-lg-4">
+                <!-- Review Card -->
+                <div class="card review-card">
+                    <!-- Button containing boots image -->
+                    <button class="btn review-btn" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
+                        {% if review.image_url %}
+                            <img class="card-img-top" src="{{ review.image_url }}" alt="Picture Of Boots Being Reviewed">
+                        {% else %}
+                            <h2 class="header">Boots Image Here</h2>
+                        {% endif %}
+                        <i class="d-block fas fa-chevron-down"></i>
+                    </button>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ review.make }} - {{ review.boots_name }}</h3>
+                        <p><em>Category:</em> {{ review.category }}</p>
+                        <p><em>Reviewed by:</em> {{ review.user_id }}</p>
+                        <p><em>Reviewed on:</em> {{ review.review_date }}</p>
+                        <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
+                        <div class="collapse" id="collapse-{{loop.index}}">
+                            <div class="card-body">
+                                <p>{{ review.review }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <!-- If no search result -->
+    <h3 id="no-result" class="header section-container">No Results Found, Try Another Search!</h3>
+{% endif %}
