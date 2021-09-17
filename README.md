@@ -246,7 +246,7 @@ The site features are as follows:
 
 ### Tools
 * [Coolors](https://coolors.co/) - Used this to generate a colour scheme that matched what I wanted for the site.
-* [Pexels](https://www.pexels.com/) - Online library of stock photos for use for free.
+* [Unsplash](https://www.unsplash.com/) - Online library of stock photos for use for free.
 * [Balsamic](https://balsamiq.com/) - Software used to complete the wireframes. This was much easier than trying to draw.
 * [CSS Formatter](https://www.cleancss.com/css-beautify/) - This is used to beautify the CSS code
 * [Javascript Formatter](https://beautifier.io/) - This is used to beatify the Javascript code to ensure the correct formatting is applied
