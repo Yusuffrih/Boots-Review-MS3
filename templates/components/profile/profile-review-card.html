@@ -1,0 +1,40 @@
+<div class="row no-gutters section-container justify-content-start">
+
+    {% for review in reviews if session.user|lower == review.user_id|lower %}
+        <div class="col-sm-6 col-lg-4">
+            <!-- Review Card -->
+            <div class="card review-card">
+                <button class="btn review-btn" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
+                    <!-- Boots Image -->
+                    <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
+                    <i class="d-block fas fa-chevron-down"></i>
+                </button>
+            
+                <div class="card-body">
+                    <h3 class="card-title">{{ review.make }} - {{ review.boots_name }}</h3>
+                    <p><em>Category:</em> {{ review.category }}</p>
+                    <p><em>Reviewed by:</em> {{ review.user_id}}</p>
+                    <p><em>Reviewed on:</em> {{ review.review_date}}</p>
+                    <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
+                    <!-- Buttons section -->
+                    <div class="row justify-content-center">
+                        <a href="{{ url_for('edit_review', review_id=review._id )}}" class="btn edit-btn" aria-label="Edit review button">Edit</a>
+                        <a href="#delete-review-modal" class="btn delete-btn" data-toggle="modal" data-target="#modal-{{loop.index}}" aria-label="Delete review button">Delete</a>
+                        {% include 'components/modals/delete_review.html' %}
+                    </div>
+                    <!-- card review section -->
+                    <div class="collapse" id="collapse-{{loop.index}}">
+                        <div class="card card-body">
+                            {{ review.review }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="col">
+            <h3>You haven't reviewed any boots yet!</h3>
+            <p>Write your first review now. Click the button <i class="fas fa-hand-pointer"></i></p>
+        </div>
+    {% endfor %}
+</div>

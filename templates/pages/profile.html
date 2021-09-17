@@ -6,38 +6,7 @@
 <h2 class="header">{{ username }}'s Profile</h2>
 
 <div class="container justify-content-center">
-    <div id="profile-container" class="row no-gutters section-container">
-        <div class="col-sm-12 col-md-4 col-lg-3">
-            <!-- Bootstrap Card -->
-            <div id="profile-card" class="card">
-                {% if profile.profile_pic %}
-                    <img src="{{ profile.profile_pic}}" alt="Add A Profile Picture">
-                {% else %}
-                    <i id="profile-icon" class="fas fa-user"></i>
-                {% endif%}
-                <!-- Edit / Delete buttons -->
-                <a href="{{ url_for('edit_profile', user_id=profile._id)}}" class="card-btn btn edit-btn" aria-label="Edit profile button">Edit</a>
-                <a href="#delete-profile-modal" class=" card-btn btn delete-btn" data-toggle="modal" data-target="#deleteProfile" aria-label="Delete profile button">Delete</a>
-                {% include 'components/modals/delete_profile.html' %}
-            </div>
-        </div>
-
-        <!-- Bio -->
-        <div id="bio-section" class="col-sm-12 col-md-8 col-lg-9">
-            <div class="row no-gutters">
-                <h4 id="profile-bio-title">A little about {{ username }}</h4>
-            </div>
-            {% if profile.bio %}
-                <div class="row no-gutters">
-                    <p class="profile-bio">{{ profile.bio }}</p>
-                </div>
-            {% else %}
-                <div class="row no-gutters">
-                    <p class="profile-bio">Click Edit Profile to Add A Bio Here</p>
-                </div>
-            {% endif %}
-        </div>
-    </div>
+    {% include 'components/profile/profile-container.html' %}
     <!-- User's Reviews -->
     <h3 class="header">Your Reviews</h3>
     <div class="row justify-content-center">
@@ -45,44 +14,7 @@
             Add Review <i class="fas fa-plus-square"></i>
         </a>
     </div>
-    <div class="row no-gutters section-container justify-content-start">
-
-        {% for review in reviews if session.user|lower == review.user_id|lower %}
-            <div class="col-sm-6 col-lg-4">
-                <!-- Bootstrap Card -->
-                <div class="card review-card">
-                <button class="btn review-btn" data-toggle="collapse" data-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
-                    <img src="{{ review.image_url }}" alt="picture of boots being reviewed">
-                    <i class="d-block fas fa-chevron-down"></i>
-                </button>
-                    <div class="card-body">
-                        <h3 class="card-title">{{ review.make }} - {{ review.boots_name }}</h3>
-                        <p><em>Category:</em> {{ review.category }}</p>
-                        <p><em>Reviewed by:</em> {{ review.user_id}}</p>
-                        <p><em>Reviewed on:</em> {{ review.review_date}}</p>
-                        <p><em>Star Rating:</em> {{ review.star_rating_id }}</p>
-                        <!-- Buttons section -->
-                        <div class="row justify-content-center">
-                            <a href="{{ url_for('edit_review', review_id=review._id )}}" class="btn edit-btn" aria-label="Edit review button">Edit</a>
-                            <a href="#delete-review-modal" class="btn delete-btn" data-toggle="modal" data-target="#modal-{{loop.index}}" aria-label="Delete review button">Delete</a>
-                            {% include 'components/modals/delete_review.html' %}
-                        </div>
-                        <!-- review section -->
-                        <div class="collapse" id="collapse-{{loop.index}}">
-                            <div class="card card-body">
-                                {{ review.review }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% else %}
-            <div class="col">
-                <h3>You haven't reviewed any boots yet!</h3>
-                <p>Write your first review now. Click the button <i class="fas fa-hand-pointer"></i></p>
-            </div>
-        {% endfor %}
-    </div>
+    {% include 'components/profile/profile-review-card.html' %}
 </div>
 {% include 'components/footer/footer.html' %}
 {% endblock %}
