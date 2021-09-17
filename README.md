@@ -3,67 +3,91 @@
 The Boots review site has the main goal of being a site where people can go to view reviews of different pairs of football boots that other people have owned. One aspect of he site is that this will be a site they can visit to assist them in making the decision of what pair of boots to purchase. 
 
 A secondary aspect is that when these people have bought their pair of boots, they will be able to review their new pair of boots and assist others in making their decision. 
-
-- [Boots Review](#boots-review)
-  * [User Experience (UX)](#user-experience--ux-)
-    + [Site Owner Goals](#site-owner-goals)
-    + [User Goals](#user-goals)
-    + [User Stories](#user-stories)
-    + [User Requirements](#user-requirements)
-    + [User Expectations](#user-expectations)
-  * [Design Choices](#design-choices)
-    + [Fonts](#fonts)
-    + [Colours](#colours)
-    + [Icons](#icons)
-    + [Wireframes](#wireframes)
-    + [Data Schema](#data-schema)
-  * [Features](#features)
-  * [Features Yet To Implement](#features-yet-to-implement)
-  * [Technologies Used](#technologies-used)
-    + [Languages](#languages)
-    + [Frameworks & Libraries](#frameworks---libraries)
-    + [Tools](#tools)
-  * [Testing](#testing)
-    + [User Story Testing](#user-story-testing)
-      - [User Registration](#user-registration)
-      - [Create a secure account with a username and password](#create-a-secure-account-with-a-username-and-password)
-      - [Reviews:](#reviews-)
-      - [Create](#create)
-      - [View](#view)
-      - [Edit](#edit)
-      - [Delete](#delete)
-      - [Read a review that someone else wrote](#read-a-review-that-someone-else-wrote)
-      - [Search the database for boot reviews based on makes, categories, reviewer, or Boots name](#search-the-database-for-boot-reviews-based-on-makes--categories--reviewer--or-boots-name)
-      - [Profile:](#profile-)
-      - [View](#view-1)
-      - [Edit](#edit-1)
-      - [Delete](#delete-1)
-    + [Admin Testing](#admin-testing)
-      - [Manage Categories](#manage-categories)
-      - [Add Category](#add-category)
-      - [Read](#read)
-      - [Edit Category](#edit-category)
-      - [Delete Category](#delete-category)
-      - [Add Make](#add-make)
-      - [Read Make](#read-make)
-      - [Edit Make](#edit-make)
-      - [Delete Make](#delete-make)
-    + [Validator Testing](#validator-testing)
-      - [HTML Validator](#html-validator)
-      - [CSS Validator](#css-validator)
-    + [Feature Testing](#feature-testing)
-    + [Lighthouse Testing](#lighthouse-testing)
-    + [Compatability Testing](#compatability-testing)
-    + [CRUD Testing](#crud-testing)
-    + [Bugs](#bugs)
-  * [Deployment](#deployment)
-    + [Github Pages](#github-pages)
-    + [Run Locally](#run-locally)
-    + [Deploying in Heroku](#deploying-in-heroku)
-  * [Credits](#credits)
-  * [Final Comments](#final-comments)
+- [User Experience (UX)](#user-experience--ux-)
+  * [Site Owner Goals](#site-owner-goals)
+  * [User Goals](#user-goals)
+  * [User Stories](#user-stories)
+  * [User Requirements](#user-requirements)
+  * [User Expectations](#user-expectations)
+- [Design Choices](#design-choices)
+  * [Fonts](#fonts)
+  * [Colours](#colours)
+  * [Icons](#icons)
+  * [Wireframes](#wireframes)
+  * [Data Schema](#data-schema)
+- [Features](#features)
+- [Features Yet To Implement](#features-yet-to-implement)
+- [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+  * [Frameworks & Libraries](#frameworks---libraries)
+  * [Tools](#tools)
+- [Testing](#testing)
+  * [User Story Testing](#user-story-testing)
+    + [User Registration](#user-registration)
+    + [Create a secure account with a username and password](#create-a-secure-account-with-a-username-and-password)
+    + [Reviews:](#reviews-)
+    + [Create](#create)
+    + [View](#view)
+    + [Edit](#edit)
+    + [Delete](#delete)
+    + [Read a review that someone else wrote](#read-a-review-that-someone-else-wrote)
+    + [Search the database for boot reviews based on makes, categories, reviewer, or Boots name](#search-the-database-for-boot-reviews-based-on-makes--categories--reviewer--or-boots-name)
+    + [Profile:](#profile-)
+    + [View](#view-1)
+    + [Edit](#edit-1)
+    + [Delete](#delete-1)
+  * [Admin Testing](#admin-testing)
+    + [Manage Categories](#manage-categories)
+    + [Add Category](#add-category)
+    + [Read](#read)
+    + [Edit Category](#edit-category)
+    + [Delete Category](#delete-category)
+    + [Add Make](#add-make)
+    + [Read Make](#read-make)
+    + [Edit Make](#edit-make)
+    + [Delete Make](#delete-make)
+  * [Validator Testing](#validator-testing)
+    + [HTML Validator](#html-validator)
+    + [CSS Validator](#css-validator)
+  + [Feature Testing](#feature-testing)
+      - [Navigation bar](#navigation-bar)
+      - [Registration page - username and password (See Testing completed in user story testing section)](#registration-page---username-and-password--see-testing-completed-in-user-story-testing-section-)
+      - [Search bar to search through the database for: (See Testing completed in user story testing section)](#search-bar-to-search-through-the-database-for---see-testing-completed-in-user-story-testing-section-)
+      - [User feedback for CRUD operations](#user-feedback-for-crud-operations)
+      - [User feedback & validation on forms](#user-feedback---validation-on-forms)
+      - [Bootstrap css design features such as navbar, buttons cards etc.](#bootstrap-css-design-features-such-as-navbar--buttons-cards-etc)
+      - [Responsive design](#responsive-design)
+      - [profile page displaying the following: (See Testing completed in user story testing section)](#profile-page-displaying-the-following---see-testing-completed-in-user-story-testing-section-)
+      - [Landing page (See Testing completed in user story testing section)](#landing-page--see-testing-completed-in-user-story-testing-section-)
+      - [Sign out](#sign-out)
+      - [Admin to manage categories and makes (See Testing completed in Admin Testing section)](#admin-to-manage-categories-and-makes--see-testing-completed-in-admin-testing-section-)
+  * [Lighthouse Testing](#lighthouse-testing)
+  * [Compatability Testing](#compatability-testing)
+  * [Bugs](#bugs)
+    + [Bug 1](#bug-1)
+    + [Bug 2](#bug-2)
+    + [Bug 3](#bug-3)
+    + [Bug 4](#bug-4)
+    + [Bug 5](#bug-5)
+    + [Bug 6](#bug-6)
+    + [Bug 7](#bug-7)
+    + [Bug 7](#bug-7-1)
+- [Deployment](#deployment)
+  * [Run Locally](#run-locally)
+  * [Deploying in Heroku](#deploying-in-heroku)
+- [Credits](#credits)
+  * [Python Documentation](#python-documentation)
+  * [Bootstrap](#bootstrap)
+  * [W3 Schools](#w3-schools)
+  * [Unsplashed](#unsplashed)
+  * [Font Awesome](#font-awesome)
+  * [Odoo](#odoo)
+  * [Coolors](#coolors)
+  * [Code Institute](#code-institute)
+- [Final Comments](#final-comments)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 ## User Experience (UX)
@@ -497,7 +521,7 @@ None
 
 ### Feature Testing
 
-1. Navigation bar
+#### Navigation bar
 #### Plan
 The navbar should work as expected and bring the user to the the different links that they want and expect to be brought to. The navbar should also be responsive on different screen sizes. It should also be dynamic in that, it should display different items depending on whether the user is logged in or not or if the user is admin or not
 #### Implementation
@@ -508,14 +532,14 @@ Try and follow all of the available navbar links and ensure they work. Only the 
 #### Result
 This was a success.
 
-2. Registration page - username and password (See Testing completed in user story testing section)
+#### Registration page - username and password (See Testing completed in user story testing section)
 
-3. Search bar to search through the database for: (See Testing completed in user story testing section)
+#### Search bar to search through the database for: (See Testing completed in user story testing section)
     1. to find reviews of particular boots
     2. to find reviews of a certain make of boots
     3. to find reviews of boots of a certain star rating
 
-4. User feedback for CRUD operations
+#### User feedback for CRUD operations
 #### Plan
 The user should be able to carry out the CRUD operations on all the collections of the databse throughout their use of the app. This excludes categories and makes as they are only for the admin user to be able to perform the crud actions on. Once they perform these actions, they should ideally recieve some feedback from the backend to let them know that they have been successful.
 #### Implementation
@@ -525,7 +549,7 @@ The tester should test out all of the crud operations on all aspects of the webs
 #### Result
 The user gets a flash message upon all of the relevant crud operations. See screenshots of testing [here](testing/feature/crud-feedback) which includes all the crud operations feedback exceot for read of course as the feedback for this is simply that the user can see the data.
 
-5. User feedback & validation on forms
+#### User feedback & validation on forms
 #### Plan
 The plan for this is that the user should not be able to fill in a form and submit it without the form matching the required pattern or without it not being filled in at all. The plan is that the browser validation system will provide the user with some feedback as to what the issue is if they have not filled in the form properly
 #### Implementation
@@ -535,7 +559,7 @@ The user must try filling in the forms that are on the site and purposely leave 
 #### Result
 This test is a success with all of the forms operating as expected. See the relevant screenshots [here](testing/feature/form-validation) for one example of each form validating the data.
 
-6. Bootstrap css design features such as navbar, buttons cards etc.
+#### Bootstrap css design features such as navbar, buttons cards etc.
 #### Plan
 For this feature of the site, the plan is to use the Bootstrap framework for components such as buttons, navbar cards among other components.
 #### Implementation
@@ -545,7 +569,7 @@ To test these, the user must go into the site ensure that all buttons and other 
 #### Result
 This test was a success. All of the components are operating as expected and look appealing to the user as is desired.
 
-7. Responsive design 
+#### Responsive design 
 #### Plan
 The plan for this is to give the user a positive experience no matter what size screen they are viewing the site on. All the elements of the site need to be dynamic and change with the screen sizes as needed.
 #### Implementation
@@ -555,16 +579,16 @@ The tester needs to go into each page on the site and right click to inspect the
 #### Result
 The site is fully resopnsive and looks appealing to the user at all different screen sizes and breakpoints. 
 
-8. profile page displaying the following: (See Testing completed in user story testing section)
+#### profile page displaying the following: (See Testing completed in user story testing section)
     1. Profile photo
     2. Bio 
     3. Reviews
  
-9. Landing page (See Testing completed in user story testing section)
+#### Landing page (See Testing completed in user story testing section)
     2. Sign up
     3. Log-in
 
-10. Sign out
+#### Sign out
 #### Plan
 The plan for signing out is that the user will be able to click the button in the navbar at any given moment. This provides a positive UX. 
 #### Implementation
@@ -574,7 +598,7 @@ The tester must sign in to their account and then click the logout button in the
 #### Result
 This was a success and the user see's the message. No session cookie can be found on the dev tools. If the user is logged into the same account on a different device they also get logged out when they next try and action which requires them to be logged in.
 
-11. Admin to manage categories and makes (See Testing completed in user story testing section)
+#### Admin to manage categories and makes (See Testing completed in Admin Testing section)
 
 ### Lighthouse Testing
 
@@ -720,11 +744,11 @@ os.environ["MONGO_DBNAME"] = "ENTER_YOUR_DBNAME_HERE"
 
 ## Credits
 
-#### Python Documentation
+### Python Documentation
 [Python](https://docs.python.org/3/library/index.html) - 
 This was a useful reference guide to keep to hand. This was used on multiple occasions if I had any queries on how Python worked. 
 
-#### Bootstrap
+### Bootstrap
 I used [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) to assist in achieving responsive design. This is a very useful tool to use.
 
 ### W3 Schools
