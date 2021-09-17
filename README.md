@@ -768,6 +768,7 @@ I got some good assistance throughout the development of my project from W3 Scho
 
 ### Stack Overflow
 [Stack Overflow](https://stackoverflow.com/) - I used this to troubleshoot loads of stumbling blocks along the way to developing this project.
+I specifically used [this](https://stackoverflow.com/questions/18568244/url-validation-regex-url-just-valid-with-http) code from [Stack Overflow](https://stackoverflow.com/) to ensure that the url being added by the user was correct.
 
 ### Odoo 
 [Odoo](https://www.odoo.com/forum/help-1/how-to-auto-fill-datefield-with-today-date-23928) - I used this to help me overcome the date bug that I have outlined above in the bugs section.
