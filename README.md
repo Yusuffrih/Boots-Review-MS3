@@ -731,6 +731,9 @@ I used [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduct
 [W3 Schools](https://www.w3schools.com/) -
 I got some good assistance throughout the development of my project from W3 Schools. This is a brilliant website for general coding tips and tricks. I used this for any kind of queries from CSS to HTML to Python and it is extremely easy to follow.
 
+### Unsplashed
+[Unsplashed](https://unsplash.com/) - was where I got the two photos that are used in the project. The [hero image](https://unsplash.com/photos/Yta-zdP9PVM) & the [background image](https://unsplash.com/photos/4Zaq5xY5M_c)
+
 ### Font Awesome 
 [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2) is where I went to get the icons that I used in my project. All you have to do is copy in the CDN to the head of the HTML document and use the code that they provide.
 
