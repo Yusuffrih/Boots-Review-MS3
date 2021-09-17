@@ -635,33 +635,87 @@ Fix- To counter this, I used “modal-{{loop.index}}” to give each modal a uni
 **Fix** - I had to add an extra div around the hero image section and then give it an opaque background colour that I wanted to overlay ontop of the hero image.This made the text much easier to read. 
 
 ## Deployment
-All of the code was written in Gitpod, a cloud-based IDE. Github is used in conjunction with Gitpod you can deploy your project to Github Pages through the following steps: 
-
-### Github Pages
-To deplow the site, the following steps were taken: 
-1. Opened Github repository
-2. Opened settings 
-3. Click into **Pages** section on the side menu
-4. Clicked into Branches
-5. Selected **Master Branch**
-6. Clicked save
-7. Refreshed page
-8. Await confirmation of deployment to Github Pages
+All of the code was written in Gitpod, a cloud-based IDE. Github is used in conjunction with Gitpod I pushed my changes throughout the development of the project to Github using Git's "git push" command in the terminal. The project is deployed to Heroku.
 
 ### Run Locally
-To run the project locally, follow these simple steps:
-1. Open the Repository
-2. Click on the **Code** button beside the green Gitpod button
-3. Click into the HTTPS tab
-4. Copy the URL available
-5. Open your local IDE
-6. Type git clone into the terminal which should prompt you to enter your copied URL
-7. Paste the URL here
-8. Project should be running in local IDE now
+To run this project locally, the following steps can be used:
+
+1. From the Github repository, click on the "Code" button beside the green Gitpod button to download the repository's zip file or Clone the project from the terminal using: 
+```
+git clone https://github.com/Yusuffrih/boots-review-app.git
+```
+
+2. You must then install the project dependencies using:
+```
+pip3 install -r requirements.txt
+```
+
+3. Once requirements are installed, you must sign into [Mongo DB](https://www.mongodb.com/) and create a new cluster and database. 
+  * Set up the database schema. See mine [here](#data-schema).
+  * Go to the Security Menu on the side Menu and click into Database Access.
+  * Add your new secure database user.
+  * Add the IP Address of 0.0.0.0 to the Network Access tab.
+
+4. Once all of the above is complete, go into your env.py file and add the environmental variables pertaining to your database. It should look like this:
+``` python
+import os
+
+os.environ.["IP"] = 0.0.0.0
+os.environ.["PORT"] = "5000"
+os.environ["SECRET_KEY"] = "ENTER_YOUR_SECRET_KEY_HERE"
+os.environ["DEBUG"] = "TRUE"
+os.environ["MONGO_URI"] = "ENTER_YOUR_MONGO_URI_HERE"
+os.environ["MONGO_DBNAME"] = "ENTER_YOUR_DBNAME_HERE"
+```
+As stated in the code snippet, you will have to enter your own data into the SECRET_KEY, MONGO_URI & MONGO_DBNAME variables. 
+* I used [RandomKeyGen](https://randomkeygen.com/) to get my SECRET_KEY as this is what was suggested during the CI walkthrough project.
+* You can find your MONGO_URI in the connect part of your database 
+* Your DBNAME is just the DBNAME that you chose in step 3. 
+* *Ensure that you do not forgot to add your env.py into the .gitignore file so as to not upload this sensitive information to Github where it will become public*
+
+Once all of the above is complete, you can run the application locally in the terminal using 
+``` python
+python3 app.py
+```
+
 
 ### Deploying in Heroku
-To deploy using Heroku, the following actions were carried out:
-1. Created the .gitignore file and added env.py file to this as well as pycache/directory so that these files are not viewable to users
+As with deploying locally, deploying to Heroku takes the following specific steps:
+
+1. Once you have logged in, you need to create a new app. Choose the region that is most suitable to where you are in the world.
+
+2. You will need a Procfile in your repository if you do not already have one and add the following to it:
+```
+echo web: python app.py
+```
+
+3. Make sure that your ```requirements.txt``` file is up to date using:
+```
+pip3 freeze --local requirements.txt
+```
+
+4. If you are using Github, choose Github as your deployment method and make sure it's automatic deployment.
+
+5. Connect your Github account to your Heroku App so that your relevant repository from Github automatically deploys to Heroku when you push your changes to Github.
+
+6. Once your Github page is connected, you will need to go to settings and within that, go to "Reveal Config Vars" where you will be able to set up the configuration variables that you have in your env.py file. i.e. you want to add these:
+``` python
+import os
+
+os.environ.["IP"] = 0.0.0.0
+os.environ.["PORT"] = "5000"
+os.environ["SECRET_KEY"] = "ENTER_YOUR_SECRET_KEY_HERE"
+os.environ["DEBUG"] = "TRUE"
+os.environ["MONGO_URI"] = "ENTER_YOUR_MONGO_URI_HERE"
+os.environ["MONGO_DBNAME"] = "ENTER_YOUR_DBNAME_HERE"
+```
+***Do not add your Debug variable to Heroku config vars***
+
+7. Once the config vars are in, you are nearly ready to deploy your app. Go back to the deploy tab and click on "Enable Automatic Deployement"
+
+8. Then click, "Deploy Branch" to start the build.
+
+9. Open your new Heroku app.
 
 
 ## Credits
